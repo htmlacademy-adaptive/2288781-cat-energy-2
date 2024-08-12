@@ -10,10 +10,29 @@
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
-  <p>Привет, Мир!</p>
-  <p>Добро пожаловать!</p>
-  <p>Очень рада</p>
+  <header class="header">
+    <div class="header__container">
+      <nav class="navigation">
+        <a class="navigation__logo" href="#">
+          <img class="navigation__image" src="./images/logo-cat-energy-desktop.svg" width="202" height="59" alt="Логотип компании Кэт Энерджи.">
+        </a>
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link" href="./index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+        <button class="navigation__button" type="button">
+          <span class="navigation__menu visually-hidden">Переключение меню</span>
+        </button>
+      </nav>
+    </div>
+  </header>
 </body>
 
 </html>
