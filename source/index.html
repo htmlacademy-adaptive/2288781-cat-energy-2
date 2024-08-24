@@ -11,39 +11,40 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo-pic" href="index.html" aria-current="page">
-      <img class="main-header__logo-pic-image main-header__logo-pic-image--text" src="./images/logo-pic.svg" width="70" height="59" alt="Логотип магазина «Кэт энерджи».">
+    <a class="main-header__logo logo" href="index.html" aria-current="page">
+      <img class="logo__image logo__image--icon" src="images/logo-pic-mobile.png" width="33" height="38" alt="Логотип магазина «Кэт энерджи».">
+      <img class="logo__image logo__image--text" src="images/logo-text-mobile.png" width="101" height="18" alt="Текстовый логотип магазина «Кэт энерджи».">
     </a>
-    <nav class="main-nav main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
+    <nav class="main-nav">
+      <button class="main-nav__toggle toggle-button" type="button">
         <span class="visually-hydden">Переключает меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="index.html" aria-current="page">Главная</a>
+        <ul class="main-nav__list main-nav__list--closed">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current" href="index.html" aria-current="page">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Подбор программы</a>
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
   <main class="main-container">
-    <h1 class="page__headline headline visually-hydden">Главная страница компании «Кэт энерджи»</h1>
-    <section class="hero">
+    <h1 class="page__headline headline visually-hydden">Главная страница магазина «Кэт энерджи»</h1>
+    <section class="main-container__hero hero">
       <div class="hero__wrapper">
         <h2 class="hero__title title">Функциональное питание для котов</h2>
         <p class="hero__description">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="./images/hero-desktop.png" width="552" height="499" alt="Упаковка компании «Кэт энерджи» в виде стаканчика.">
+        <img class="hero__image" src="./images/hero-mobile.png" width="280" height="270" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика.">
         <a class="hero__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
-    <section class="programs">
+    <section class="main-container__programs programs">
       <div class="programs__wrapper">
         <h2 class="programs__title title visually-hidden">Выбор программы</h2>
         <ul class="programs__list">
@@ -54,13 +55,13 @@
           </li>
           <li class="programs__item programs__item--pro">
             <h3 class="programs__subtitle subtitle">Набор массы</h3>
-            <p class="programs__description programs__description--mobile">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs__link" href="#">Каталог Pro</a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="reasons">
+    <section class="main-container__reasons reasons">
       <div class="reasons__wrapper">
         <h2 class="reasons__title title">Как это работает?</h2>
         <ol class="reasons__list">
@@ -83,7 +84,7 @@
         </ol>
       </div>
     </section>
-    <section class="stats">
+    <section class="main-container__stats stats">
       <div class="stats__wrapper">
         <h2 class="stats__title title">Живой пример</h2>
         <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -114,8 +115,8 @@
           </span>
         </p>
         <div class="stats__slider">
-          <img class="stats__image-before" src="./images/cat-tablet-before2x.svg" width="560" height="512" alt="Демонстрация кота до программы питания">
-          <img class="stats__image-after" src="./images/cat-tablet-after2x.svg" width="560" height="512" alt="Демонстрация кота после программы питания">
+          <img class="stats__image-before" src="./images/cats-mobile-before@1x.png" width="280" height="256" alt="Демонстрация кота до программы питания">
+          <img class="stats__image-after" src="./images/cats-mobile-after@1x.png" width="280" height="256" alt="Демонстрация кота после программы питания">
           <div class="stats__range-bar">
             <button class="stats__range-toggle" type="button" aria-label="Передвижение слайда"></button>
           </div>
@@ -123,26 +124,30 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer__container">
-      <section class="map">
+  <footer class="main-footer">
+    <div class="main-footer__container">
+      <section class="main-footer__map map">
         <div class="map__wrapper">
-          <h2 class="map__title title visually-hidden">Местонахождение компании «Кэт Энерджи» на карте</h2>
-          <div class="map__signboard map__pin">
-            <p class="map__text">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="map__address">
-              <p class="map__street">ул. Большая Конюшенная, д. 19/8</p>
-              <p class="map__city">Санкт-Петербург</p>
+          <h2 class="map__title title visually-hidden">Местонахождение магазина «Кэт Энерджи» на карте</h2>
+          <div class="map__signboard signboard">
+            <p class="signboard__text">Приглашаем к сотрудничеству дилеров!</p>
+            <address class="signboard__address">
+              <p class="signboard__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="signboard__city">Санкт-Петербург</p>
             </address>
+            <div class="signboard__location location">
+              <img class="location__image" src="images/map-mobile.png" width="1200" height="1200" alt="Фрагмент карты города Санкт-Петербурга">
+              <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте</span>
+            </div>
           </div>
         </div>
       </section>
-      <section class="social">
+      <a class="main-footer__logo-text logo-text" href="index.html" aria-current="page">
+        <img class="logo-text__image" src="images/footer-logo.png" width="128" height="24" alt="Текстовый логотип магазина «Кэт энерджи».">
+      </a>
+      <section class="main-footer__social social">
         <div class="social__wrapper">
-          <h2 class="social__title title visually-hidden">Социальная секция</h2>
-          <a class="footer__logo-text" href="index.html">
-            <img class="footer__logo-text-image" src="./images/logo-text-footer-tablet-desktop.svg" width="128" height="24" alt="Текстовый логотип компании «Кэт энерджи».">
-          </a>
+          <h2 class="social__title title visually-hidden">Социальные каналы HTML Academy</h2>
           <ul class="social-list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
@@ -160,14 +165,12 @@
               </a>
             </li>
           </ul>
-          <a class="social__logo-academy" href="https://htmlacademy.ru/">
-            <span class="social__logo-academy-text">
-              HTML Academy
-            </span>
-            <img class="social__logo-academy-image" src="./images/logo-academy.svg" width="27" height="34" alt="Логотип компании HTML Academy.">
-          </a>
         </div>
       </section>
+      <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="logo-academy__text">HTML Academy</span>
+        <img class="logo-academy__image" src="images/logo-academy.svg" width="27" height="34" alt="Логотип компании HTML Academy.">
+      </a>
     </div>
   </footer>
 </body>
