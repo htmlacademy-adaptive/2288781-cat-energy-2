@@ -12,8 +12,18 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html" aria-current="page">
-      <img class="logo__image logo__image--icon" src="images/logo-pic-mobile.png" width="33" height="38" alt="Логотип магазина «Кэт энерджи».">
-      <img class="logo__image logo__image--text" src="images/logo-text-mobile.png" width="101" height="18" alt="Текстовый логотип магазина «Кэт энерджи».">
+      <div class="logo__wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo/logotype-desktop.svg">
+          <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo/logotype-tablet.svg">
+          <img class="logo__image" width="33" height="38" src="images/logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logo/logotext-desktop.svg">
+          <source media="(min-width: 768px)" width="101" height="18" type="image/svg+xml" srcset="images/logo/logotext-mobile-tablet.svg">
+          <img class="logo__text" src="images/logo/logotext-mobile-tablet.svg" width="101" height="18" alt="Текстовый логотип магазина «Кэт энерджи».">
+        </picture>
+      </div>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle toggle-button" type="button">

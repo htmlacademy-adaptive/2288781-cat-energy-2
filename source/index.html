@@ -59,10 +59,10 @@
         <h2 class="hero__title title">Функциональное питание для котов</h2>
         <p class="hero__description">Занялся собой? Займись котом!</p>
         <picture>
-
-          <img class="hero__image" src="images/hero-mobile.png" width="280" height="270" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика.">
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/hero/hero-glass-desktop@1x.png 1x, images/hero/hero-glass-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/hero/hero-glass-tablet@1x.png 1x, images/hero/hero-glass-tablet@2x.png 2x">
+          <img class="hero__image" src="images/hero/hero-glass-mobile@1x.png" width="280" height="270" srcset="images/hero/hero-glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика со вкусом курицы.">
         </picture>
-
         <a class="hero__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
@@ -137,8 +137,14 @@
           </span>
         </p>
         <div class="stats__slider">
-          <img class="stats__image-before" src="./images/cats-mobile-before@1x.png" width="280" height="256" alt="Демонстрация кота до программы питания">
-          <img class="stats__image-after" src="./images/cats-mobile-after@1x.png" width="280" height="256" alt="Демонстрация кота после программы питания">
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/hero/hero-glass-tablet@1x.png 1x, images/hero/hero-glass-tablet@2x.png 2x">
+            <img class="stats__image-before" src="images/" width="280" height="256" alt="Пухленький кот до программы питания">
+          </picture>
+          <picture>
+
+            <img class="stats__image-after" src="./images/cat-mobile-after.png" width="280" height="256" alt="Похудевший кот после программы питания">
+          </picture>
           <div class="stats__range-bar">
             <button class="stats__range-toggle" type="button" aria-label="Передвижение слайда"></button>
           </div>
