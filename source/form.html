@@ -152,14 +152,18 @@
               <p class="signboard__city">Санкт-Петербург</p>
             </address>
             <div class="signboard__location location">
-              <img class="location__image" src="images/map-mobile.png" width="1200" height="1200" alt="Фрагмент карты города Санкт-Петербурга">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="images/maps/map-desktop@1x.jpg 1x, images/maps/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="images/maps/map-tablet@1x.jpg 1x, images/maps/map-tablet@2x.jpg 2x">
+                <img class="location__image" src="images/maps/map-mobile@1x.jpg" width="320" height="320" srcset="images/maps/map-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+              </picture>
               <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте</span>
             </div>
           </div>
         </div>
       </section>
       <a class="main-footer__logo-text logo-text" href="index.html" aria-current="page">
-        <img class="logo-text__image" src="images/footer-logo.png" width="128" height="24" alt="Текстовый логотип магазина «Кэт энерджи».">
+        <img class="logo__text" src="images/logo/logo-footer.svg" width="128" height="24" alt="Текстовый логотип магазина «Кэт энерджи».">
       </a>
       <section class="main-footer__social social">
         <div class="social__wrapper">
