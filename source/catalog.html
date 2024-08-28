@@ -52,34 +52,33 @@
         <li class="catalog__item card">
           <a class="card__image-link" href="#">
             <picture>
-              <source media="(min-width: 768px)" type="image/png" width="161" height="172" srcset="images/catalog/card-chicken500-tablet-desktop@1x.png 1x, images/catalog/card-chicken500-tablet-desktop@2x.png 2x">
-              <img class="card__image" type="image/png" width="68" height="86" src="images/catalog/card-chicken500-mobile@1x.png" srcset="images/catalog/card-buckwheat500-mobile@2x.png" alt="Упаковка в виде стаканчика Cat «Energy PRO 500 г со вкусом курицы».">
+              <img class="card__image" type="image/png" width="161" height="172" src="images/catalog/catalog-1.png" alt="Упаковка Cat «Energy PRO 500 г. Курица».">
             </picture>
           </a>
-          <a href="#">
+          <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy PRO 500 г</h3>
+            <ul class="card__list">
+              <li class="card__item">
+                <span class="card__description">Масса</span>
+                <span class="card__meaning">500 г</span>
+              </li>
+              <li class="card__item">
+                <span class="card__description">Вкус</span>
+                <span class="card__meaning">Курица</span>
+              </li>
+              <li class="card__item">
+                <span class="card__description">Цена</span>
+                <span class="card__meaning">700 ₽</span>
+              </li>
+            </ul>
+          </div>
+          <a class="catalog__order" href="#">
+            <span class="catalog__text">Заказать</span>
           </a>
-          <dl class="card__options">
-            <div class="card__option">
-              <dt class="card__key">Масса</dt>
-              <dd class="card__value">500 г</dd>
-            </div>
-            <div class="card__option">
-              <span class="card__key">Вкус</span>
-              <span class="card__value">Курица</span>
-            </div>
-        <li class="card__option">
-          <span class="card__key">Цена</span>
-          <span class="card__value">700 &#8381</span>
-        </li>
-        </dl>
-        <a class="catalog__order" href="#">
-          <span class="catalog__text">Заказать</span>
-        </a>
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-2.png" width="168" height="206" alt="Упаковка в виде стаканчика Cat «Energy PRO 1000 г со вкусом курицы».">
+            <img src="images/catalog-2.png" width="168" height="206" alt="Упаковка Cat «Energy PRO 1000 г. Курица».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy PRO 1000 г</h3>
@@ -104,7 +103,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-3.png" width="163" height="174" alt="Упаковка в виде стаканчика Cat «Energy PRO 500 г со вкусом рыбы».">
+            <img src="images/catalog-3.png" width="163" height="174" alt="Упаковка Cat «Energy PRO 500 г. Рыба».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy PRO 500 г</h3>
@@ -129,7 +128,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-4.png" width="168" height="200" alt="Упаковка в виде стаканчика Cat «Energy PRO 1000 г со вкусом рыбы».">
+            <img src="images/catalog-4.png" width="168" height="200" alt="Упаковка Cat «Energy PRO 1000 г. Рыба».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy PRO 1000 г</h3>
@@ -154,7 +153,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-5.png" width="161" height="171" alt="Упаковка в виде стаканчика Cat «Energy SLIM 500 г со вкусом гречки».">
+            <img src="images/catalog-5.png" width="161" height="171" alt="Упаковка Cat «Energy SLIM 500 г. Гречка».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy SLIM 500 г</h3>
@@ -179,7 +178,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-6.png" width="168" height="200" alt="Упаковка в виде стаканчика Cat «Energy SLIM 1000 г со вкусом гречки».">
+            <img src="images/catalog-6.png" width="168" height="200" alt="Упаковка Cat «Energy SLIM 1000 г. Гречка».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy SLIM 1000 г</h3>
@@ -204,7 +203,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image" href="#">
-            <img src="images/catalog-7.png" width="161" height="171" alt="Упаковка в виде стаканчика Cat «Energy SLIM 500 г со вкусом риса».">
+            <img src="images/catalog-7.png" width="161" height="171" alt="Упаковка Cat «Energy SLIM 500 г. Рис».">
           </a>
           <div class="catalog__content card">
             <h3 class="card__subtitle subtitle">Cat Energy SLIM 500 г</h3>
@@ -309,9 +308,9 @@
             </address>
             <div class="signboard__location location">
               <picture>
-                <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/map-desktop1440x400@1x.jpg 1x, images/maps/map-desktop1440x400@2x.jpg 2x">
-                <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/map-tablet768x400@1x.jpg 1x, images/maps/map-tablet768x400@2x.jpg 2x">
-                <img class="location__image" type="image/jpeg" width="320" height="362" src="images/maps/map-mobile320x362@1x.jpg" srcset="images/maps/map-mobile320x362@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+                <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/map-desktop@1x.jpg 1x, images/maps/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/map-tablet@1x.jpg 1x, images/maps/map-tablet@2x.jpg 2x">
+                <img class="location__image" type="image/jpeg" width="320" height="320" src="images/maps/map-mobile@1x.jpg" srcset="images/maps/map-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
               </picture>
               <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте по адресу: ул. Большая Конюшенная, д. 19/8</span>
             </div>
