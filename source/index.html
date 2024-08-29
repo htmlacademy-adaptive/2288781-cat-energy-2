@@ -5,15 +5,33 @@
   <meta charset="UTF-8">
   <title>Личный проект «Кэт энерджи» - главная страница магазина «Кэт энерджи»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico"><!-- 32x32 -->
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="android-chrome-512.png" sizes="512x512">
+  <link rel="icon" href="apple-touch-icon-180.png">
+  <link rel="icon" href="152.png" sizes="152x152">
+  <link rel="icon" href="32.png" sizes="32x32">
+  <link rel="icon" href="16.png" sizes="16x16">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js" defer="defer"></script>
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html" aria-current="page">
-      <img class="logo__image logo__image--icon" src="images/logo-pic-mobile.png" width="33" height="38" alt="Логотип магазина «Кэт энерджи».">
-      <img class="logo__image logo__image--text" src="images/logo-text-mobile.png" width="101" height="18" alt="Текстовый логотип магазина «Кэт энерджи».">
+      <div class="logo__wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/logotype-desktop.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/logotype-tablet.svg">
+          <img width="33" height="38" src="images/logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/logotext-desktop.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/logotext-mobile-tablet.svg">
+          <img width="101" height="18" src="images/logo/logotext-mobile-tablet.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+        </picture>
+      </div>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle toggle-button" type="button">
@@ -40,7 +58,11 @@
       <div class="hero__wrapper">
         <h2 class="hero__title title">Функциональное питание для котов</h2>
         <p class="hero__description">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="./images/hero-mobile.png" width="280" height="270" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика.">
+        <picture>
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/hero/hero-glass-desktop@1x.png 1x, images/hero/hero-glass-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/hero/hero-glass-tablet@1x.png 1x, images/hero/hero-glass-tablet@2x.png 2x">
+          <img class="hero__image" src="images/hero/hero-glass-mobile@1x.png" width="280" height="270" srcset="images/hero/hero-glass-mobile@2x.png 2x" alt="Упаковка магазина «Кэт энерджи» в виде стаканчика со вкусом курицы.">
+        </picture>
         <a class="hero__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
@@ -84,41 +106,39 @@
         </ol>
       </div>
     </section>
-    <section class="main-container__stats stats">
-      <div class="stats__wrapper">
-        <h2 class="stats__title title">Живой пример</h2>
-        <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="stats__list">
-          <li class="stats__item">
-            <p class="stats__module">
-              <span class="stats__meaning">
-                <span class="stats__number">5</span>
-                <span class="stats__text">кг</span>
-              </span>
-            </p>
-            <p class="stats__inscription">Снижение веса</p>
+    <section class="main-container__statistical-information statistical-information">
+      <div class="statistical-information__wrapper">
+        <h2 class="statistical-information__title title">Живой пример</h2>
+        <p class="statistical-information__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <ul class="statistical-information__list">
+          <li class="statistical-information__item stats">
+            <dl class="stats__option">
+              <dt class="stats__value">5 кг</dt>
+              <dd>Снижение веса</dd>
+            </dl>
           </li>
-          <li class="stats__item">
-            <p class="stats__module">
-              <span class="stats__meaning">
-                <span class="stats__number">60</span>
-                <span class="stats__text">дней</span>
-              </span>
-            </p>
-            <p class="stats__inscription">Затрачено времени</p>
+          <li class="statistical-information__item stats">
+            <dl class="stats__option">
+              <dt class="stats__value">60 дней</dt>
+              <dd>Затрачено времени</dd>
+            </dl>
           </li>
         </ul>
-        <p class="stats__costs">Затраты на питание:
-          <span class="stats__price">
-            <span class="stats__number">15 000</span>
-            <span class="stats__text">руб.</span>
-          </span>
-        </p>
-        <div class="stats__slider">
-          <img class="stats__image-before" src="./images/cats-mobile-before@1x.png" width="280" height="256" alt="Демонстрация кота до программы питания">
-          <img class="stats__image-after" src="./images/cats-mobile-after@1x.png" width="280" height="256" alt="Демонстрация кота после программы питания">
-          <div class="stats__range-bar">
-            <button class="stats__range-toggle" type="button" aria-label="Передвижение слайда"></button>
+        <div class="statistical-information__costs costs">
+          <p class="costs__text">Затраты на питание:</p>
+          <p class="costs__price">15 000 руб.</p>
+        </div>
+        <div class="statistical-information__slider">
+          <picture>
+            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-before-tablet-desktop2x@1x.png 1x, images/cats/cat-before-tablet-desktop2x@2x.png 2x">
+            <img class="statistical-information__image-before" width="280" height="256" src="images/cats/cat-before-mobile1x@1x.png" srcset="images/cats/cat-before-mobile1x@2x.png 2x" alt="Пухленький кот до программы питания">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/cat-after-tablet-desktop2x@1x.png 1x, images/cats/cat-after-tablet-desktop2x@2x.png 2x">
+            <img class="statistical-information__image-after" width="280" height="256" src="images/cats/cat-after-mobile1x@1x.png" srcset="images/cats/cat-after-mobile1x@2x.png 2x" alt="Похудевший кот после программы питания">
+          </picture>
+          <div class="statistical-information__range-bar">
+            <button class="statistical-information__range-toggle" type="button" aria-label="Передвижение слайда"></button>
           </div>
         </div>
       </div>
@@ -136,14 +156,18 @@
               <p class="signboard__city">Санкт-Петербург</p>
             </address>
             <div class="signboard__location location">
-              <img class="location__image" src="images/map-mobile.png" width="1200" height="1200" alt="Фрагмент карты города Санкт-Петербурга">
-              <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте</span>
+              <picture>
+                <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/map-desktop@1x.jpg 1x, images/maps/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/map-tablet@1x.jpg 1x, images/maps/map-tablet@2x.jpg 2x">
+                <img class="location__image" width="320" height="320" src="images/maps/map-mobile@1x.jpg" srcset="images/maps/map-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+              </picture>
+              <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте по адресу: ул. Большая Конюшенная, д. 19/8</span>
             </div>
           </div>
         </div>
       </section>
       <a class="main-footer__logo-text logo-text" href="index.html" aria-current="page">
-        <img class="logo-text__image" src="images/footer-logo.png" width="128" height="24" alt="Текстовый логотип магазина «Кэт энерджи».">
+        <img class="logo-text__image" width="128" height="24" src="images/logo/logo-footer.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
       </a>
       <section class="main-footer__social social">
         <div class="social__wrapper">
@@ -169,7 +193,7 @@
       </section>
       <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="logo-academy__text">HTML Academy</span>
-        <img class="logo-academy__image" src="images/logo-academy.svg" width="27" height="34" alt="Логотип компании HTML Academy.">
+        <img class="logo-academy__image" width="27" height="34" src="images/logo/logo-html-academy.png" alt="Логотип компании HTML Academy.">
       </a>
     </div>
   </footer>
