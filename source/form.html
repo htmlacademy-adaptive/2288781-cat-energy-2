@@ -5,8 +5,16 @@
   <meta charset="UTF-8">
   <title>Личный проект «Кэт энерджи» - главная страница магазина «Кэт энерджи»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico"><!-- 32x32 -->
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="android-chrome-512.png" sizes="512x512" type="image/png">
+  <link rel="icon" href="apple-touch-icon-180.png" type="image/png">
+  <link rel="icon" href="152.png" sizes="152x152" type="image/png">
+  <link rel="icon" href="32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js" defer="defer"></script>
 </head>
 
 <body class="page__body">
@@ -16,12 +24,12 @@
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/logotype-desktop.svg">
           <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/logotype-tablet.svg">
-          <img class="logo__image" type="image/svg+xml" width="33" height="38" src="images/logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
+          <img class="logo__image" width="33" height="38" src="images/logo/logotype-mobile.svg" alt="Логотип магазина «Кэт энерджи».">
         </picture>
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/logotext-desktop.svg">
           <source media="(min-width: 768px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/logotext-mobile-tablet.svg">
-          <img class="logo__text" type="image/svg+xml" width="101" height="18" src="images/logo/logotext-mobile-tablet.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+          <img class="logo__image-text" width="101" height="18" src="images/logo/logotext-mobile-tablet.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
         </picture>
       </div>
     </a>
@@ -69,7 +77,7 @@
         <ul class="choice__list">
           <li class="choice__item">
             <label class="choice__control" for="weight-loss">
-              <input class="choice__control-radio" type="radio" id="weight-loss" name="weight-loss" value="weight-loss" checked>
+              <input class="choice__control-radio" type="radio" id="weight-loss" name="weight-loss" value="weight-loss" checked="checked">
               <span class="choice__text">Похудение</span>
             </label>
           </li>
@@ -112,7 +120,7 @@
         <ul class="add-info__list">
           <li class="add-info__item">
             <label class="add-info__control">
-              <input class="add-info__input" type="checkbox" name="sweetener" value="sweetener" checked>
+              <input class="add-info__input" type="checkbox" name="sweetener" value="sweetener" checked="checked">
               Сахарозаменитель
             </label>
           </li>
@@ -153,9 +161,9 @@
             </address>
             <div class="signboard__location location">
               <picture>
-                <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/map-desktop@1x.jpg 1x, images/maps/map-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/map-tablet@1x.jpg 1x, images/maps/map-tablet@2x.jpg 2x">
-                <img class="location__image" type="image/jpeg" width="320" height="320" src="images/maps/map-mobile@1x.jpg" srcset="images/maps/map-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+                <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/map-desktop@1x.jpg, images/maps/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/map-tablet@1x.jpg, images/maps/map-tablet@2x.jpg 2x">
+                <img class="location__image" width="320" height="320" src="images/maps/map-mobile@1x.jpg" srcset="images/maps/map-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
               </picture>
               <span class="location__pin pin visually-hidden">Вывеска логотипа магазина «Кэт Энерджи» на карте по адресу: ул. Большая Конюшенная, д. 19/8</span>
             </div>
@@ -163,7 +171,7 @@
         </div>
       </section>
       <a class="main-footer__logo-text logo-text" href="index.html" aria-current="page">
-        <img class="logo__text" type="image/svg+xml" width="128" height="24" src="images/logo/logo-footer.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+        <img class="logo-text__image" width="128" height="24" src="images/logo/logo-footer.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
       </a>
       <section class="main-footer__social social">
         <div class="social__wrapper">
@@ -189,7 +197,7 @@
       </section>
       <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="logo-academy__text">HTML Academy</span>
-        <img class="logo-academy__image" type="image/png" width="27" height="34" src="images/logo/logo-html-academy.png" alt="Логотип компании HTML Academy.">
+        <img class="logo-academy__image" width="27" height="34" src="images/logo/logo-html-academy.png" alt="Логотип компании HTML Academy.">
       </a>
     </div>
   </footer>
