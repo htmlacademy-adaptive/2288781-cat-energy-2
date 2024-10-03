@@ -31,6 +31,7 @@
   <header class="page__main-header main-header">
 
     <div class="main-header__container container">
+
       <a class="container__logo logo" href="index.html" aria-current="page">
         <div class="logo__wrapper">
           <picture>
@@ -46,9 +47,11 @@
       </a>
 
       <nav class="container__navigation navigation">
+
         <button class="navigation__toggle" type="button">
           <span class="visually-hydden">Переключает меню</span>
         </button>
+
         <div class="navigation__wrapper">
           <ul class="navigation__list navigation__list--closed">
             <li class="navigation__item">
@@ -157,12 +160,12 @@
           </p>
           <div class="stats__slider">
             <picture>
-              <source media="(min-width: 768px)" type="image/jpeg" width="560" height="512" srcset="images/cats/ 1x, images/cats/ 2x">
-              <img class="stats__image-before" width="280" height="256" src="images/cats/mobile-cat-before@1x.jpg" srcset="images/cats/mobile-cat-before@2x.jpg 2x" alt="Пухленький кот до программы питания">
+              <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/tablet-desktop-cat-before@1x.png 1x, images/cats/tablet-desktop-cat-before@2x.png 2x">
+              <img class="stats__image-before" width="280" height="256" src="images/cats/mobile-cat-before@1x.png" srcset="images/cats/mobile-cat-before@2x.png 2x" alt="Пухленький кот до программы питания">
             </picture>
             <picture>
-              <source media="(min-width: 768px)" type="image/jpg" width="560" height="512" srcset="images/cats/cat-tablet-desktop-after@1x.jpg 1x, images/cats/cat-tablet-desktop-after@2x.jpg 2x">
-              <img class="stats__image-after" width="280" height="256" src="images/cats/cat-mobile-after@1x.jpg" srcset="images/cats/cat-mobile-after@2x.jpg 2x" alt="Похудевший кот после программы питания">
+              <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="images/cats/tablet-desktop-cat-after@1x.png 1x, images/cats/tablet-desktop-cat-after@2x.png 2x">
+              <img class="stats__image-after" width="280" height="256" src="images/cats/mobile-cat-after@1x.png" srcset="images/cats/mobile-cat-after@2x.png 2x" alt="Похудевший кот после программы питания">
             </picture>
             <div class="stats__range-bar">
               <input class="stats__range-toggle" type="range" name="range-toggle" aria-label="Передвижение слайда">
@@ -200,7 +203,8 @@
         </div>
       </section>
       <a class="main-footer__logo-text logo-text" href="index.html" aria-current="page">
-        <img class="logo-text__image" width="128" height="24" src="images/logo/logo-footer.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
+        <source media="(min-width: 768px)" type="image/svg+xml" width="128" height="24" srcset="images/logo/footer-logo/footer-logotext.svg">
+        <img class="logo-text__image" width="128" height="24" src="images/logo/footer-logo/footer-logotext.svg" alt="Текстовый логотип магазина «Кэт энерджи».">
       </a>
       <section class="container__social social">
         <h2 class="visually-hidden">Социальные каналы HTML Academy</h2>
@@ -225,8 +229,8 @@
       <a class="container__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="logo-academy__text">HTML Academy</span>
         <picture>
-          <source media="(min-width: 768px)" type="image/svg+xml" width="27" height="34" srcset="images/logo/logo-html-academy.svg">
-          <img class="logo-academy__image" width="27" height="34" src="images/logo/logo-html-academy.svg" alt="Логотип компании HTML Academy.">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="27" height="34" srcset="images/logo/footer-logo/logo-html.svg">
+          <img class="logo-academy__image" width="27" height="34" src="images/logo/footer-logo/logo-html.svg" alt="Логотип компании HTML Academy.">
         </picture>
       </a>
     </div>
