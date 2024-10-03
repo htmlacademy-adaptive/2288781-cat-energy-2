@@ -1,10 +1,15 @@
 .main-header {
+  display: flex;
+
+  width: 320px;
+  height: 70;
+
   background-color: #663399;
   color: #ffffff;
   padding: 10px 15px;
 
   // .main-header__container
-  &__container {
+  // &__container {
 
-  }
+  // }
 }
