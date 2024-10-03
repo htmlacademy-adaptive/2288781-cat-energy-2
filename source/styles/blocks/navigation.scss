@@ -62,7 +62,7 @@
     text-decoration: none;
 
     &:hover {
-      color: $base-green;
+      color: $secondary-green-2;
       opacity: 0.8;
     }
   }
@@ -71,6 +71,6 @@
   &__link--current {
     width: 100%;
 
-    text-decoration: underline 2px solid $base-green;
+    text-decoration: underline 2px solid $secondary-green-2;
   }
 }

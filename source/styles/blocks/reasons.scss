@@ -11,8 +11,8 @@
   padding-right: 21px;
   padding-left: 20px;
 
-  background-color: $base-white;
-  color: $base-black;
+  background-color: $white;
+  color: $black;
 
   // .reasons__wrapper
   &__wrapper {
@@ -42,7 +42,7 @@
     width: 60px;
     height: 60px;
 
-    color: $base-green;
+    color: $secondary-green-2;
   }
 
   // .reasons__description
@@ -63,7 +63,7 @@
     width: 60px;
     height: 60px;
 
-    color: $base-green;
+    color: $secondary-green-2;
   }
 
   // .reasons__item--nutrition
@@ -71,7 +71,7 @@
     width: 60px;
     height: 60px;
 
-    color: $base-green;
+    color: $secondary-green-2;
   }
 
   // .reasons__item--time
@@ -79,6 +79,6 @@
     width: 60px;
     height: 60px;
 
-    color: $base-green;
+    color: $secondary-green-2;
   }
 }

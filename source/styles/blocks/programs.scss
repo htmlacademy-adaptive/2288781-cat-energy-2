@@ -11,8 +11,8 @@
   padding-right: 21px;
   padding-left: 20px;
 
-  background-color: $base-green;
-  color: $base-black;
+  background-color: $secondary-green-2;
+  color: $black;
 
   // .programs__wrapper
   &__wrapper {
@@ -22,11 +22,11 @@
 
   // .programs__title
   &__title {
-    font-family: "Oswald", sans-serif;
+    font-family: $secondary-font;
     font-size: 36px;
     line-height: 36px;
 
-    color: $base-white;
+    color: $white;
   }
 
   // .programs__list
@@ -37,7 +37,7 @@
     padding: 0;
     list-style: none;
 
-    color: $base-black;
+    color: $black;
     text-decoration: none;
     list-style-type: none;
   }
