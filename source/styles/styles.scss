@@ -1,10 +1,12 @@
 /* GLOBAL */
-@import "./common/visually-hydden.scss";
+// @import "./common/visually-hydden.scss";
 @import "./common/variables.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
 
 /* BLOCKS */
+@import "./blocks/button.scss";
 @import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/container.scss";

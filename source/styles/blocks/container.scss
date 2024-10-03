@@ -1,10 +1,79 @@
-// .container {
+@include container (flex, column, space-around, center, $accent, $base-white);
 
-//   // .container__logo
-//   &__logo {
-//   }
+.container {
 
-//   // .container__navigation
-//   &__navigation {
-//   }
-// }
+  // .container__logo
+  &__logo {
+    min-width: 414px;
+    min-height: 38px;
+    margin: 0;
+    padding: 0;
+    padding-right: auto;
+  }
+
+  // .container__navigation
+  &__navigation {
+    min-width: 24px;
+    min-height: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__hero
+  &__hero {
+    min-width: 320px;
+    min-height: 270px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__programs
+  &__programs {
+    min-width: 320px;
+    min-height: 592px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__reasons
+  &__reasons {
+    min-width: 320px;
+    min-height: 1789px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__stats
+  &__stats {
+    min-width: 320px;
+    min-height: 659px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__map
+  &__map {
+    min-width: 320px;
+    min-height: 362px;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .container__logo-text
+  &__logo-text {
+    min-width: 128px;
+    min-height: 24px;
+  }
+
+  // .container__social
+  &__social {
+    min-width: 132px;
+    min-height: 22px;
+  }
+
+  // .container__logo-academy
+  &__logo-academy {
+    min-width: 280px;
+    min-height: 34px;
+  }
+}
