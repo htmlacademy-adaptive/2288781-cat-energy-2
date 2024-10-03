@@ -1,0 +1,84 @@
+.reasons {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 21px;
+  padding-left: 20px;
+
+  background-color: $base-white;
+  color: $base-black;
+
+  // .reasons__wrapper
+  &__wrapper {
+    width: 280px;
+    height: 380px;
+  }
+
+  // .reasons__title
+  &__title {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  // .reasons__list
+  &__list {
+    list-style-type: none;
+  }
+
+  // .reasons__item
+  &__item {
+    padding-bottom: 20px;
+  }
+
+  // .reasons__item--petal
+  &__item--petal {
+    width: 60px;
+    height: 60px;
+
+    color: $base-green;
+  }
+
+  // .reasons__description
+  &__description {
+    font-family: $primary-font;
+    text-align: left;
+  }
+
+  // .reasons__number
+  &__number {
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+  }
+
+  // .reasons__item--powder
+  &__item--powder {
+    width: 60px;
+    height: 60px;
+
+    color: $base-green;
+  }
+
+  // .reasons__item--nutrition
+  &__item--nutrition {
+    width: 60px;
+    height: 60px;
+
+    color: $base-green;
+  }
+
+  // .reasons__item--time
+  &__item--time {
+    width: 60px;
+    height: 60px;
+
+    color: $base-green;
+  }
+}

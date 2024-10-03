@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 21px;
+  padding-left: 20px;
+
+  background-color: $base-white;
+  color: $base-black;
+
+  // .hero__wrapper
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .hero__title
+  &__title {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 36px;
+
+    color: $base-white;
+  }
+
+  // .hero__description
+  &__description {
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  // .hero__image
+  &__image {
+    width: 280px;
+    height: 270px;
+    margin: 0;
+    padding: 0;
+    margin-right: 21px;
+    margin-left: 20px;
+  }
+
+  // .hero__button
+  &__button {
+    max-width: 100%;
+    min-height: 40px;
+    margin-right: 21px;
+  }
+}

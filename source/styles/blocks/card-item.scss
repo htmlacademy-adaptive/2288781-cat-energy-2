@@ -1,0 +1,47 @@
+.card-item {
+  display: flex;
+
+  // .card-item__link
+  &__link {
+    width: 140px;
+    height: 107px;
+  }
+
+  // .card-item__subtitle
+  &__subtitle {
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  // .card-item__image
+  &__image {
+    width: 140px;
+    height: 107px;
+  }
+
+  // .card-item__index
+  &__index {
+    width: 140px;
+    height: 48px;
+  }
+
+  // .card-item__order
+  &__order {
+    width: 280px;
+    height: 40px;
+    padding: 10px 0;
+  }
+
+  // .card-item__text
+  &__text {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .card-item__content
+  &__content {
+    width: 140px;
+  }
+}

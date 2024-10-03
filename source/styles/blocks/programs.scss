@@ -1,0 +1,84 @@
+.programs {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 21px;
+  padding-left: 20px;
+
+  background-color: $base-green;
+  color: $base-black;
+
+  // .programs__wrapper
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .programs__title
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+
+    color: $base-white;
+  }
+
+  // .programs__list
+  &__list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    color: $base-black;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  // .programs__item
+  &__item {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  // .programs__item--slim
+  &__item--slim {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .programs__subtitle
+  &__subtitle {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 37px;
+
+    text-align: left;
+  }
+
+  // .programs__description
+  &__description {
+    font-family: $primary-font;
+  }
+
+  // .programs__link
+
+  &__link {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  // .programs__item--pro
+  &__item--pro {
+    margin: 0;
+    padding: 0;
+  }
+}

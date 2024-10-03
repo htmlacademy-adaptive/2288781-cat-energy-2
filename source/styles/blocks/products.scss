@@ -1,0 +1,27 @@
+.products {
+  width: 280px;
+  height: 98px;
+
+  // .products__list
+  &__list {
+    list-style-type: none;
+  }
+
+  // .products__item
+  &__item {
+    width: 117px;
+  }
+
+  // .products__subtitle
+  &__subtitle {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+  }
+
+  // .products__content
+  &__content {
+    min-width: 100%;
+  }
+}

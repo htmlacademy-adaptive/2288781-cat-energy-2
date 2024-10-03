@@ -1,0 +1,9 @@
+.main-inner {
+  width: 320px;
+
+  // .main-inner__catalog-container
+  &__catalog-container {
+    min-width: 100%;
+    height: 209px;
+  }
+}

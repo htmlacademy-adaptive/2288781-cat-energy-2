@@ -1,0 +1,52 @@
+.signboard {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 112px;
+  margin: 0;
+  padding: 0;
+  padding-right: 21px;
+  padding-left: 20px;
+
+  background-color: $base-white;
+  color: $base-black;
+
+  // .signboard__text
+  &__text {
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+  }
+
+  // .signboard__address
+  &__address {
+    min-width: 140px;
+    min-height: 60px;
+  }
+
+  // .signboard__street
+  &__street {
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  // .signboard__city
+  &__city {
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  // .signboard__location
+  &__location {
+    width: 320px;
+    height: 362px;
+  }
+}

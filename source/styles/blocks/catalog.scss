@@ -1,0 +1,23 @@
+.catalog {
+  width: 140px;
+  height: 103px;
+
+  // .catalog__title
+  &__title {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  // .catalog__list
+  &__list {
+    list-style-type: none;
+  }
+
+  // .catalog__text
+  &__text {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

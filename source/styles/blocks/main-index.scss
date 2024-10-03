@@ -1,4 +1,4 @@
-.main-header {
+.main-index {
   display: flex;
   flex-direction: column;
 
@@ -9,14 +9,17 @@
   padding-right: 21px;
   padding-left: 20px;
 
-  background-color: $white;
-  color: $black;
+  background-color: $base-white;
+  color: $base-black;
 
+  // .main-index__container
   &__container {
     position: relative;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     min-width: 100%;
     min-height: 100%;

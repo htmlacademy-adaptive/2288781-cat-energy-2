@@ -1,0 +1,43 @@
+.social {
+  width: 132px;
+  height: 22px;
+
+  // .social__item
+  &__item {
+    width: 28px;
+    height: 22px;
+  }
+
+  // .social__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  // .social__link--vkontakte
+  &__link--vkontakte {
+    width: 28px;
+    height: 22px;
+
+    fill: #666666;
+  }
+
+  // .social__link--youtube
+  &__link--youtube {
+    width: 28px;
+    height: 22px;
+
+    fill: #666666;
+  }
+
+  // .social__link--telegram
+  &__link--telegram {
+    width: 28px;
+    height: 22px;
+
+    fill: #666666;
+  }
+}

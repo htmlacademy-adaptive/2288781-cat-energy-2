@@ -1,0 +1,30 @@
+.card {
+  width: 140px;
+  height: 103px;
+
+  background-color: #222222;
+
+  // .card__list
+  &__list {
+    list-style-type: none;
+  }
+
+  // .card__item
+  &__item {
+    display: flex;
+  }
+
+  // .card__description
+  &__description {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  // .card__meaning
+  &__meaning {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

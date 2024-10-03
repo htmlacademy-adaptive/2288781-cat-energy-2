@@ -1,0 +1,19 @@
+.card-index {
+  width: 250px;
+  height: 84px;
+
+  gap: 10px;
+  background-color: #cdcdcd;
+
+  // .card-index__subtitle
+  &__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .card-index__meaning
+  &__meaning {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

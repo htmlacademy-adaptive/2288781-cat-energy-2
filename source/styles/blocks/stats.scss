@@ -1,0 +1,110 @@
+.stats {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 21px;
+  padding-left: 20px;
+
+  background-color: $fon-green;
+  color: $secondary;
+
+  // .stats__wrapper
+  &__wrapper {
+    width: 320px;
+    min-height: 659px;
+  }
+
+  // .stats__title
+  &__title {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  // .stats__description
+  &__description {
+    font-family: $primary-font;
+  }
+
+  // .stats__module
+  &__module {
+    width: 124px;
+    height: 70px;
+  }
+
+  // .stats__meaning
+  &__meaning {
+    width: auto;
+    min-height: 24px;
+  }
+
+  // .stats__number
+  &__number {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  // .stats__text
+  &__text {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  // .stats__action
+  &__action {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  // .stats__costs
+  &__costs {
+    font-family: $secondary-font;
+    line-height: 20px;
+  }
+
+  // .stats__price
+  &__price {
+    font-family: $secondary-font;
+    line-height: 20px;
+  }
+
+  // .stats__slider
+  &__slider {
+    width: 280px;
+    min-height: 256px;
+  }
+
+  // .stats__image-before
+  &__image-before {
+    min-height: 256px;
+  }
+
+  // .stats__image-after
+  &__image-after {
+    min-height: 256px;
+  }
+
+  // .stats__range-bar
+  &__range-bar {
+    position: relative;
+  }
+
+  // .stats__range-toggle
+  &__range-toggle {
+    position: absolute;
+
+    display: block;
+
+    width: 40px;
+    height: 40px;
+  }
+}

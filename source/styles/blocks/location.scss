@@ -1,0 +1,19 @@
+.location {
+  position: relative;
+
+  // .location__image
+  &__image {
+    width: 320px;
+    margin: 0;
+    height: 0;
+  }
+
+  // .location__pin
+  &__pin {
+    position: absolute;
+
+    width: 57px;
+    margin: 0;
+    height: 0;
+  }
+}

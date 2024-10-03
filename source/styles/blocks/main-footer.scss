@@ -1,0 +1,20 @@
+.main-footer {
+
+  // .main-footer__container
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 320px;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-right: 21px;
+    padding-left: 20px;
+
+    background-color: $fon-green;
+    color: $secondary;
+  }
+}

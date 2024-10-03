@@ -14,8 +14,8 @@
 
   // .page__body--fon
   &__body--fon {
-    background-color: $fon_grey;
-    color: $white;
+    background-color: $accent;
+    color: $base-white;
   }
 
   // .page__headline
@@ -41,7 +41,7 @@
     margin: 0 auto;
     padding: 0;
 
-    background-color: $fon_grey;
-    color: $white;
+    background-color: $fon-green;
+    color: $base-white;
   }
 }
