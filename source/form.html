@@ -32,7 +32,7 @@
 
     <div class="main-header__wrapper">
 
-      <a class="main-header__header-logo header-logo" href="./index.html" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
+      <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
 
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
@@ -52,18 +52,18 @@
 
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--index navigation__list--catalog">
+        <ul class="navigation__list navigation__list--index navigation__list--catalog-index">
 
-          <li class="navigation__item">
-            <a class="navigation__link" href="./index.html" aria-current="page">Главная</a>
+          <li class="navigation__item navigation__item--active">
+            <a class="navigation__link " href="./index.html">Главная</a>
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--current navigation__link--catalog-current" href="./catalog.html" aria-current="page">Каталог продукции</a>
+            <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--current navigation__link--form-current" href="./form.html" disabled>Подбор программы</a>
+            <a class="navigation__link navigation__link--current" href="#" aria-current="page">Подбор программы</a>
           </li>
 
         </ul>
