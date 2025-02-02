@@ -17,24 +17,16 @@ body {
   flex-direction: column;
 
   min-width: $breakpoint-mobile-min;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0;
 
   font-family: $base-font;
+  font-size: 14px;
+  line-height: 18px;
 
   background-color: $accent-light-grey;
   color: $accent-dark-grey;
-
-  @include max-width-mobile {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  @include tablet {
-    font-size: 16px;
-    line-height: 24px;
-  }
 }
 
 img {
@@ -44,10 +36,5 @@ img {
   height: auto;
 
   object-fit: contain;
-  border: none;
-}
-
-ol,
-ul {
-  @include reset-list;
+  border-style: none;
 }

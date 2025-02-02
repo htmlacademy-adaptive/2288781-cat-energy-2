@@ -39,7 +39,7 @@
   width: 100%;
   min-width: 280px;
   max-width: $breakpoint-desktop-min;
-  margin: 0 auto;
+  margin: auto;
 
   @include max-width-mobile {
     min-width: $breakpoint-mobile-min;
@@ -68,7 +68,7 @@
   font-family: $font-family;
   font-size: 36px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 500;
 
   color: $color;
 
@@ -85,7 +85,7 @@
 
   font-family: $font-family;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 40px;
   font-weight: 400;
 
   color: $color;
@@ -143,7 +143,10 @@
 // Ссылки
 @mixin reset-link {
   @include reset-list;
-  border: none;
+
+  display: block;
+
+  border-style: none;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
@@ -238,21 +241,6 @@
   }
 }
 
-@mixin green-border {
-  @include pseudo-element;
-  right: 0;
-  z-index: -2;
-
-  width: 92%;
-
-  border-bottom: 3px solid $primary;
-
-  @include tablet {
-    width: 100%;
-  }
-}
-
-// Центрирование
 @mixin absolute-center {
   position: absolute;
   top: 50%;

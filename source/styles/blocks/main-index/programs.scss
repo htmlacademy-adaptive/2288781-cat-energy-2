@@ -1,37 +1,24 @@
 .programs {
-  margin: 0;
-  padding-top: 20px;
+  margin: 20px auto;
+  padding: 0;
+
+  background-color: $white;
 
   @include tablet {
-    padding-top: 0;
-  }
-
-  @include desktop {
-    padding-top: 82px;
+    margin-top: 0;
   }
 }
 
 .programs__wrapper {
   @include container;
 
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  margin: 0 auto;
   padding-bottom: 20px;
 
   @include tablet {
-    gap: 30px;
-
-    padding-bottom: 45px;
+    padding-bottom: 0;
   }
 
   @include desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-
     padding-bottom: 71px;
   }
 }
@@ -40,36 +27,40 @@
   @include reset-list;
 
   display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
-
-  margin: 0 auto;
 
   @include tablet {
     gap: 30px;
   }
 
   @include desktop {
-    grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
-    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
 
-    margin: 89px 0 71px;
+    width: 1220px;
   }
 }
 
 .programs__item {
-  position: relative;
-
-  padding: 21px 20px 18px;
+  width: 280px;
+  min-height: 266px;
+  padding: 24px 20px 18px;
 
   background-color: $accent-light-grey;
   text-align: left;
 
   @include tablet {
-    padding: 77px 316px 53px 52px;
+    width: 708px;
+    min-height: 372px;
+    padding: 77px 63px 53px 52px;
   }
 
   @include desktop {
-    padding: 73px 61px 55px 52px;
+    width: 570px;
+    min-height: 374px;
+    padding: 47px 61px 55px 52px;
   }
 }
 
@@ -118,32 +109,34 @@
 .programs__subtitle {
   @include subtitle;
 
-  margin: 0;
-  margin-left: 71px;
-  margin-bottom: 29px;
-  margin-block: 0 0;
-  padding: 9px 0 7px;
+  display: flex;
+  align-items: flex-start;
+
+  width: 157px;
+  margin: 0 0 29px 71px;
+  padding: 0 0 7px;
 
   text-transform: uppercase;
 
   @include tablet {
+    width: 340px;
     margin-left: 0;
     margin-bottom: 24px;
   }
 
   @include desktop {
+    width: 295px;
     margin-left: 162px;
     margin-bottom: 73px;
   }
 }
 
 .programs__description {
-  margin: 0;
-  margin-bottom: 19px;
-  padding-right: 13px;
-  padding-bottom: 23px;
+  width: 227px;
+  margin: 25px 0 23px;
+  padding: 9px 0 23px;
 
-  color: $accent-dark-grey;
+  vertical-align: middle;
 
   @include max-width-mobile {
     position: relative;
@@ -163,9 +156,9 @@
   }
 
   @include tablet {
-    margin-bottom: 48px;
-    padding-right: 0;
-    padding-bottom: 0;
+    width: 340px;
+    margin: 24px 0 48px;
+    padding: 0;
 
     font-size: 16px;
     line-height: 24px;
@@ -178,7 +171,8 @@
   }
 
   @include desktop {
-    margin-bottom: 23px;
+    min-width: 457px;
+    margin: 39px 0 23px;
   }
 }
 
@@ -204,32 +198,21 @@
     width: 165px;
   }
 
-  &:hover {
-    color: $primary;
-  }
-
-  &:focus {
-    color: $primary;
-  }
-
   &:active {
-    color: $primary;
     opacity: 0.3;
   }
 
   &:hover .programs__link-text::after {
-    fill: $primary;
     background-position: 0;
 
     transition: background-position 0.5s;
   }
 
   &:focus .programs__link-text::after {
-    fill: $primary;
+    color: $primary;
   }
 
   &:active .programs__link-text::after {
-    fill: $primary;
     opacity: 0.3;
   }
 }

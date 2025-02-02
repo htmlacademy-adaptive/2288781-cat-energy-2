@@ -13,9 +13,10 @@
 
   border: none;
   text-align: left;
+  background-color: transparent;
   color: transparent;
 
-  transition: opacity 0.3s ease-in;
+  transition: all 0.5s ease-out;
 
   &:hover {
     opacity: 0.8;
