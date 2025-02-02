@@ -1,0 +1,99 @@
+.gift {
+  position: relative;
+
+  width: 280px;
+  height: 290px;
+
+  background-color: $primary-fon;
+  background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-mobile@1x.jpg, ../../images/bgi-gift-mobile@1x.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-mobile@2x.jpg, ../../images/bgi-gift-mobile@2x.webp");
+  }
+
+  @media (min-width: $breakpoint-tablet-min) {
+    width: 707px;
+    height: 200px;
+
+    background-color: $primary-fon;
+    background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-tablet@1x.jpg, ../../images/bgi-gift-tablet@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-tablet@2x.jpg, ../../images/bgi-gift-tablet@2x.webp");
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    width: 245px;
+    height: 288px;
+
+    background-color: $primary-fon;
+    background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-mobile@1x.jpg, ../../images/bgi-gift-mobile@1x.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient($primary-fon, $primary-fon), url("../../images/bgi-gift-mobile@2x.jpg, ../../images/bgi-gift-mobile@2x.webp");
+    }
+  }
+}
+
+.gift::before {
+  content: "";
+
+  position: absolute;
+  top: 56px;
+  left: 50%;
+
+  display: block;
+
+  width: 78px;
+  height: 80px;
+
+  background-image: url("../../icons/stack.svg#icon-gift");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate(-50%);
+
+  @media (min-width: $breakpoint-tablet-min) {
+    top: 50%;
+    left: 77px;
+
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    top: 56px;
+    left: 50%;
+
+    transform: translate(-50%);
+  }
+}
+
+.gift__description {
+  margin: 0;
+  margin-top: 126px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    margin: 0;
+    margin-left: 344px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    margin: 0;
+    margin-top: 129px;
+
+    text-align: center;
+  }
+}
+

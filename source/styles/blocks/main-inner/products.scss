@@ -1,0 +1,27 @@
+.products {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+
+    list-style-type: none;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    text-align: center;
+  }
+}

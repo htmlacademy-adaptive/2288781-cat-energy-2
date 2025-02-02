@@ -1,0 +1,57 @@
+.main-inner {
+  background-color: $white;
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__title {
+    position: relative;
+
+    margin: 27px 0 41px;
+
+    font-family: $main-font;
+
+    text-align: left;
+    border-top: 1px solid $specify-light-grey;
+
+    @include max-width-mobile {
+      &::after {
+        @include pseudo-element;
+        top: -28px;
+        left: -20px;
+
+        width: 100%;
+        height: 1px;
+        margin: 0;
+        padding: 20px 0 25px;
+
+        background-color: $specify-light-grey;
+      }
+
+      &::before {
+        @include pseudo-element;
+        bottom: -41px;
+        left: -20px;
+
+        width: 100%;
+        height: 1px;
+        margin: 0;
+        padding: 20px 0 25px;
+
+        background-color: $specify-light-grey;
+      }
+    }
+
+    @include tablet {
+      margin: 65px 0 74px;
+
+      border: none;
+    }
+
+    @include desktop {
+      margin: 74px 0 71px;
+    }
+  }
+}
+

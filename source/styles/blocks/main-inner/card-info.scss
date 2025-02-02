@@ -1,0 +1,22 @@
+.card-info {
+  &__list {
+    list-style-type: none;
+  }
+
+  // &__item {
+  // }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+
+    text-align: center;
+  }
+
+  &__meaning {
+    font-size: 12px;
+    line-height: 16px;
+
+    text-align: center;
+  }
+}
