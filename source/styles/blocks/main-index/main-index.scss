@@ -1,0 +1,15 @@
+.main-index {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+
+  flex-grow: 1;
+}
+
+.main-index__hero,
+.main-index__programs,
+.main-index__reasons,
+.main-index__stats,
+.main-index__map {
+  position: relative;
+}

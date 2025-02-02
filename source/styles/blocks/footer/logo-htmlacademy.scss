@@ -1,0 +1,47 @@
+.logo-htmlacademy__image {
+  @include reset-link;
+
+  position: relative;
+
+  font-family: $base-font;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: $accent-dark-grey;
+  text-decoration: none;
+
+  & img {
+    object-fit: contain;
+  }
+
+  &::after {
+    @include pseudo-element;
+    top: 23px;
+    right: 0;
+
+    width: 27px;
+    height: 34px;
+
+    background-color: $accent-dark-grey;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("../../../icons/stack.svg#icon-htmlacademy");
+  }
+
+  &:hover::after {
+    background-color: $primary;
+  }
+
+  &:active::after {
+    background-color: $primary;
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+
+  @include desktop {
+    position: relative;
+  }
+}
