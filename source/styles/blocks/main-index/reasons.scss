@@ -1,10 +1,20 @@
 .reasons {
-  position: relative;
-
   margin: 0 auto;
+  margin-bottom: 49px;
+
+  @include tablet {
+    margin-bottom: 47px;
+  }
+
+  @include desktop {
+    margin-bottom: 69px;
+  }
 
   &__wrapper {
     @include container;
+
+    width: 100%;
+    min-width: 768px;
   }
 
   &__title {
@@ -19,19 +29,24 @@
 .reasons__list {
   @include reset-list;
 
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-  margin: 0 0 49px;
+  max-width: 280px;
+
+  margin: 0;
 
   @include tablet {
     position: relative;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 38px 139px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 37px 137px;
 
-    margin: 0 0 89px;
+    max-width: 708px;
+
+    margin: 0 80px 0 0;
 
     &::after {
       @include pseudo-element;
@@ -48,7 +63,7 @@
   @include desktop {
     gap: 80px;
 
-    margin: 0 0 69px;
+    margin: 0;
   }
 }
 
@@ -57,7 +72,6 @@
 
   display: flex;
   align-items: center;
-  gap: 20px;
 
   max-width: 320px;
   min-height: 60px;
@@ -76,7 +90,7 @@
 
     flex-direction: column;
     align-items: flex-start;
-    gap: 31px;
+    gap: 37px 137px;
 
     width: 245px;
     padding: 40px 0 57px;
@@ -123,7 +137,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-leaf2");
+      background-image: url("../../../icons/stack.svg#icon-leaf");
       background-size: 25px 28px;
       background-repeat: no-repeat;
     }
@@ -132,11 +146,11 @@
   &--powder {
     position: relative;
 
-    ::before {
+    &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-powder2");
-      background-size: 26px 29px;
+      background-image: url("../../../icons/stack.svg#icon-powder");
+      background-size: 27px 29px;
       background-repeat: no-repeat;
     }
   }
@@ -147,7 +161,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-food2");
+      background-image: url("../../../icons/stack.svg#icon-food");
       background-size: 25px 30px;
       background-repeat: no-repeat;
     }
@@ -156,10 +170,10 @@
   &--time {
     position: relative;
 
-    &--time::before {
+    &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-time2");
+      background-image: url("../../../icons/stack.svg#icon-time");
       background-size: 26px 31px;
       background-repeat: no-repeat;
     }

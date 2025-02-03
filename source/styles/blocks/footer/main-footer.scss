@@ -1,84 +1,45 @@
 .main-footer {
-  min-height: 240px;
-
   background-color: $accent-light-grey;
 
-  @include tablet {
-    min-height: 140px;
-  }
+  &__map {
+    position: relative;
 
-  @include desktop {
-    min-height: 169px;
-  }
-}
-
-.main-footer__map {
-  position: relative;
-
-  &--background {
-    background-color: $accent-light-grey;
-  }
-}
-
-.main-footer__wrapper {
-  @include container;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 40px 0;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $specify-light-grey;
-  }
-
-  @include tablet {
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    padding: 55px 0;
-
-    &:not(:last-child) {
-      border-bottom: none;
+    &--background {
+      background-color: $accent-light-grey;
     }
   }
 
-  @include desktop {
-    padding: 66px 0;
+  &__footer-logotext {
+    margin: 0 auto;
+    padding: 20px 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    &:hover img,
+    &:focus img {
+      fill: $hover;
+    }
+
+    &:active img {
+      fill: $active;
+    }
   }
-}
 
-.main-footer__footer-logotext {
-  margin: 0;
-  padding: 20px 0;
+  &__footer-logotext-image {
+    width: 128px;
+    height: 24px;
 
-  cursor: pointer;
-  text-align: center;
-
-  &[path]:hover,
-  &[path]:focus {
-    fill: $hover;
+    vertical-align: middle;
   }
 
-  &[path]:active {
-    fill: $active;
+  &__social {
+    min-width: 132px;
+
+    text-align: center;
   }
-}
 
-.main-footer__footer-logotext-image {
-  width: 128px;
-  height: 24px;
-}
-
-.main-footer__social {
-  min-width: 280px;
-
-  text-align: center;
-}
-
-.main-footer__logo-htmlacademy {
-  position: relative;
+  &__logo-htmlacademy {
+    position: relative;
+  }
 }

@@ -236,30 +236,40 @@
 
   <footer class="page__main-footer main-footer">
 
-    <section class="main-footer__map main-footer__map--background map">
+    <section class="main-footer__map map">
 
       <h2 class="map__title title visually-hidden">Местонахождение офиса онлайн-магазина «Кэт Энерджи» с вывеской на карте</h2>
 
       <div class="map__wrapper">
 
-        <div class="map__content">
+        <p class="map__text">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
 
-          <p class="map__text">Приглашаем<br> к сотрудничеству дилеров!</p>
-
-          <address class="map__address">
-            <span>Ул. Большая Конюшенная, д. 19/8</span>
-            <span>Санкт-Петербург</span>
-          </address>
-
-        </div>
+        <address class="map__address">
+          Ул. Большая <br>Конюшенная, д. 19/8<br>
+          <span class="map__city">Санкт-Петербург</span>
+        </address>
 
       </div>
 
-      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5420.122870671311!2d30.324542009035714!3d59.93897378098787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1728051462390!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
       <div class="map__location">
-        <span class="map__image--location visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19/8</span>
-        <span class="map__image--pin visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
+
+        <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19/8</span>
+
+        <iframe class="map__location-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5420.122870671311!2d30.324542009035714!3d59.93897378098787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1728051462390!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" width="1440" height="400" srcset="images/maps/location-desktop@1x.webp 1x, images/maps/location-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" width="768" height="400" srcset="images/maps/location-tablet@1x.webp 1x, images/maps/location-tablet@2x.webp 2x">
+          <source media="(min-width: 320px)" type="image/webp" width="320" height="320" srcset="images/maps/location-mobile@1x.webp 1x, images/maps/location-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/location-desktop@1x.jpg 1x, images/maps/location-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/location-tablet@1x.jpg 1x, images/maps/location-tablet@2x.jpg 2x">
+          <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+        </picture>
+
+        <div class="map__location-pin">
+          <span class="map__pin--image visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
+        </div>
+
       </div>
 
     </section>

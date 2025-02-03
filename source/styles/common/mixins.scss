@@ -37,7 +37,7 @@
 // Контейнер
 @mixin container {
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   max-width: $breakpoint-desktop-min;
   margin: auto;
 
