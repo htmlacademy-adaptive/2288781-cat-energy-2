@@ -61,7 +61,7 @@
 
   max-width: 320px;
   min-height: 60px;
-  padding: 0 20px 0 100px;
+  padding: 0 0 0 80px;
 
   counter-increment: number;
 
@@ -123,7 +123,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-leaf");
+      background-image: url("../../../icons/stack.svg#icon-leaf2");
       background-size: 30px 32px;
       background-repeat: no-repeat;
     }
@@ -135,7 +135,7 @@
     ::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-powder");
+      background-image: url("../../../icons/stack.svg#icon-powder2");
       background-size: 30px 32px;
       background-repeat: no-repeat;
     }
@@ -147,7 +147,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-food");
+      background-image: url("../../../icons/stack.svg#icon-food2");
       background-size: 30px 32px;
       background-repeat: no-repeat;
     }
@@ -159,7 +159,7 @@
     &--time::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-time");
+      background-image: url("../../../icons/stack.svg#icon-time2");
       background-size: 30px 32px;
       background-repeat: no-repeat;
     }
