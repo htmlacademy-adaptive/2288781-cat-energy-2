@@ -1,52 +1,12 @@
 .reasons {
-  margin: 0 auto;
-  margin-bottom: 49px;
+  padding: 0 0 49px;
+
+  @include outline($test-color: #5aeca8);
 
   @include tablet {
-    margin-bottom: 47px;
-  }
-
-  @include desktop {
-    margin-bottom: 69px;
-  }
-
-  &__wrapper {
-    @include container;
-
-    width: 100%;
-    min-width: 768px;
-  }
-
-  &__title {
-    margin: 0 0 40px;
-
-    @include tablet {
-      margin: 0 0 32px;
-    }
-  }
-}
-
-.reasons__list {
-  @include reset-list;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  max-width: 280px;
-
-  margin: 0;
-
-  @include tablet {
-    position: relative;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 37px 137px;
-
-    max-width: 708px;
-
-    margin: 0 80px 0 0;
+    min-height: 597px;
+    margin-right: 75px;
+    padding: 0 0 47px;
 
     &::after {
       @include pseudo-element;
@@ -61,23 +21,83 @@
   }
 
   @include desktop {
-    gap: 80px;
+    min-height: 280px;
+    padding: 0;
 
-    margin: 0;
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.reasons__wrapper {
+  @include container;
+}
+
+.reasons__title {
+  width: 280px;
+  margin: 0;
+  padding: 0 0 40px;
+
+  text-align: left;
+
+  @include tablet {
+    width: 708px;
+    padding: 45px 0 32px;
+  }
+
+  @include desktop {
+    width: 1000px;
+    padding-top: 71px;
+  }
+}
+
+.reasons__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  min-width: 280px;
+  min-height: 300px;
+  margin: 0;
+  padding: 0;
+
+  @include tablet {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 37px 137px;
+    align-items: start;
+
+    max-width: 708px;
+    margin: 0 75px 0 0;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 81px;
+    justify-content: space-between;
+
+    margin: 0 auto;
   }
 }
 
 .reasons__item {
   position: relative;
 
-  display: flex;
-  align-items: center;
-
-  max-width: 320px;
   min-height: 60px;
-  padding: 0 0 0 80px;
+  margin: 0;
+  padding: 0;
 
-  counter-increment: number;
+  counter-increment: number 1;
+
+  @include outline($test-color: #ec5a86);
 
   @include max-width-mobile {
     &:not(:last-child) {
@@ -88,12 +108,10 @@
   @include tablet {
     position: relative;
 
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 37px 137px;
-
-    width: 245px;
-    padding: 40px 0 57px;
+    min-width: 250px;
+    min-height: 280px;
+    margin: 0;
+    padding: 0;
 
     &::after {
       content: counter(number);
@@ -110,22 +128,24 @@
   }
 
   @include desktop {
-    gap: 80px;
+    margin: 0 0 69px;
   }
 
   &::before {
     @include pseudo-element;
-    top: 0;
+    top: -2px;
     left: 0;
 
     width: 60px;
     height: 60px;
 
     background-color: $primary;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 
     @include tablet {
+      top: 40px;
+
       width: 80px;
       height: 80px;
     }
@@ -139,7 +159,6 @@
 
       background-image: url("../../../icons/stack.svg#icon-leaf");
       background-size: 25px 28px;
-      background-repeat: no-repeat;
     }
   }
 
@@ -181,10 +200,21 @@
 }
 
 .reasons__item-text {
-  margin: 0;
+  width: 100%;
+  min-width: 200px;
+  min-height: 72px;
+  margin: 0 0 0 80px;
+  padding: 2px 0 4px;
 
   @include tablet {
+    min-width: 204px;
+    margin: 151px 0 57px;
+    padding: 0;
+
     font-size: 16px;
     line-height: 24px;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }

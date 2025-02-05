@@ -242,10 +242,10 @@
 
       <div class="map__wrapper">
 
-        <p class="map__text">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+        <p class="map__text">Приглашаем к&nbsp;сотрудничеству<br> дилеров!</p>
 
         <address class="map__address">
-          Ул. Большая <br>Конюшенная, д. 19/8<br>
+          <span class="map__street">Ул. Большая Конюшенная, д. 19/8</span>
           <span class="map__city">Санкт-Петербург</span>
         </address>
 
@@ -255,16 +255,16 @@
 
         <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19/8</span>
 
-        <iframe class="map__location-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5420.122870671311!2d30.324542009035714!3d59.93897378098787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1728051462390!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
         <picture>
           <source media="(min-width: 1440px)" type="image/webp" width="1440" height="400" srcset="images/maps/location-desktop@1x.webp 1x, images/maps/location-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" type="image/webp" width="768" height="400" srcset="images/maps/location-tablet@1x.webp 1x, images/maps/location-tablet@2x.webp 2x">
           <source media="(min-width: 320px)" type="image/webp" width="320" height="320" srcset="images/maps/location-mobile@1x.webp 1x, images/maps/location-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/location-desktop@1x.jpg 1x, images/maps/location-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/location-tablet@1x.jpg 1x, images/maps/location-tablet@2x.jpg 2x">
-          <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга">
+          <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга" loading="lazy">
         </picture>
+
+        <iframe class="map__location-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198161!2d30.320472477341305!3d59.9387191620936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1727771187651!5m2!1sru!2sua" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <div class="map__location-pin">
           <span class="map__pin--image visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
@@ -276,35 +276,43 @@
 
     <div class="main-footer__wrapper">
 
-      <a class="main-footer__footer-logotext" href="./index.html" aria-current="page" aria-label="Текстовый логотип онлайн-магазина «Кэт энерджи» | Активная главная страница">
+      <a class="main-footer__footer-logotext" href="./index.html" aria-current="page">
+
+        <span class="visually-hidden">Текстовый логотип онлайн-магазина «Кэт энерджи» | Активная главная страница</span>
 
         <img class="main-footer__footer-logotext-image" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи».">
 
       </a>
 
       <div class="main-footer__social social">
+
         <ul class="social__list">
+
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Переход на канал HTML Academy в «Вконтакте»</span>
             </a>
           </li>
+
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Переход на канал HTML Academy в «Youtube»</span>
             </a>
           </li>
+
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Переход на канал HTML Academy в «Телеграмм»</span>
             </a>
           </li>
+
         </ul>
+
       </div>
 
       <div class="main-footer__logo-htmlacademy logo-htmlacademy">
-        <span class="logo-htmlacademy__text">HTML Academy</span>
-        <a class="logo-htmlacademy__image" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="logo-htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="logo-htmlacademy__text">HTML Academy</span>
           <span class="visually-hidden">Иконка логотипа HTML Academy</span>
         </a>
       </div>

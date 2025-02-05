@@ -12,14 +12,12 @@
 .programs__wrapper {
   @include container;
 
+  display: flex;
+
   padding-bottom: 20px;
 
   @include tablet {
     padding-bottom: 0;
-  }
-
-  @include desktop {
-    padding-bottom: 71px;
   }
 }
 
