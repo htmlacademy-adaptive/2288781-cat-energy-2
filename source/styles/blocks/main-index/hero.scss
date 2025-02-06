@@ -48,6 +48,8 @@
   color: $white;
   text-align: center;
 
+  transition: all 0.8s ease-out;
+
   @include tablet {
     width: 420px;
     margin: 65px 20px 20px 120px;
@@ -94,6 +96,8 @@
   display: block;
 
   margin: 29px auto 3px;
+
+  transition: all 0.8s ease-out;
 
   @include tablet {
     position: absolute;

@@ -48,6 +48,8 @@
     width: 33px;
     height: 38px;
 
+    border-style: none;
+
     @include tablet {
       width: 60px;
       height: 50px;

@@ -5,43 +5,47 @@
 
   background: $very-light-grey;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include outline($test-color: #ee00ff);
+
+  @include tablet {
     padding: 45px 0 0;
 
-    background: $white;
+    background: transparent;
     border-top: 1px solid $extra-light-grey;
-
-    &::before {
-      @include pseudo-element;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      height: 462px;
-
-      background-color: $very-light-grey;
-
-      // @media (min-width: $breakpoint-desktop-min) {
-      //   background-size: 100% 100%;
-      //   background-image: linear-gradient(to right, $very-light-grey, $very-light-grey calc(50% + 200px), $very-light-grey calc(50% + 200px));
-      // }
-
-      // &--before::before {
-      //   background-color: $very-light-grey;
-      //   background-image: none;
-      // }
-
-      // &--after::before {
-      //   background-color: $very-light-grey;
-      //   background-image: none;
-      // }
-    }
   }
 
   @media (min-width: $breakpoint-desktop-min) {
     padding-top: 0;
 
     border-top: none;
+  }
+}
+
+.stats::before {
+  @include pseudo-element;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 462px;
+
+  background-color: $very-light-grey;
+
+  @include tablet {
+    padding: 0;
+
+    background-color: transparent;
+    background-image: linear-gradient(to top, $very-light-grey 462px, transparent 462px);
+  }
+
+  &--before::before {
+    background-color: $very-light-grey;
+    background-image: none;
+  }
+
+  &--after::before {
+    background-color: $very-light-grey;
+    background-image: none;
   }
 }
 

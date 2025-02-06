@@ -67,10 +67,18 @@
   }
 
   &__item {
-    height: 66px;
+    height: 65px;
+
+    transition: all 0.8s ease-out;
+
+    @include max-width-mobile {
+      border-top: 1px solid $extra-light-grey;
+    }
 
     @include tablet {
       height: 50px;
+
+      border: none;
     }
 
     @include desktop {
@@ -105,8 +113,6 @@
 
       min-height: 66px;
       padding: 22px 0 24px;
-
-      border-top: 1px solid $extra-light-grey;
     }
 
     @include tablet {

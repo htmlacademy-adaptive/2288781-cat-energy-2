@@ -1,12 +1,17 @@
 .reasons {
-  padding: 0 0 49px;
+  transition: all 0.8s ease-out;
 
-  @include outline($test-color: #5aeca8);
+  @include max-width-mobile {
+    max-width: 320px;
+    margin: 20px auto 49px;
+    padding: 0;
+  }
 
   @include tablet {
+    max-width: 768px;
     min-height: 597px;
-    margin-right: 75px;
-    padding: 0 0 47px;
+    margin: 45px auto 47px;
+    padding: 0;
 
     &::after {
       @include pseudo-element;
@@ -21,83 +26,79 @@
   }
 
   @include desktop {
+    max-width: 1440px;
     min-height: 280px;
+    margin: auto;
     padding: 0;
 
     &::after {
       content: none;
     }
   }
-}
 
-.reasons__wrapper {
-  @include container;
-}
-
-.reasons__title {
-  width: 280px;
-  margin: 0;
-  padding: 0 0 40px;
-
-  text-align: left;
-
-  @include tablet {
-    width: 708px;
-    padding: 45px 0 32px;
+  &__wrapper {
+    @include container;
   }
 
-  @include desktop {
-    width: 1000px;
-    padding-top: 71px;
-  }
-}
+  &__title {
+    width: 280px;
+    margin: 0 0 40px;
+    padding: 0;
 
-.reasons__list {
-  @include reset-list;
+    text-align: left;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    @include tablet {
+      width: 708px;
+      margin: 0 0 32px;
+      padding: 0;
+    }
 
-  width: 100%;
-  min-width: 280px;
-  min-height: 300px;
-  margin: 0;
-  padding: 0;
-
-  @include tablet {
-    position: relative;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 37px 137px;
-    align-items: start;
-
-    max-width: 708px;
-    margin: 0 75px 0 0;
+    @include desktop {
+      width: 1000px;
+      padding-top: 71px;
+    }
   }
 
-  @include desktop {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    gap: 81px;
-    justify-content: space-between;
+  &__list {
+    @include reset-list;
 
-    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+
+    @include tablet {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 37px 137px;
+      align-items: start;
+
+      margin: 0 75px 0 0;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: 81px;
+      justify-content: space-between;
+
+      margin: 0 auto;
+    }
   }
 }
 
 .reasons__item {
   position: relative;
 
+  display: flex;
+
   min-height: 60px;
   margin: 0;
   padding: 0;
 
   counter-increment: number 1;
-
-  @include outline($test-color: #ec5a86);
 
   @include max-width-mobile {
     &:not(:last-child) {
