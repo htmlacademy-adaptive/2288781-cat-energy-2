@@ -1,4 +1,14 @@
-.logo-htmlacademy__image {
+.logo-htmlacademy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+
+  border-top: 1px solid $specify-light-grey;
+}
+
+.logo-htmlacademy__link {
   @include reset-link;
 
   position: relative;
@@ -9,10 +19,6 @@
 
   color: $accent-dark-grey;
   text-decoration: none;
-
-  & img {
-    object-fit: contain;
-  }
 
   &::after {
     @include pseudo-element;

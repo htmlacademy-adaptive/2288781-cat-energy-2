@@ -32,23 +32,18 @@
     flex-direction: row;
     justify-content: space-between;
 
-    min-width: $breakpoint-mobile-min;
+    width: $breakpoint-mobile-min;
 
     @include tablet {
-      justify-content: space-between;
       align-items: flex-end;
 
       width: $breakpoint-tablet-min;
       height: 50px;
-      margin: 0 auto;
     }
 
     @include desktop {
-      width: 1220px;
+      width: $breakpoint-desktop-min;
       height: 59px;
-      max-width: $breakpoint-desktop-min;
-      margin: 0 auto;
-      padding: 55px 0 0;
     }
   }
 

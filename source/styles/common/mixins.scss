@@ -185,7 +185,7 @@
   text-decoration: none;
   text-align: center;
   word-break: break-word;
-  border: none;
+  border-style: none;
   cursor: pointer;
   background: none;
 
@@ -213,6 +213,7 @@
   background-color: $bg-color;
 
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition-duration: 1s;
 
   &:hover {
     $bg-color: $hover-green;
@@ -235,6 +236,7 @@
   background-color: $bg-color;
 
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition-duration: 1s;
 
   &:hover {
     $bg-color: $extra-light-grey;

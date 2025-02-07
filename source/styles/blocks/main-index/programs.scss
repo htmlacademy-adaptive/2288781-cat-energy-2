@@ -30,8 +30,8 @@
   grid-template-columns: 1fr;
   gap: 20px;
 
-  width: 100%;
   min-width: 280px;
+  margin: auto;
 
   @include tablet {
     gap: 30px;
@@ -186,7 +186,7 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 15px;
 
@@ -202,15 +202,20 @@
 
   transition: color 0.1s ease-out;
 
+
   @include tablet {
     gap: 25px;
 
-    width: 165px;
+    width: 227px;
     margin: 0;
   }
 
   @include tablet {
-    width: 168px;
+    width: 340px;
+  }
+
+  @include desktop {
+    min-width: 457px;
   }
 
   &:active {

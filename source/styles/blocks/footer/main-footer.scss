@@ -1,5 +1,6 @@
 .main-footer {
   background-color: $accent-light-grey;
+  color: $black;
 
   &__map {
     position: relative;
@@ -9,12 +10,26 @@
     }
   }
 
+  &__wrapper {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
   &__footer-logotext {
+    @include reset-link;
+
     margin: 0 auto;
     padding: 20px 0;
 
     cursor: pointer;
     text-align: center;
+    color: $extra-dark-grey;
+    border-bottom: 1px solid $specify-light-grey;
 
     &:hover img,
     &:focus img {
@@ -34,9 +49,13 @@
   }
 
   &__social {
-    min-width: 132px;
+    display: flex;
+    align-self: center;
+    gap: 24px;
 
-    text-align: center;
+    min-width: 132px;
+    margin: 0;
+    padding: 20px 0;
   }
 
   &__logo-htmlacademy {

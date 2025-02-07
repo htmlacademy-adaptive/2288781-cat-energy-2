@@ -1,4 +1,6 @@
 .navigation {
+  transition: all 0.8s ease-out;
+
   &__toggle {
     position: relative;
     right: 0;
@@ -216,9 +218,6 @@
     & &__list {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-
-      min-width: 436px;
 
       border: none;
     }
