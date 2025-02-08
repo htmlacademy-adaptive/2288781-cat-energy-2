@@ -5,51 +5,40 @@ on:
     branches:
       - master
 
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
     name: Deploy
-    url: ${{ steps.deployment.outputs.page_url }}
 
-  runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-  steps:
+    runs-on: ubuntu-latest
 
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-          persist-credentials: false
+    steps:
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version-file: 'package.json'
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Restore cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: cache-npm-${{ hashFiles('./package-lock.json') }}
-        restore-keys: cache-npm-
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: cache-npm-${{ hashFiles('./package-lock.json') }}
+          restore-keys: cache-npm-
 
-    - name: Build project
-      run: npm run build
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: ./build
-        branch: gh-pages
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./build
+          branch: gh-pages
