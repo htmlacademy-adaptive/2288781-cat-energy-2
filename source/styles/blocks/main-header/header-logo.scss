@@ -65,19 +65,6 @@
     width: 101px;
     height: 18px;
 
-    [path] {
-      fill: $extra-dark-grey;
-    }
-
-    &[path]:hover,
-    &[path]:focus {
-      fill: $hover;
-    }
-
-    &[path]:active {
-      fill: $active;
-    }
-
     @include desktop {
       width: 118px;
       height: 21px;

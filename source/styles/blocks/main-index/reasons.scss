@@ -38,6 +38,8 @@
 
   &__wrapper {
     @include container;
+
+    margin: auto;
   }
 
   &__title {

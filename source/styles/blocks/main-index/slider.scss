@@ -1,0 +1,142 @@
+.slider {
+  position: relative;
+
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  touch-action: none;
+
+  @include tablet {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__range-toggle {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+
+  width: 4px;
+  height: 100%;
+  padding: 0;
+
+  border: none;
+  border-radius: 2px;
+  background-color: $very-dark-grey;
+  cursor: pointer;
+
+  &:hover,
+  &:hover::after,
+  &:focus,
+  &:focus::after {
+    background-color: $primary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $primary;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $hover-green;
+  }
+
+  &:active::before {
+    background-color: $hover-green;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.slider__range-toggle::before {
+  @include pseudo-element;
+  left: 50%;
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: $white;
+  border: 2px solid $very-dark-grey;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.slider__range-toggle::after {
+  @include pseudo-element;
+  left: 50%;
+  top: 50%;
+
+  width: 24px;
+  height: 18px;
+
+  background-color: $very-dark-grey;
+  mask-image: url("../../../icons/stack.svg#icon-thumb");
+  mask-size: 24px 18px;
+  mask-repeat: no-repeat;
+
+  transform: translate(-50%, -50%);
+}
+
+.slider__image {
+  width: 280px;
+  height: 100%;
+
+  object-fit: cover;
+  pointer-events: none;
+
+  @include tablet {
+    width: 560px;
+  }
+}
+
+.slider__wrapper-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+  background-color: $very-light-grey;
+  pointer-events: none;
+
+  @include tablet {
+    background-color: $very-light-grey;
+  }
+
+  @include desktop {
+    background-color: $accent-light-grey;
+  }
+}
+
+.slider__wrapper-after {
+  pointer-events: none;
+
+  @include tablet {
+    &::after {
+      @include pseudo-element;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 147px;
+
+      background-color: $accent-dark-grey;
+
+      @include desktop {
+        height: 134px;
+      }
+    }
+  }
+}
+

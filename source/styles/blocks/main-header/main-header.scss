@@ -15,8 +15,6 @@
   background-color: $white;
   color: $black;
 
-  transition: all 0.8s ease-out;
-
   @include tablet {
     padding: 25px 4px 0;
   }
@@ -31,6 +29,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     width: $breakpoint-mobile-min;
 

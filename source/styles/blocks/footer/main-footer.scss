@@ -2,29 +2,27 @@
   background-color: $accent-light-grey;
   color: $black;
 
-  &__map {
-    position: relative;
-
-    &--background {
-      background-color: $accent-light-grey;
-    }
-  }
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   &__wrapper {
     @include container;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 
-    padding-top: 20px;
-    padding-bottom: 40px;
+    width: 320px;
   }
 
   &__footer-logotext {
     @include reset-link;
 
-    margin: 0 auto;
-    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
 
     cursor: pointer;
     text-align: center;

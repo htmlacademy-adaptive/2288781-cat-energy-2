@@ -9,6 +9,9 @@
 @import "./common/global.scss";
 //Скрытие элемента
 @import "./common/visually-hidden.scss";
+//Анимация
+@import "./common/animation.scss";
+
 
 /* BLOCKS */
 //Общие блоки
@@ -25,16 +28,16 @@
 
 //Подвал
 @import "./blocks/footer/main-footer.scss";
-@import "./blocks/footer/map.scss";
 @import "./blocks/footer/social.scss";
 @import "./blocks/footer/logo-htmlacademy.scss";
 
 //Главная страница
-@import "./blocks/main-index/main-index.scss";
 @import "./blocks/main-index/hero.scss";
 @import "./blocks/main-index/programs.scss";
 @import "./blocks/main-index/reasons.scss";
 @import "./blocks/main-index/stats.scss";
+@import "./blocks/main-index/slider.scss";
+@import "./blocks/main-index/map.scss";
 
 //Страница каталога
 @import "./blocks/main-inner/main-inner.scss";

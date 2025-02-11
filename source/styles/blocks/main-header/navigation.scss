@@ -1,6 +1,4 @@
 .navigation {
-  transition: all 0.8s ease-out;
-
   &__toggle {
     position: relative;
     right: 0;
@@ -25,6 +23,9 @@
 
     background-color: $white;
     text-align: center;
+
+    transform: translateY(-150%);
+    animation: ani 1s forwards;
 
     @include max-width-mobile {
       position: absolute;
@@ -69,9 +70,7 @@
   }
 
   &__item {
-    height: 65px;
-
-    transition: all 0.8s ease-out;
+    height: 66px;
 
     @include max-width-mobile {
       border-top: 1px solid $extra-light-grey;
@@ -98,8 +97,6 @@
     color: $black;
     text-transform: uppercase;
     text-align: center;
-
-    transition: all 0.3s ease-out;
 
     &:hover,
     &:focus {
@@ -148,7 +145,7 @@
         0 8px 0 0 $black,
         0 16px 0 0 $black;
 
-      transition: all 0.3s ease-out;
+      transition: background 1s 1s;
     }
 
     &--opened &__toggle::before,
@@ -161,20 +158,16 @@
       height: 1.5px;
 
       background-color: $black;
-
-      transition: all 0.3s ease-out;
     }
 
     &--opened &__toggle::before {
       box-shadow: none;
 
       transform: rotate(45deg);
-      transition: all 0.3s ease-out;
     }
 
     &--opened &__toggle::after {
       transform: rotate(-45deg);
-      transition: all 0.3s ease-out;
     }
 
     &--closed &__toggle:hover::after {
@@ -211,6 +204,10 @@
 
     &--nojs &__list {
       display: block;
+    }
+
+    & &__link--current {
+      pointer-events: none;
     }
   }
 

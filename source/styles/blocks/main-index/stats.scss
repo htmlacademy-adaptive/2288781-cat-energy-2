@@ -1,287 +1,259 @@
 .stats {
-  position: relative;
-
-  padding: 25px 0 40px;
-
-  background: $very-light-grey;
-
-  @include outline($test-color: #ee00ff);
-
-  @include tablet {
-    padding: 45px 0 0;
-
-    background: transparent;
-    border-top: 1px solid $extra-light-grey;
-  }
-
-  @media (min-width: $breakpoint-desktop-min) {
-    padding-top: 0;
-
-    border-top: none;
-  }
-}
-
-.stats::before {
-  @include pseudo-element;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 462px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   background-color: $very-light-grey;
 
   @include tablet {
-    padding: 0;
+    position: relative;
 
-    background-color: transparent;
-    background-image: linear-gradient(to top, $very-light-grey 462px, transparent 462px);
+    padding-top: 45px;
+    padding-bottom: 101px;
+
+    background-color: $white;
+
+    &::before {
+      @include pseudo-element;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 463px;
+
+      background-color: $very-light-grey;
+    }
   }
 
-  &--before::before {
-    background-color: $very-light-grey;
-    background-image: none;
-  }
-
-  &--after::before {
-    background-color: $very-light-grey;
-    background-image: none;
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 75px;
   }
 }
 
 .stats__wrapper {
-  position: relative;
-
   @include container;
 
-  display: flex;
-  flex-direction: column;
-
-  width: 320px;
-  margin: 0 auto;
-
-  @media (min-width: $breakpoint-tablet-min) {
-    flex-wrap: wrap;
-    align-items: stretch;
-
-    width: 768px;
-
-    // margin-bottom: 80px;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
   }
+}
 
-  @media (min-width: $breakpoint-desktop-min) {
-    display: grid;
-    grid-template: "title slider" min-content "description slider" min-content "list slider" 1fr / 436px 656px;
-
-    // width: 100%;
-    // padding: 70px 0 75px;
+.stas__content {
+  @include desktop {
+    width: 436px;
   }
 }
 
 .stats__title {
-  grid-area: title;
-  margin-bottom: 40px;
+  min-width: 280px;
+  margin: 0 auto 40px;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  text-align: left;
+
+  @include tablet {
+    min-width: 708px;
     margin-bottom: 60px;
+
+    border: 1px solid $dark-grey;
+    border-top: 45px;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
-    margin-top: 69px;
-    margin-bottom: 146px;
+  @include desktop {
+    min-width: 436px;
+    margin-bottom: 76px;
+
+    border: none;
   }
 }
 
 .stats__description {
-  grid-area: description;
-
-  margin: 0;
+  width: 100%;
+  min-width: 280px;
+  min-height: 108px;
   margin-bottom: 20px;
 
-  font-family: $base-font;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
+    min-width: 708px;
+    min-height: 72px;
     margin-bottom: 55px;
+
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
+  @include desktop {
+    min-width: 436px;
+    min-height: 96px;
     margin-bottom: 69px;
   }
 }
 
 .stats__module {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
 
-  @media (min-width: $breakpoint-tablet-min) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 167px;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 167px;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
-    flex-direction: column;
+  @include desktop {
+    display: block;
   }
 }
 
 .stats__list {
-  grid-area: list;
+  @include reset-list;
 
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  gap: 35px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
 
-  margin: 0;
   margin-bottom: 20px;
 
-  @media (min-width: $breakpoint-tablet-min) {
-    grid-template-columns: repeat(2, max-content) 1fr;
-    gap: 42px;
+  @include tablet {
+    gap: 43px;
 
-    margin-bottom: 43px;
+    margin-bottom: 0;
   }
 
-  @media (min-width: $breakpoint-desktop-min) {
-    grid-template-columns: repeat(2, max-content);
-    grid-template-rows: min-content 1fr;
-    justify-self: flex-start;
-    row-gap: 59px;
+  @include desktop {
+    gap: 42px;
 
     margin-bottom: 55px;
   }
 }
 
 .stats__item {
-  position: relative;
-  margin: 0;
-
   width: 124px;
-  height: 70px;
+  min-height: 56px;
 
-  text-align: center;
+  border: 1px solid $dark-grey;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     width: 162px;
-    height: 77px;
-  }
-
-  &--bordered {
-    position: relative;
-
-    grid-column: span 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 124px;
-    height: 70px;
-
-    border: 1px solid $dark-grey;
-    border-radius: 3px;
-
-    @media (min-width: $breakpoint-tablet-min) {
-      width: 162px;
-      height: 72px;
-    }
-  }
-
-  &--clean {
-    grid-column: span 2;
-
-    text-align: center;
-    border: none;
-
-    @media (min-width: $breakpoint-tablet-min) {
-      grid-column: span 1;
-
-      padding-top: 11px;
-    }
-
-    @media (min-width: $breakpoint-desktop-min) {
-      grid-column: span 2;
-
-      display: flex;
-
-      padding-top: 0;
-    }
-  }
-}
-
-////////
-.stats__item-action {
-  position: absolute;
-  top: 47px;
-  left: 50%;
-
-  margin: 0;
-  padding: 0 22px;
-
-  font-size: 12px;
-  line-height: 12px;
-
-  color: $accent-dark-grey;
-  background-color: $very-light-grey;
-  transform: translate(-50%);
-
-  @media (min-width: $breakpoint-tablet-min) {
-    top: 63px;
-    padding: 0 9px;
-
-    font-size: 14px;
-    line-height: 14px;
-
-    white-space: nowrap;
-    background-color: $white;
-  }
-
-  @media (min-width: $breakpoint-desktop-min) {
-    background-color: $very-light-grey;
+    min-height: 72px;
   }
 }
 
 .stats__item-number {
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 18px;
+  margin-top: 15px;
+  margin-bottom: 8px;
 
   font-family: $main-font;
   font-size: 24px;
   line-height: 24px;
 
-  border: 1px solid $dark-grey;
-  border-radius: 3px;
+  color: $black;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
 
-  @media (min-width: $breakpoint-tablet-min) {
-    padding-top: 15;
-    padding-bottom: 20;
+  @include tablet {
+    margin-bottom: 11px;
 
     font-size: 30px;
     line-height: 37px;
   }
 }
 
+.stats__item-action {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+
+  width: 77px;
+  margin-top: 8px;
+
+  font-family: $main-font;
+  font-size: 12px;
+  line-height: 12px;
+
+  color: $accent-dark-grey;
+  background-color: $very-light-grey;
+  letter-spacing: 0;
+  text-align: center;
+
+
+  transform: translateX(-50%);
+
+  &::before {
+    @include pseudo-element;
+    top: 0;
+    left: -10px;
+
+    width: 10px;
+    height: 15px;
+
+    background-color: $very-light-grey;
+  }
+
+  &::after {
+    @include pseudo-element;
+    top: 0;
+    right: -10px;
+
+    width: 10px;
+    height: 15px;
+
+    background-color: $very-light-grey;
+  }
+
+  @include tablet {
+    position: realitive;
+    bottom: -6px;
+
+    width: max-content;
+
+    line-height: 14px;
+
+    background-color: $white;
+
+    &::before {
+      @include pseudo-element;
+
+      background-color: $white;
+    }
+
+    &::after {
+      @include pseudo-element;
+
+      background-color: $white;
+    }
+  }
+
+  @include desktop {
+    position: relative;
+    top: 65px;
+
+    max-width: 125px;
+
+    background-color: $very-light-grey;
+
+    &::before {
+      background-color: $very-light-grey;
+    }
+
+    &::after {
+      background-color: $very-light-grey;
+    }
+  }
+}
+
+
 .stats__text {
   display: flex;
   justify-content: center;
   gap: 3px;
+
   margin: 0;
   margin-bottom: 20px;
 
   font-family: $main-font;
   line-height: 20px;
   text-transform: uppercase;
-
-  p {
-    margin: 0;
-  }
 
   @media (min-width: $breakpoint-tablet-min) {
     flex-direction: column;
@@ -293,10 +265,6 @@
     line-height: 20px;
 
     text-align: right;
-
-    p {
-      margin-bottom: 9px;
-    }
   }
 
   @media (min-width: $breakpoint-desktop-min) {

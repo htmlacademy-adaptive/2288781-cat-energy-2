@@ -32,7 +32,7 @@
             url("../../../images/index-page/cat-mobile@1x.webp") 1x type("image/webp"),
             url("../../../images/index-page/cat-mobile@1x.jpg") 1x type("image/jpeg")
           ),
-          linear-gradient(to bottom, #3f3f60 50%, #34344e 50%);
+          linear-gradient(to right, #5a5a62 50%, #42425b 50%);
         background-repeat: no-repeat;
         background-position: 60% center;
         background-size: cover, auto 302px, cover;
@@ -64,7 +64,7 @@
             url("../../../images/index-page/cat-desktop@1x.webp") 1x type("image/webp"),
             url("../../../images/index-page/cat-desktop@1x.jpg") 1x type("image/jpeg")
           ),
-          linear-gradient(316deg, #5b5b67, $black);
+          linear-gradient(104deg, #3c3c52, #3c3c52);
         background-repeat: no-repeat;
         background-size: auto, 1040px  694px;
 
@@ -117,7 +117,8 @@
   display: block;
 }
 
-.page__main {
+.page__main-index,
+.page__main-inner {
   flex-grow: 1;
 }
 

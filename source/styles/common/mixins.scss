@@ -1,10 +1,11 @@
 // Шрифты
-@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+@mixin font-face($font-family, $font-weight, $font-style, $font-src, $font-src2) {
   @font-face {
     font-family: $font-family;
     font-weight: $font-weight;
     font-style: $font-style;
     src: $font-src;
+    src: $font-src2;
     font-display: swap;
   }
 }
@@ -36,9 +37,7 @@
 
 // Контейнер
 @mixin container {
-  width: 100%;
-  min-width: 320px;
-  max-width: $breakpoint-desktop-min;
+  width: $breakpoint-mobile-min;
   margin: 0 auto;
 
   @include max-width-mobile {
@@ -55,6 +54,7 @@
 
   @include desktop {
     min-width: 1220px;
+    width: 1440px;
     padding: 0 110px;
   }
 }
