@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CatEnergy">
 
   <title>Учебный проект «Кэт энерджи» | Каталог продукции онлайн-магазина «Кэт энерджи»</title>
 
-  <link rel="stylesheet" href="./styles/styles.css" defer>
+  <link rel="stylesheet" href="./styles/styles.css">
 
   <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
-  <link rel="preload" href="./fonts/lato/Lato-Regular.woff" as="font" crossorigin="anonymous" type="font/woff">
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
-  <link rel="preload" href="./fonts/oswald/oswaldregular.woff" as="font" crossorigin="anonymous" type="font/woff">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml">
@@ -22,6 +21,7 @@
   <link rel="icon" href="32.png" sizes="32x32">
   <link rel="icon" href="16.png" sizes="16x16">
   <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
 <body class="page__body">
@@ -52,7 +52,7 @@
 
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--index navigation__list--catalog">
+        <ul class="navigation__list navigation__list--index navigation__list--catalog-index">
 
           <li class="navigation__item">
             <a class="navigation__link" href="./index.html" aria-current="page">Главная</a>
@@ -63,7 +63,7 @@
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Подбор программы</a>
+            <a class="navigation__link" href="./form.html">Подбор программы</a>
           </li>
 
         </ul>
@@ -601,6 +601,8 @@
     </div>
 
   </footer>
+
+  <script src="./scripts/index.js" defer></script>
 
 </body>
 

@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CatEnergy">
 
   <title>Учебный проект «Кэт энерджи» | Услуга в подборе программы в онлайн-магазине «Кэт энерджи»(формы)</title>
 
-  <link rel="stylesheet" href="./styles/styles.css" defer>
+  <link rel="stylesheet" href="./styles/styles.css">
 
   <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
-  <link rel="preload" href="./fonts/lato/Lato-Regular.woff" as="font" crossorigin="anonymous" type="font/woff">
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
-  <link rel="preload" href="./fonts/oswald/oswaldregular.woff" as="font" crossorigin="anonymous" type="font/woff">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml">
@@ -22,6 +21,7 @@
   <link rel="icon" href="32.png" sizes="32x32">
   <link rel="icon" href="16.png" sizes="16x16">
   <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
 <body class="page__body">
@@ -52,9 +52,9 @@
 
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--index navigation__list--catalog-index">
+        <ul class="navigation__list navigation__list--index navigation__list--form-index">
 
-          <li class="navigation__item navigation__item--active">
+          <li class="navigation__item">
             <a class="navigation__link " href="./index.html">Главная</a>
           </li>
 
@@ -63,7 +63,7 @@
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="#" aria-current="page">Подбор программы</a>
+            <a class="navigation__link navigation__link--current navigation__link--form-current" href="./form.html" aria-current="page">Подбор программы</a>
           </li>
 
         </ul>
@@ -76,42 +76,62 @@
 
   <main class="page__main main-form">
 
-    <form class="main-form__contact-form contact-form" action="https://echo.htmlacademy.ru" method="post">
-      <h2 class="contact-form__title">Подбор программы</h2>
-      <p class="contact-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <fieldset class="contact-form__info info">
-        <legend class="info__subtitle visually-hidden">Информация о коте</legend>
-        <div class="info__item"><label class="info__label" for="name">Имя:<sup>*</sup></label> <input class="info__input" type="text" id="name" name="name" placeholder="Барсик" aria-label="Как звать вашего кота?" required></div>
-        <div class="info__item"><label class="info__label" for="weighing">Вес(кг):<sup>*</sup></label> <input class="info__input" type="number" id="weighing" name="weighing" placeholder="7" aria-label="Сколько весит ваш кот?" required></div>
-        <div class="info__item"><label class="info__label" for="age">Возраст(лет):<sup>*</sup></label> <input class="info__input" type="number" id="age" name="age" placeholder="7" aria-label="Сколько лет вашему коту?" required></div>
-      </fieldset>
-      <fieldset class="contact-form__choice choice">
-        <legend class="choice__subtitle visually-hidden">Выбор подходящей программы:</legend>
-        <ul class="choice__list">
-          <li class="choice__item"><label class="choice__control" for="weight-loss"><input class="choice__control-radio" type="radio" id="weight-loss" name="weight-loss" value="weight-loss" checked="checked"> <span class="choice__text">Похудение</span></label></li>
-          <li class="choice__item"><label class="choice__control" for="weight-gain"><input class="choice__control-radio" type="radio" id="weight-gain" name="weight-gain" value="weight-gain"> <span class="choice__text">Набор массы</span></label></li>
-          <li class="choice__item"><label class="choice__control" for="donot-know"><input class="choice__control-radio" type="radio" id="donot-know" name="donot-know" value="donot-know"> <span class="choice__text">Не знаю (нужен ваш совет)</span></label></li>
-        </ul>
-      </fieldset>
-      <fieldset class="contact-form__contacts contacts">
-        <legend class="contacts__subtitle">Контактные данные (владельца кота)</legend>
-        <div class="contacts__item"><label class="contacts__label" for="email-stroke">E-mail:<sup>*</sup></label> <input class="contacts__input" type="text" id="email-stroke" name="email-stroke" placeholder="kuklachev@gmail.com" aria-label="Укажите вашу электронную почту" required> <button class="contacts__button" aria-label="Переход на почту" type="submit"></button></div>
-        <div class="contacts__item"><label class="contacts__label" for="phone-stroke">Телефон:<sup>*</sup></label> <input class="contacts__input" type="text" id="phone-stroke" name="phone-stroke" placeholder="8 (960) 900-60-90" aria-label="Укажите ваш контактный телефон" required> <button class="contacts__button" aria-label="Позвонить" type="submit"></button></div>
-      </fieldset>
-      <fieldset class="contact-form__comments comments">
-        <legend class="comments__subtitle">Комментарий</legend>
-        <div class="comments__item"><label class="comments__label visually-hidden" for="story"></label> <textarea class="comments__textarea" id="story" name="text" rows="10" cols="45" placeholder="Расскажите обо всех повадках кота"></textarea></div>
-      </fieldset>
-      <fieldset class="contact-form__add-info add-info">
-        <legend class="add-info__subtitle">Дополнительно</legend>
-        <ul class="add-info__list">
-          <li class="add-info__item"><label class="add-info__control"><input class="add-info__input" type="checkbox" name="sweetener" value="sweetener" checked="checked"> Сахарозаменитель</label></li>
-          <li class="add-info__item"><label class="add-info__control"><input class="add-info__input" type="checkbox" name="drinking-water" value="drinking-water"> Питьевая вода</label></li>
-          <li class="add-info__item"><label class="add-info__control"><input class="add-info-input" type="checkbox" name="milk" value="milk"> Молоко</label></li>
-          <li class="add-info__item"><label class="add-info__control"><input class="add-info-input" type="checkbox" name="vitamins" value="vitamins"> Витамины</label></li>
-        </ul>
-      </fieldset><button class="contact-form__button button" type="submit">Отправить заявку</button><small class="contact-form__footnote contact-form__footnote--bottom"><sup>*</sup> — Обязательные поля</small>
-    </form>
+    <div class="main-form__wrapper">
+
+      <form class="main-form__contact-form contact-form" action="https://echo.htmlacademy.ru" method="post">
+
+        <h2 class="contact-form__title title">Подбор программы</h2>
+
+        <p class="contact-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
+        <fieldset class="contact-form__info info">
+          <legend class="info__subtitle visually-hidden">Информация о коте</legend>
+          <div class="info__item"><label class="info__label" for="name">Имя:<sup>*</sup></label> <input class="info__input" type="text" id="name" name="name" placeholder="Барсик" aria-label="Как звать вашего кота?" required></div>
+          <div class="info__item"><label class="info__label" for="weighing">Вес(кг):<sup>*</sup></label> <input class="info__input" type="number" id="weighing" name="weighing" placeholder="7" aria-label="Сколько весит ваш кот?" required></div>
+          <div class="info__item"><label class="info__label" for="age">Возраст(лет):<sup>*</sup></label> <input class="info__input" type="number" id="age" name="age" placeholder="7" aria-label="Сколько лет вашему коту?" required></div>
+        </fieldset>
+
+        <fieldset class="contact-form__choice choice">
+          <legend class="choice__subtitle visually-hidden">Выбор подходящей программы:</legend>
+          <ul class="choice__list">
+            <li class="choice__item"><label class="choice__control" for="weight-loss"><input class="choice__control-radio" type="radio" id="weight-loss" name="weight-loss" value="weight-loss" checked="checked"> <span class="choice__text">Похудение</span></label></li>
+            <li class="choice__item"><label class="choice__control" for="weight-gain"><input class="choice__control-radio" type="radio" id="weight-gain" name="weight-gain" value="weight-gain"> <span class="choice__text">Набор массы</span></label></li>
+            <li class="choice__item"><label class="choice__control" for="donot-know"><input class="choice__control-radio" type="radio" id="donot-know" name="donot-know" value="donot-know"> <span class="choice__text">Не знаю (нужен ваш совет)</span></label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="contact-form__contacts contacts">
+          <legend class="contacts__subtitle">Контактные данные (владельца кота)</legend>
+          <div class="contacts__item"><label class="contacts__label" for="email-stroke">E-mail:<sup>*</sup></label> <input class="contacts__input" type="text" id="email-stroke" name="email-stroke" placeholder="kuklachev@gmail.com" aria-label="Укажите вашу электронную почту" required> <button class="contacts__button" aria-label="Переход на почту" type="submit"></button></div>
+          <div class="contacts__item"><label class="contacts__label" for="phone-stroke">Телефон:<sup>*</sup></label> <input class="contacts__input" type="text" id="phone-stroke" name="phone-stroke" placeholder="8 (960) 900-60-90" aria-label="Укажите ваш контактный телефон" required> <button class="contacts__button" aria-label="Позвонить" type="submit"></button></div>
+        </fieldset>
+
+        <fieldset class="contact-form__comments comments">
+          <legend class="comments__subtitle">Комментарий</legend>
+          <div class="comments__item"><label class="comments__label visually-hidden" for="story"></label> <textarea class="comments__textarea" id="story" name="text" rows="10" cols="45" placeholder="Расскажите обо всех повадках кота"></textarea></div>
+        </fieldset>
+
+        <fieldset class="contact-form__add-info add-info">
+          <legend class="add-info__subtitle">Дополнительно</legend>
+          <ul class="add-info__list">
+            <li class="add-info__item"><label class="add-info__control"><input class="add-info__input" type="checkbox" name="sweetener" value="sweetener" checked="checked"> Сахарозаменитель</label></li>
+            <li class="add-info__item"><label class="add-info__control"><input class="add-info__input" type="checkbox" name="drinking-water" value="drinking-water"> Питьевая вода</label></li>
+            <li class="add-info__item"><label class="add-info__control"><input class="add-info-input" type="checkbox" name="milk" value="milk"> Молоко</label></li>
+            <li class="add-info__item"><label class="add-info__control"><input class="add-info-input" type="checkbox" name="vitamins" value="vitamins"> Витамины</label></li>
+          </ul>
+        </fieldset>
+
+        <button class="contact-form__button button" type="submit">Отправить заявку</button>
+
+        <small class="contact-form__footnote contact-form__footnote--bottom"><sup>*</sup> — Обязательные поля</small>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer class="page__main-footer main-footer">
 
     <section class="main-footer__map map">
 
@@ -142,10 +162,6 @@
       </div>
 
     </section>
-
-  </main>
-
-  <footer class="page__main-footer main-footer">
 
     <div class="main-footer__wrapper">
 
@@ -185,6 +201,8 @@
     </div>
 
   </footer>
+
+  <script src="./scripts/index.js" defer></script>
 
 </body>
 

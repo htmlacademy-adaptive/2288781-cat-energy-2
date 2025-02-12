@@ -9,6 +9,8 @@
 
   <title>Учебный проект «Кэт энерджи» | Главная страница онлайн-магазина «Кэт энерджи»</title>
 
+  <link rel="stylesheet" href="./styles/styles.css">
+
   <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
 
@@ -20,8 +22,6 @@
   <link rel="icon" href="32.png" sizes="32x32">
   <link rel="icon" href="16.png" sizes="16x16">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <link rel="stylesheet" href="./styles/styles.css" defer>
 
 </head>
 
@@ -53,7 +53,7 @@
 
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--index navigation__list--catalog-index">
+        <ul class="navigation__list navigation__list--index">
 
           <li class="navigation__item">
             <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
@@ -64,7 +64,7 @@
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__link" href="./404.html">Подбор программы</a>
+            <a class="navigation__link" href="./form.html">Подбор программы</a>
           </li>
 
         </ul>
@@ -179,67 +179,58 @@
 
         <div class="stats__content">
 
-          <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="stats__example">
 
-          <div class="stats__module">
+            <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-            <ul class="stats__list">
+            <div class="stats__module">
 
-              <li class="stats__item">
-                <span class="stats__item-number">5 кг</span>
-                <span class="stats__item-action">Снижение веса</span>
-              </li>
+              <span class="stats__module--number">5 кг</span>
+              <span class="stats__module--action">Снижение веса</span>
 
-              <li class="stats__item">
-                <span class="stats__item-number">60 дней</span>
-                <span class="stats__item-action">Затрачено времени</span>
+            </div>
 
-              </li>
+            <div class="stats__module stats__module--days">
 
-              <li class="stats__text">
-                <span class="stats__text-action">Затраты на питание:</span>
-                <span class="stats__text-price">15 000 руб.</span>
-              </li>
+              <span class="stats__module--number">60 дней</span>
+              <span class="stats__module--action">Затрачено времени</span>
 
-            </ul>
+            </div>
+
+            <p class="stats__cost">Затраты на питание:
+
+              <span class="stats__cost-price">15 000 руб.</span>
+
+            </p>
 
           </div>
 
-        </div>
-
-        <div class="stats__slider slider">
-
-          <button class="slider__range-toggle" type="button">
-
-            <span class="visually-hidden">Передвинуть ползунок слайдов, чтобы посмотреть фотографии котов до/послe подбора питания</span>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewbox="0 0 24 18" fill="currentColor">
-              <path d="M8 0L0 9L8 18V0Z" />
-              <path d="M24 9L16 0V18L24 9Z" />
-            </svg>
-
-          </button>
-
-          <div class="slider__wrapper-before">
+          <div class="stats__slider slider">
 
             <picture>
               <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-before@1x.webp 1x, ./images/cats/cat-before@1x.webp 2x">
               <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-before-mobile@1x.webp 1x, ./images/cats/cat-before-mobile@2x.webp 2x">
 
               <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-before@1x.png 1x, images/cats/cat-before@2x.png 2x">
-              <img class="slider__image slider__image--before" width="280" height="256" src="./images/cats/cat-before-mobile@1x.png" srcset="images/cats/cat-before-mobile@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
+              <img class="slider__image slider__image--cat-before" width="280" height="256" src="./images/cats/cat-before-mobile@1x.png" srcset="images/cats/cat-before-mobile@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
             </picture>
 
-          </div>
+            <div class="slider__curtain">
 
-          <div class="slider__wrapper-after">
+              <button class="slider__tumb" type="button">
+
+                <span class="visually-hidden">Передвинуть ползунок слайдов, чтобы посмотреть фотографии котов до/послe подбора питания</span>
+
+              </button>
+
+            </div>
 
             <picture>
               <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-after@1x.webp 1x, ./images/cats/cat-after@1x.webp 2x">
               <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-after-mobile@1x.webp 1x, ./images/cats/cat-after-mobile@2x.webp  2x">
 
               <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-after@1x.png 1x, ./images/cats/cat-after@2x.png  2x">
-              <img class="slider__image slider__image--after" width="280" height="256" src="./images/cats/cat-after-mobile@1x.png" srcset="./images/cats/cat-after-mobile@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
+              <img class="slider__image slider__image--cat-after" width="280" height="256" src="./images/cats/cat-after-mobile@1x.png" srcset="./images/cats/cat-after-mobile@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
             </picture>
 
           </div>
@@ -249,6 +240,10 @@
       </div>
 
     </section>
+
+  </main>
+
+  <footer class="page__main-footer main-footer">
 
     <section class="map">
 
@@ -290,17 +285,18 @@
 
     </section>
 
-  </main>
-
-  <footer class="page__main-footer main-footer">
-
     <div class="main-footer__wrapper">
+
+      <div>
+
+      </div>
 
       <a class="main-footer__footer-logotext" href="./index.html" aria-current="page">
 
         <span class="visually-hidden">Текстовый логотип онлайн-магазина «Кэт энерджи» | Активная главная страница</span>
+        <span class="visually-hidden">Иконка текстового логотипа онлайн-магазина «Кэт энерджи»</span>
 
-        <img class="main-footer__footer-logotext-image" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи».">
+        <!-- <img class="main-footer__footer-logotext-image" width="128" height="24" src="../images/logo/footer-logo/footer-logotext.svg" alt="Товарный знак текстового логотипа онлайн-магазина «Кэт энерджи»."> -->
 
       </a>
 

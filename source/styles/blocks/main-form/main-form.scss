@@ -1,3 +1,9 @@
 .maun-form {
   position: relative;
+
+  width: 320px;
+
+  &__wrapper {
+    @include container;
+  }
 }
