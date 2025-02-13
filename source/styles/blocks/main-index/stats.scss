@@ -14,7 +14,7 @@
 
   @include desktop {
     padding-top: 0;
-    padding-bottom: 75px;
+    padding-bottom: 85px;
 
     background: linear-gradient(180deg, $white 0%, $white 23%, $accent-light-grey 23%, $accent-light-grey 100%);
     border: none;
@@ -23,6 +23,22 @@
 
 .stats__wrapper {
   @include container;
+  @include outline($test-color: #5aeca8);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .stats__title {
@@ -44,20 +60,27 @@
 
 .stats__content {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+
+  width: 280px;
+
+  @include outline($test-color: #ec5a92);
+
+  @include tablet {
+    width: 708px;
+  }
 
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
+
+    width: 436px;
   }
 }
 
 .stas__example {
-  display: grid;
-  grid-template-columns: repeat(2, 124px);
-  grid-template-rows: auto auto auto;
-  gap: 20px 32px;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
 
   margin-bottom: 20px;
 
@@ -80,9 +103,7 @@
 }
 
 .stats__description {
-  grid-column: 1 / -1;
-
-  margin: 0;
+  margin: 70px 0 69px;
 
   @include tablet {
     font-size: 16px;
@@ -116,16 +137,12 @@
 
   width: 124px;
   min-height: 56px;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  padding-bottom: 14px;
 
   font-family: $main-font;
   font-size: 24px;
   line-height: 24px;
 
   color: $black;
-  letter-spacing: 0%;
   text-transform: uppercase;
   text-align: center;
   border: 1px solid $dark-grey;
@@ -155,23 +172,21 @@
   font-size: 12px;
   line-height: 12px;
 
-  background-color: $very-light-grey;
-  letter-spacing: 0;
+  background-color: transparent;
   text-align: center;
+  text-transform: lowercase;
 
   transform: translateX(-50%);
 
   @include tablet {
-    top: 63px;
-    left: 32px;
+    top: 68%;
+    left: 85px;
 
     width: max-content;
     padding-top: 0;
 
     font-size: 14px;
     line-height: 14px;
-
-    background-color: $white;
   }
 
   @include desktop {
@@ -179,8 +194,6 @@
     top: 65px;
 
     max-width: 125px;
-
-    background-color: $very-light-grey;
 
     &::before {
       background-color: $very-light-grey;

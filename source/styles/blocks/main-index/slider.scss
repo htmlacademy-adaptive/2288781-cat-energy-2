@@ -9,6 +9,8 @@
   width: min(100%, 560px);
   aspect-ratio: 280/256;
 
+  @include outline($test-color: #ec5a92);
+
   @include tablet {
     width: 560px;
     height: 512px;
