@@ -37,7 +37,7 @@
 
 // Контейнер
 @mixin container {
-  width: $breakpoint-mobile-min;
+  width: 100%;
   margin: 0 auto;
 
   @include max-width-mobile {
@@ -54,7 +54,7 @@
 
   @include desktop {
     min-width: 1220px;
-    width: 1440px;
+    max-width: $breakpoint-desktop-min;
     padding: 0 110px;
   }
 }
@@ -139,6 +139,27 @@
     line-height: 24px;
   }
 }
+
+//h5 - catalog | info-title
+@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: $color;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
 
 // Списки
 @mixin reset-list {

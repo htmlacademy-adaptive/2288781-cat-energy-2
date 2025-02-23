@@ -181,55 +181,66 @@
 
           <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-          <div class="stats__module">
+          <div class="stats__info">
 
-            <span class="stats__module--number">5 кг</span>
-            <span class="stats__module--action">Снижение веса</span>
+            <div class="stats__info-wrapper">
+
+              <ul class="stats__list">
+
+                <li class="stats__item">
+                  <p class="stats__item--number">5 кг</p>
+                  <p class="stats__item--action">Снижение веса</p>
+                </li>
+
+                <li class="stats__item">
+                  <p class="stats__item--number">60 дней</p>
+                  <p class="stats__item--action">Затрачено времени</p>
+                </li>
+
+              </ul>
+
+              <p class="stats__cost">
+                <span>Затраты на питание:</span>
+                <span>15 000 руб.</span>
+              </p>
+
+            </div>
 
           </div>
-
-          <div class="stats__module stats__module--days">
-
-            <span class="stats__module--number">60 дней</span>
-            <span class="stats__module--action">Затрачено времени</span>
-
-          </div>
-
-          <p class="stats__cost">Затраты на питание:
-
-            <span class="stats__cost-price">15 000 руб.</span>
-
-          </p>
 
         </div>
 
         <div class="stats__slider slider">
 
-          <picture>
-            <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-before@1x.webp 1x, ./images/cats/cat-before@1x.webp 2x">
-            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-before-mobile@1x.webp 1x, ./images/cats/cat-before-mobile@2x.webp 2x">
+          <button class="slider__button" type="button" aria-hidden="true">
 
-            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-before@1x.png 1x, images/cats/cat-before@2x.png 2x">
-            <img class="slider__image slider__image--cat-before" width="280" height="256" src="./images/cats/cat-before-mobile@1x.png" srcset="images/cats/cat-before-mobile@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
-          </picture>
+            <span class="visually-hidden">Передвинуть ползунок слайдов, чтобы посмотреть фотографии котов до/послe подбора питания</span>
 
-          <div class="slider__curtain">
+          </button>
 
-            <button class="slider__tumb" type="button">
+          <div class="slider__wrapper-before">
 
-              <span class="visually-hidden">Передвинуть ползунок слайдов, чтобы посмотреть фотографии котов до/послe подбора питания</span>
+            <picture>
+              <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-before@1x.webp 1x, ./images/cats/cat-before@1x.webp 2x">
+              <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-before-mobile@1x.webp 1x, ./images/cats/cat-before-mobile@2x.webp 2x">
 
-            </button>
+              <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-before@1x.png 1x, images/cats/cat-before@2x.png 2x">
+              <img class="slider__image slider__image--before" width="280" height="256" src="./images/cats/cat-before-mobile@1x.png" srcset="images/cats/cat-before-mobile@2x.png 2x" alt="Фото толстого кота до приема функционального питания «Кэт энерджи».">
+            </picture>
 
           </div>
 
-          <picture>
-            <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-after@1x.webp 1x, ./images/cats/cat-after@1x.webp 2x">
-            <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-after-mobile@1x.webp 1x, ./images/cats/cat-after-mobile@2x.webp  2x">
+          <div class="slider__wrapper-after">
 
-            <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-after@1x.png 1x, ./images/cats/cat-after@2x.png  2x">
-            <img class="slider__image slider__image--cat-after" width="280" height="256" src="./images/cats/cat-after-mobile@1x.png" srcset="./images/cats/cat-after-mobile@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
-          </picture>
+            <picture>
+              <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-after@1x.webp 1x, ./images/cats/cat-after@1x.webp 2x">
+              <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-after-mobile@1x.webp 1x, ./images/cats/cat-after-mobile@2x.webp  2x">
+
+              <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-after@1x.png 1x, ./images/cats/cat-after@2x.png  2x">
+              <img class="slider__image slider__image--after" width="280" height="256" src="./images/cats/cat-after-mobile@1x.png" srcset="./images/cats/cat-after-mobile@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
+            </picture>
+
+          </div>
 
         </div>
 
@@ -243,9 +254,9 @@
 
     <section class="map">
 
-      <div class="map__wrapper">
+      <h2 class="map__title title visually-hidden">Местонахождение офиса онлайн-магазина «Кэт Энерджи» с вывеской на карте</h2>
 
-        <h2 class="map__title title visually-hidden">Местонахождение офиса онлайн-магазина «Кэт Энерджи» с вывеской на карте</h2>
+      <div class="map__wrapper">
 
         <div class="map__content">
 
@@ -273,7 +284,7 @@
           <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга" loading="lazy">
         </picture>
 
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae9cb3d2acd9f272a37713f75a31cda409fd3e9059e40d1e406001719dfb1a078&amp;source=constructor" width="100%" height="400" frameborder="0" title="Фрагмент карты из Яндекса"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;source=constructor" width="100%" height="362" frameborder="0" title="Фрагмент карты из Яндекса"></iframe>
 
         <span class="map__pin map__pin--image visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19/8</span>
 
@@ -306,21 +317,33 @@
         <ul class="social__list">
 
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+
               <span class="visually-hidden">Переход на канал HTML Academy в «Вконтакте»</span>
+
             </a>
+
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+
               <span class="visually-hidden">Переход на канал HTML Academy в «Youtube»</span>
+
             </a>
+
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+
               <span class="visually-hidden">Переход на канал HTML Academy в «Телеграмм»</span>
+
             </a>
+
           </li>
 
         </ul>
@@ -346,6 +369,8 @@
   </footer>
 
   <script src="./scripts/index.js" defer></script>
+
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
 
 </body>
 

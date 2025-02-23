@@ -1,7 +1,6 @@
 .social {
-  position: relative;
-
-  text-align: center;
+  display: flex;
+  gap: 24px;
 }
 
 .social__list {

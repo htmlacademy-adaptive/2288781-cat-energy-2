@@ -4,14 +4,12 @@
   @include max-width-mobile {
     max-width: 320px;
     margin: 20px auto 49px;
-    padding: 0;
   }
 
   @include tablet {
     max-width: 768px;
     min-height: 597px;
     margin: 45px auto 47px;
-    padding: 0;
 
     &::after {
       @include pseudo-element;
@@ -29,7 +27,6 @@
     max-width: 1440px;
     min-height: 280px;
     margin: auto;
-    padding: 0;
 
     &::after {
       content: none;
@@ -45,14 +42,12 @@
   &__title {
     width: 280px;
     margin: 0 0 40px;
-    padding: 0;
 
     text-align: left;
 
     @include tablet {
       width: 708px;
       margin: 0 0 32px;
-      padding: 0;
     }
 
     @include desktop {

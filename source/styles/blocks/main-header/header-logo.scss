@@ -14,12 +14,12 @@
   border: none;
   text-align: left;
   background-color: transparent;
-  color: transparent;
 
   transition: all 0.5s ease-out;
 
   &:hover {
     opacity: 0.8;
+    transition: 0.5s;
   }
 
   &:focus {

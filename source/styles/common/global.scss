@@ -31,6 +31,7 @@ body {
   word-wrap: break-word;
   background-color: $accent-light-grey;
   color: $accent-dark-grey;
+  user-select: none;
 }
 
 img {

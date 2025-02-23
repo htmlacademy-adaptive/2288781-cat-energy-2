@@ -11,15 +11,7 @@
 }
 
 .promotions__wrapper {
-  padding: 0 20px;
-
-  @media (min-width: $breakpoint-tablet-min) {
-    padding: 0 68px;
-  }
-
-  @media (min-width: $breakpoint-desktop-min) {
-    padding: 0 110px;
-  }
+  @include container;
 }
 
 .promotions__title {

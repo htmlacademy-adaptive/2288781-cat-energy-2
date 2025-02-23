@@ -1,4 +1,6 @@
 .main-footer {
+  position: relative;
+
   background-color: $accent-light-grey;
   color: $black;
 
@@ -14,7 +16,7 @@
     align-items: center;
     gap: 20px;
 
-    width: 320px;
+    min-width: 320px;
   }
 
   &__footer-logotext {
