@@ -1,136 +1,118 @@
 .slider {
-  position: relative;
-  width: 280px;
-  height: 256px;
+  display: grid;
+  --curtain-place: 0.5;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
 
-  justify-self: center;
-  touch-action: none;
+  width: min(100%, 560px);
+  margin: 0 auto;
 
-  @include tablet {
-    width: 560px;
-    height: 512px;
-  }
-}
+  aspect-ratio: 280/256;
 
-.slider__button {
-  position: absolute;
-  left: 50%;
-  z-index: 3;
-
-  width: 4px;
-  height: 100%;
-  padding: 0;
-
-  border: none;
-  border-radius: 2px;
-  background-color: $very-dark-grey;
-  cursor: pointer;
-
-  &::before {
-    @include pseudo-element;
-    top: 50%;
-    left: 50%;
-
-    width: 40px;
-    height: 40px;
-
-    background-color: $white;
-    border: 2px solid $very-dark-grey;
-    border-radius: 50%;
-
-    transform: translate(-50%, -50%);
+  @include desktop {
+    margin: 0;
   }
 
-  &::after {
-    @include pseudo-element;
-    top: 50%;
-    left: 50%;
+  &__image {
+    display: block;
 
-    width: 24px;
-    height: 18px;
+    width: 100%;
+    height: 100%;
 
-    background-color: $very-dark-grey;
-    mask-image: url("../../../icons/stack.svg#icon-thumb");
-    mask-size: 24px 18px;
-    mask-repeat: no-repeat;
+    object-fit: cover;
 
-    transform: translate(-50%, -50%);
-  }
+    &--before {
+      object-position: left;
+    }
 
-  &:hover,
-  &:hover::after,
-  &:focus,
-  &:focus::after {
-    background-color: $primary;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    border-color: $primary;
-  }
-
-  &:active,
-  &:active::after {
-    background-color: $hover-green;
-  }
-
-  &:active::before {
-    border-color: $hover-green;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-  }
-}
-
-
-.slider__image {
-  width: 280px;
-  max-width: none;
-  height: 100%;
-
-  object-fit: cover;
-  pointer-events: none;
-
-
-  @include tablet {
-    width: 560px;
-  }
-}
-
-.slider__wrapper-before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-
-  width: 50%;
-  height: 100%;
-
-  overflow: hidden;
-  background-color: $very-light-grey;
-  pointer-events: none;
-
-  @include tablet {
-    &::after {
-      @include pseudo-element;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-
-      width: 100%;
-      height: 151px;
-      background-color: $white;
-
-      @include desktop {
-        height: 135px;
-      }
+    &--after {
+      object-position: right;
     }
   }
 
-  @include desktop {
-    background-color: $accent-light-grey;
+  &__curtain {
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    width: 4px;
+    height: 100%;
+    margin: 0 -2px;
+
+    border-radius: 2px;
+    color: var(--curtain-color, $very-dark-grey);
+    background-color: currentColor;
+    cursor: col-resize;
+    appearance: none;
+
+    transition: background-color 0.5s, opacity 0.5s;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    &:focus {
+      background-color: $primary;
+    }
+
+    &:active {
+      background-color: $hover-green;
+      opacity: 0.6;
+    }
+  }
+
+  &__thumb {
+    display: grid;
+
+    width: 40px;
+    height: 40px;
+    margin: -18px;
+    padding: 0;
+
+    color: inherit;
+    border: 2px solid currentColor;
+    border-radius: 20px;
+    background-color: $white;
+    cursor: col-resize;
+
+    &::before {
+      @include pseudo-element;
+      z-index: 10;
+
+      width: 24px;
+      height: 18px;
+
+      background-color: currentColor;
+      mask-image: url("icons/stack.svg#icon-thumb");
+      mask-size: 24px 18px;
+      mask-repeat: no-repeat;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-color: $primary;
+
+      &[stroke] {
+        color: $primary;
+      }
+
+      &[path] {
+        fill: $primary;
+      }
+    }
+
+    &:active::before {
+      background-color: $hover-green;
+
+      &[stroke] {
+        color: $hover-green;
+        opacity: 0.6;
+      }
+
+      &[path] {
+        fill: $hover-green;
+        opacity: 0.6;
+      }
+    }
   }
 }
-

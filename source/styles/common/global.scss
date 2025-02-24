@@ -41,4 +41,10 @@ img {
   height: auto;
 
   object-fit: contain;
+  object-position: center;
+}
+
+picture,
+source {
+  display: contents;
 }

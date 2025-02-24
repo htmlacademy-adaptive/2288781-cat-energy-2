@@ -1,13 +1,13 @@
 /* в этот файл добавляет скрипты*/
 
+document.documentElement.lang = 'ru';
+document.documentElement.classList.add('page');
+document.body.classList.add('page__body');
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const navMain = document.querySelector('.navigation');
   const navToggle = document.querySelector('.navigation__toggle');
-
-  const slider = document.querySelector(".slider .slider input");
-  const img = document.querySelector(".slider__image .slider__image--after");
-  const dragLine = document.querySelector(".slider .slider__button");
 
   // Меню сайта
   if (navMain) {
@@ -27,25 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   );
+});
 
+// Ползунок
+//   const slider = document.querySelector('.slider');
+//   const curtain = slider.querySelector('.slider__curtain');
+//   const sliderStyles = getComputedStyle(slider);
+//   let curtainPlaceStart;
+//   let clientX;
 
-  // Ползунок
-  slider.oninput = ()=>{
-    let sliderVal = slider.value;
-    dragLine.style.left = sliderVal + "%";
-    img.style.width = sliderVal + "%";
-  }
+//   window.addEventListener('pointerup', stopTheCurtainShifting);
+//   curtain.addEventListener('pointerdown', startTheCurtainShifting);
 
+//   function startTheCurtainShifting (event) {
+//     curtainPlaceStart = Number(sliderStyles.getPropertyValue('--curtain-place'));
+//     clientX = event.clientX;
+//     window.addEventListener('pointermove', shiftТheСurtain);
+//   }
 
-// Карта
-// if (map) {
-//   map.classList.remove('map__location-static--nojs');
+//   function shiftТheСurtain (event) {
+//     const deltaX = event.clientX - clientX;
+//     const cursorPlace = curtainPlaceStart + deltaX / slider.clientWidth;
+//     const curtainPlace = Math.min(Math.max(cursorPlace, 0), 1);
+//     slider.style.setProperty('--curtain-place', `${curtainPlace}`);
+//   }
+
+//   function stopTheCurtainShifting () {
+//     window.removeEventListener('pointermove', shiftТheСurtain);
+//   }
 // }
+// );
 
-// Пин
-// objectManager.objects.options.set({
-//   iconLayout: 'default#image',
-//   iconImageHref: '../images/maps',
-//   iconImageSize: [95, 37], // размеры картинки
-//   iconImageOffset: [-11, -30] // смещение картинки
-// });
