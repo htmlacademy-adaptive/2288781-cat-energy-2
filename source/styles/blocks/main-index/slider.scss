@@ -1,118 +1,85 @@
 .slider {
-  display: grid;
-  --curtain-place: 0.5;
-  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  position: relative;
 
-  width: min(100%, 560px);
-  margin: 0 auto;
+  width: 280px;
+  height: 256px;
 
-  aspect-ratio: 280/256;
+  @include tablet {
+    display: flex;
 
-  @include desktop {
-    margin: 0;
+    width: 560px;
+    height: 512px;
+    margin: 0 auto;
   }
 
-  &__image {
+  &__image-before {
     display: block;
 
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
-    &--before {
-      object-position: left;
-    }
-
-    &--after {
-      object-position: right;
-    }
+    clip-path: inset(0 50% 0 0);
   }
 
-  &__curtain {
-    z-index: 1;
+  &__image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    display: grid;
-    place-items: center;
+    display: block;
 
-    width: 4px;
+    width: 100%;
     height: 100%;
-    margin: 0 -2px;
 
-    border-radius: 2px;
-    color: var(--curtain-color, $very-dark-grey);
-    background-color: currentColor;
-    cursor: col-resize;
-    appearance: none;
-
-    transition: background-color 0.5s, opacity 0.5s;
-
-    &:hover {
-      background-color: $primary;
-    }
-
-    &:focus {
-      background-color: $primary;
-    }
-
-    &:active {
-      background-color: $hover-green;
-      opacity: 0.6;
-    }
+    clip-path: inset(0 0 0 50%);
   }
+}
 
-  &__thumb {
-    display: grid;
+.slider__thumb {
+  &::before {
+    @include pseudo-element;
 
     width: 40px;
     height: 40px;
-    margin: -18px;
+    margin: 0;
     padding: 0;
 
-    color: inherit;
-    border: 2px solid currentColor;
-    border-radius: 20px;
     background-color: $white;
-    cursor: col-resize;
+    border: 2px solid $very-dark-grey;
+    border-radius: 50%;
 
-    &::before {
-      @include pseudo-element;
-      z-index: 10;
+    transform: translate(-50%, -50%);
+  }
 
-      width: 24px;
-      height: 18px;
+  &::after {
+    @include pseudo-element;
 
-      background-color: currentColor;
-      mask-image: url("icons/stack.svg#icon-thumb");
-      mask-size: 24px 18px;
-      mask-repeat: no-repeat;
-    }
+    width: 24px;
+    height: 18px;
 
-    &:hover::before,
-    &:focus::before {
-      background-color: $primary;
+    mask-image: url("../../icons/#");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $very-dark-grey;
 
-      &[stroke] {
-        color: $primary;
-      }
+    transform: translate(-50%, -50%);
+  }
 
-      &[path] {
-        fill: $primary;
-      }
-    }
+  &:hover::before {
+    border: 2px solid #68b738;
+  }
 
-    &:active::before {
-      background-color: $hover-green;
+  &:hover,
+  &:hover::after {
+    background-color: #68b738;
+    cursor: pointer;
+  }
 
-      &[stroke] {
-        color: $hover-green;
-        opacity: 0.6;
-      }
+  &:active {
+    opacity: 0.6;
+  }
 
-      &[path] {
-        fill: $hover-green;
-        opacity: 0.6;
-      }
-    }
+  &:active::after {
+    opacity: 0.6;
   }
 }
