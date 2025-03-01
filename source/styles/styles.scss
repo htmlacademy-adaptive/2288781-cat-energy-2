@@ -1,7 +1,55 @@
 /* GLOBAL */
+//Переменные
 @import "./common/variables.scss";
-@import "./common/global.scss";
+//Миксины
+@import "./common/mixins.scss";
+//Шрифты
 @import "./common/fonts.scss";
+//Общие стили
+@import "./common/global.scss";
+//Скрытие элемента
+@import "./common/visually-hidden.scss";
+//Анимация
+@import "./common/animation.scss";
+
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+//Общие блоки
+// @import "./blocks/common-blocks/page.scss";
+// @import "./blocks/common-blocks/headline.scss";
+// @import "./blocks/common-blocks/title.scss";
+// @import "./blocks/common-blocks/subtitle.scss";
+// @import "./blocks/common-blocks/button.scss";
+
+//Шапка
+// @import "./blocks/main-header/main-header.scss";
+// @import "./blocks/main-header/header-logo.scss";
+// @import "./blocks/main-header/navigation.scss";
+
+//Подвал
+// @import "./blocks/footer/main-footer.scss";
+// @import "./blocks/footer/map.scss";
+// @import "./blocks/footer/footer-logotext.scss";
+// @import "./blocks/footer/social.scss";
+// @import "./blocks/footer/logo-htmlacademy.scss";
+
+//Главная страница
+// @import "./blocks/main-index/hero.scss";
+// @import "./blocks/main-index/programs.scss";
+// @import "./blocks/main-index/reasons.scss";
+// @import "./blocks/main-index/stats.scss";
+// @import "./blocks/main-index/slider.scss";
+
+//Страница каталога
+// @import "./blocks/main-inner/main-inner.scss";
+// @import "./blocks/main-inner/catalog.scss";
+// @import "./blocks/main-inner/card-info.scss";
+// @import "./blocks/main-inner/products.scss";
+// @import "./blocks/main-inner/product.scss";
+// @import "./blocks/main-inner/addition.scss";
+// @import "./blocks/main-inner/gift.scss";
+// @import "./blocks/main-inner/promotions.scss";
+
+//Страница форм (не будут рассматривать на защите)
+// @import "./blocks/main-form/main-form.scss";
+
