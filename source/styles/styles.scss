@@ -15,16 +15,16 @@
 
 /* BLOCKS */
 //Общие блоки
-// @import "./blocks/common-blocks/page.scss";
-// @import "./blocks/common-blocks/headline.scss";
-// @import "./blocks/common-blocks/title.scss";
-// @import "./blocks/common-blocks/subtitle.scss";
-// @import "./blocks/common-blocks/button.scss";
+@import "./blocks/common-blocks/page.scss";
+@import "./blocks/common-blocks/headline.scss";
+@import "./blocks/common-blocks/title.scss";
+@import "./blocks/common-blocks/subtitle.scss";
+@import "./blocks/common-blocks/button.scss";
 
 //Шапка
-// @import "./blocks/main-header/main-header.scss";
-// @import "./blocks/main-header/header-logo.scss";
-// @import "./blocks/main-header/navigation.scss";
+@import "./blocks/main-header/main-header.scss";
+@import "./blocks/main-header/header-logo.scss";
+@import "./blocks/main-header/navigation.scss";
 
 //Подвал
 // @import "./blocks/footer/main-footer.scss";
