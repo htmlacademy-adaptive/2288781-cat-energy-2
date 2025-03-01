@@ -25,15 +25,64 @@
 
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--index">
 
-  <header class="header">Шапка</header>
-  <p>Привет, Мир!</p>
-  <p>Привет, Оксана!</p>
-  <p>Добрый вечер, Оксана!</p>
-  <p>Радужных снов, Оксана!</p>
-  <p>Спокойной ночи, Оксана!</p>
-  <p>Пока!</p>
+  <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Приветственная страница</h1>
+
+  <header class="page__main-header main-header main-header--index">
+
+    <div class="main-header__wrapper">
+
+      <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Активная главная страница">
+
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+          <img class="header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+        </picture>
+
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+          <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+        </picture>
+
+      </a>
+
+      <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened -->
+      <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
+
+        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+
+        <ul class="navigation__list navigation__list--index">
+
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
+          </li>
+
+          <li class="navigation__item">
+            <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+
+          <li class="navigation__item">
+            <a class="navigation__link" href="./form.html">Подбор программы</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main class="page__main-index">
+
+  </main>
+
+  <footer class="page__main-footer main-footer">
+
+  </footer>
 
 </body>
 
