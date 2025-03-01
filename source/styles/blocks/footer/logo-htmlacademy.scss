@@ -1,0 +1,69 @@
+.logo-htmlacademy {
+  border-top: 1px solid $specify-light-grey;
+
+  @include tablet {
+    border: none;
+  }
+
+  &__link {
+    @include reset-link;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 320px;
+
+    margin: 20px auto 40px;
+
+    color: $accent-dark-grey;
+
+    &::after {
+      @include pseudo-element;
+      top: 0;
+      right: 0;
+
+      width: 27px;
+      height: 34px;
+
+      background-color: $very-dark-grey;
+      mask-image: url("../../../icons/stack.svg#icon-htmlacademy");
+      mask-size: 27px 34px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    &:hover::after {
+      background-color: $primary;
+    }
+
+    &:focus::after {
+      background-color: $primary;
+    }
+
+    &:active::after {
+      background-color: $primary;
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+
+
+    min-height: 34px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    @include tablet {
+      gap: 23px;
+
+      margin: 0;
+      padding: 0 0 0 5px;
+    }
+  }
+}

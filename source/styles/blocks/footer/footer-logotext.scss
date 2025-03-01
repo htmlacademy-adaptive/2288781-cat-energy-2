@@ -1,0 +1,43 @@
+.footer-logotext {
+  width: 128px;
+  height: 24px;
+
+  &__link {
+    @include reset-link;
+
+    width: 128;
+    height: 24;
+
+    color: $extra-dark-grey;
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:focus {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &__svg {
+      width: 128;
+      height: 24;
+
+      background-color: transparent;
+      vertical-align: middle;
+      fill: $extra-dark-grey;
+    }
+
+    @include tablet {
+      margin-right: 160px;
+      padding: 7px 0;
+    }
+
+    @include desktop {
+      margin-right: 416px;
+    }
+  }
+}

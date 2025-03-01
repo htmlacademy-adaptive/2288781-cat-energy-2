@@ -1,0 +1,109 @@
+.social {
+  display: flex;
+  gap: 24px;
+}
+
+.social__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  gap: 24px;
+
+  width: 132px;
+
+  margin: 20px auto;
+  padding: 0;
+
+  @include tablet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    width: auto;
+    margin: 0;
+    margin-left: 160px;
+  }
+
+  @include desktop {
+    margin-left: 416px;
+  }
+}
+
+.social__item {
+  max-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.social__link {
+  @include reset-link;
+
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  transition: all 0.2s ease-in-out;
+
+  &::before {
+    @include pseudo-element;
+
+    width: 28px;
+    height: 22px;
+
+    background-color: $very-dark-grey;
+    mask-repeat: no-repeat;
+
+    transition: background-color 0.3s ease-in;
+  }
+
+  &--vkontakte {
+    &::before {
+      @include pseudo-element;
+
+      mask-image: url("../../../icons/stack.svg#icon-vkontakte");
+      mask-size: 27px 17px;
+    }
+  }
+
+  &--youtube {
+    &::before {
+      @include pseudo-element;
+
+      mask-image: url("../../../icons/stack.svg#icon-youtube");
+      mask-size: 24px 19px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  &--telegram {
+    &::before {
+      @include pseudo-element;
+
+      mask-image: url("../../../icons/stack.svg#icon-telegram");
+      mask-size: 20px 17px;
+    }
+  }
+
+  &:hover::after {
+    background-color: $hover-green;
+  }
+
+  &:focus::after {
+    background-color: $hover-green;
+    outline: none;
+
+    transition-duration: 0.3s;
+  }
+
+  &:active::after {
+    background-color: $hover-green;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

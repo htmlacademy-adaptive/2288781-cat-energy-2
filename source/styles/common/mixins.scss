@@ -37,7 +37,7 @@
 // Контейнер
 @mixin container {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 
   @include max-width-mobile {
     min-width: $breakpoint-mobile-min;
