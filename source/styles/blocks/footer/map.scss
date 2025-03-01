@@ -95,9 +95,9 @@
   position: relative;
 }
 
-.map__location-image {
+// .map__location-image {
 
-}
+// }
 
 .map__iframe {
   position: absolute;
@@ -107,6 +107,8 @@
 
   width: 100%;  
   height: 362px;
+
+  border: none;
 
   @include tablet {
     height: 400px;
