@@ -1,0 +1,274 @@
+.programs {
+  margin: 20px auto 0;
+  padding: 0;
+
+  background-color: $white;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.programs__wrapper {
+  @include container;
+
+  display: flex;
+
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+
+.programs__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  min-width: 280px;
+  margin: auto;
+
+  @include tablet {
+    gap: 30px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.programs__item {
+  width: 100%;
+  min-width: 280px;
+  min-height: 266px;
+  padding: 24px 20px 18px;
+
+  background-color: $accent-light-grey;
+  text-align: left;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    min-width: 708px;
+    min-height: 372px;
+    padding: 77px 63px 53px 52px;
+  }
+
+  @include desktop {
+    min-width: 570px;
+    min-height: 374px;
+    padding: 47px 61px 55px 52px;
+  }
+}
+
+.programs__item--slim {
+  background-image: url("../../icons/stack.svg#icon-cat-slim");
+  background-repeat: no-repeat;
+  background-position: top 21px left 20px;
+  background-size: 50px 53px;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    background-image: url("../../icons/stack.svg#icon-cat-slim");
+    background-repeat: no-repeat;
+    background-position: top 81px right 63px;
+    background-size: 200px 211px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    background-image: url("../../icons/stack.svg#icon-cat-slim");
+    background-repeat: no-repeat;
+    background-position: top 39px left 53px;
+    background-size: 100px 106px;
+  }
+}
+
+.programs__item--pro {
+  background-image: url("../../icons/stack.svg#icon-cat-pro");
+  background-repeat: no-repeat;
+  background-position: top 24px left 13px;
+  background-size: 67px 50px;
+
+  @include tablet {
+    background-image: url("../../icons/stack.svg#icon-cat-pro");
+    background-repeat: no-repeat;
+    background-position: top 91px right 29px;
+    background-size: 268px 200px;
+  }
+
+  @include desktop {
+    background-image: url("../../icons/stack.svg#icon-cat-pro");
+    background-repeat: no-repeat;
+    background-position: top 45px left 35px;
+    background-size: 134px 100px;
+  }
+}
+
+.programs__subtitle {
+  @include subtitle;
+
+  display: flex;
+  align-items: flex-start;
+
+  width: 157px;
+  margin: 0 0 29px 71px;
+  padding: 0 0 7px;
+
+  text-transform: uppercase;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    width: 340px;
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    width: 295px;
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
+.programs__description {
+  width: 227px;
+  margin: 25px 0 23px;
+  padding: 9px 0 23px;
+
+  vertical-align: middle;
+
+  @include max-width-mobile {
+    position: relative;
+
+    &::after {
+      @include pseudo-element;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      min-width: 240px;
+      height: 1px;
+
+      background-color: $specify-light-grey;
+      background-position: center;
+    }
+  }
+
+  @include tablet {
+    width: 340px;
+    margin: 24px 0 48px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $black;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @include desktop {
+    min-width: 457px;
+    margin: 39px 0 23px;
+  }
+}
+
+.programs__link {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+
+  width: 139px;
+  margin: 15px 0 18px;
+  padding: 0;
+
+  text-decoration: none;
+  list-style-type: none;
+
+  color: $black;
+  cursor: pointer;
+
+  transition: color 0.1s ease-out;
+
+
+  @include tablet {
+    gap: 25px;
+
+    width: 227px;
+    margin: 0;
+  }
+
+  @include tablet {
+    width: 340px;
+  }
+
+  @include desktop {
+    min-width: 457px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .programs__link-text::after {
+    background-position: 0;
+
+    transition: background-position 0.5s;
+  }
+
+  &:focus .programs__link-text::after {
+    color: $primary;
+  }
+
+  &:active .programs__link-text::after {
+    opacity: 0.3;
+  }
+}
+
+.programs__link-text {
+  position: relative;
+
+  display: inline-flex;
+  justify-content: flex-start;
+
+  padding-right: 50px;
+
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    @include pseudo-element;
+    top: 50%;
+    right: 0;
+
+    width: 32px;
+    height: 10px;
+
+    background-image: url("../../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    background-size: 32px 10px;
+    background-position: -8px;
+    fill: $black;
+
+    transform: translateY(-50%);
+  }
+}

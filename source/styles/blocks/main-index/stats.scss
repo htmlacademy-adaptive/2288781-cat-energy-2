@@ -1,0 +1,279 @@
+.stats {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    --bg-top-shift: calc(100% - 462px);
+
+    border-top: 1px solid $extra-light-grey;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+
+    --bg-top-shift: 135px;
+    border-top: none;
+  }
+
+  &::before {
+    @include pseudo-element;
+    top: var(--bg-top-shift, 0);
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 100%;
+
+    background-color: $very-light-grey;
+    box-shadow: 100% 0 0 0 $very-light-grey;
+
+    @include desktop {
+      background-color: $accent-light-grey;
+      box-shadow: 100% 0 0 0 $accent-light-grey;
+    }
+  }
+}
+
+.stats__wrapper {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    width: 768px;
+    padding-top: 45px;
+    padding-bottom: 101px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 1440px;
+    padding-top: 0;
+    padding-bottom: 85px;
+  }
+}
+
+.stats__content {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    align-items: flex-start;
+
+    width: 436px;
+  }
+}
+
+.stats__title {
+  min-width: min-content;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  text-align: left;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    margin-bottom: 146px;
+  }
+}
+
+.stats__description {
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.stats__info {
+  margin: 0;
+  padding: 0;
+
+  font-family: $main-font;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 34px;
+
+  min-width: min-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 55px;
+    margin-bottom: 99px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    row-gap: 60px;
+
+    margin-top: 69px;
+    margin-bottom: 75px;
+  }
+}
+
+.stats__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+
+  width: 280px;
+  margin: 0;
+
+  @include tablet {
+    width: 367px;
+    column-gap: 43px;
+  }
+
+  @include desktop {
+    width: 366px;
+    column-gap: 42px;
+  }
+}
+
+.stats__item {
+  position: relative;
+
+  padding: 15px 0 18px;
+
+  border: 1px solid $dark-grey;
+  border-radius: 3px;
+
+  @include tablet {
+    padding: 15px 0 20px;
+  }
+}
+
+.stats__number {
+  font-size: 24px;
+  line-height: 24px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.stats__action {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+
+  width: 77px;
+  margin: 0;
+  padding: 0;
+
+  font-family: $base-font;
+  font-size: 12px;
+  line-height: 12px;
+
+  text-transform: lowercase;
+  background-color: $very-light-grey;
+
+  transform: translateX(-50%);
+
+  @include tablet {
+    top: 63px;
+
+    width: 143px;
+    height: 14px;
+    padding-right: 9px;
+    padding-left: 9px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $white;
+  }
+
+  @include desktop {
+    background-color: $accent-light-grey;
+  }
+}
+
+.stats__cost {
+  display: flex;
+  column-gap: 4px;
+
+  margin: 0;
+
+  line-height: 20px;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 9px;
+
+    padding: 11px 0 17px;
+
+    font-size: 20px;
+  }
+
+  @include desktop {
+    flex-wrap: wrap;
+    align-self: flex-start;
+    column-gap: 63px;
+
+    height: 20px;
+
+    padding: 0;
+  }
+}
+
+.stats__compare {
+  place-self: start center;
+
+  max-width: 280px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 560px;
+  }
+
+  @include desktop {
+    margin: 0;
+    margin-left: 224px;
+  }
+}
+
+.stats__text {
+  text-align: center;
+}

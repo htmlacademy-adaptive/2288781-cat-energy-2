@@ -1,0 +1,92 @@
+.main-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding: 13px 0 14px;
+  min-height: 65px;
+
+  font-size: 0;
+
+  border-bottom: 1px solid $extra-light-grey; /* декоративная граница */
+  background-color: $white;
+  color: $black;
+
+  @include tablet {
+    padding: 25px 4px 0;
+  }
+
+  @include desktop {
+    padding: 55px 0 0;
+  }
+
+  &__wrapper {
+    @include container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: $breakpoint-mobile-min;
+
+    @include tablet {
+      align-items: flex-end;
+
+      width: $breakpoint-tablet-min;
+      height: 50px;
+    }
+
+    @include desktop {
+      width: $breakpoint-desktop-min;
+      height: 59px;
+    }
+  }
+
+  &__header-logo {
+    @include reset-link;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 190px;
+    height: 38px;
+    margin-right: auto;
+    padding: 0;
+
+    color: $extra-dark-grey;
+
+    @include tablet {
+      min-width: 174px;
+      height: 50px;
+    }
+
+    @include desktop {
+      min-width: 202px;
+      height: 59px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @include tablet {
+    min-height: 75px;
+
+    border: none;
+  }
+
+  @include desktop {
+    min-height: 114px;
+
+    background-color: transparent;
+    color: $white;
+  }
+}

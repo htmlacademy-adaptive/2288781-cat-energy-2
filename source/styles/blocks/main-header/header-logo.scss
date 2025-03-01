@@ -1,0 +1,73 @@
+.header-logo {
+  @include reset-link;
+
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  height: 38px;
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
+
+  border: none;
+  text-align: left;
+  background-color: transparent;
+
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+
+    height: 50px;
+  }
+
+  @include desktop {
+    gap: 14px;
+
+    height: 59px;
+  }
+
+  &__logo-image {
+    width: 33px;
+    height: 38px;
+
+    border-style: none;
+
+    @include tablet {
+      width: 60px;
+      height: 50px;
+    }
+
+    @include desktop {
+      width: 70px;
+      height: 59px;
+    }
+  }
+
+  &__logo-text {
+    width: 101px;
+    height: 18px;
+
+    @include desktop {
+      width: 118px;
+      height: 21px;
+    }
+  }
+}

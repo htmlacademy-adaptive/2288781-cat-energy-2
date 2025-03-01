@@ -1,0 +1,144 @@
+.hero {
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    background-color: transparent;
+  }
+}
+
+.hero__wrapper {
+  @include container;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  width: $breakpoint-mobile-min;
+  margin: auto;
+  padding: 0;
+
+  @include tablet {
+    align-items: flex-start;
+
+    width: $breakpoint-tablet-min;
+    min-height: 875px;
+    padding: 0 0 1px;
+
+    background-color: $white;
+  }
+
+  @include desktop {
+    width: $breakpoint-desktop-min;
+    min-height: 694px;
+    padding: 0;
+
+    background-color: transparent;
+  }
+}
+
+.hero__title {
+  width: 100%;
+  margin: 27px 0 25px;
+  padding: 0;
+
+  color: $white;
+  text-align: center;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    width: 420px;
+    margin: 65px 20px 20px 120px;
+
+    color: $black;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin: 110px 0 0 190px;
+  }
+}
+
+.hero__slogan {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include tablet {
+    width: 420px;
+    margin: 20px 20px 50px 120px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $black;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin: 40px 0 0 190px;
+  }
+}
+
+.hero__image {
+  display: block;
+
+  margin: 29px auto 3px;
+
+  transition: all 0.8s ease-out;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+
+  @include tablet {
+    position: absolute;
+    top: 266px;
+    bottom: 0;
+    left: 50%;
+
+    margin: 0;
+
+    transform: translate(-50%);
+  }
+
+  @include desktop {
+    top: 29px;
+    right: 331px;
+    left: auto;
+
+    transform: none;
+  }
+}
+
+.hero__button {
+  width: 100%;
+  min-width: 280px;
+  height: 40px;
+
+  @include tablet {
+    position: absolute;
+    top: 295px;
+    left: 120px;
+
+    width: 242px;
+    min-height: 54px;
+  }
+
+  @include desktop {
+    position: static;
+
+    width: 244px;
+    margin: 52px 0 0 190px;
+  }
+}

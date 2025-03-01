@@ -1,0 +1,294 @@
+.navigation {
+  transition: margin 3s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+  &__toggle {
+    position: relative;
+    right: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    padding: 7px 0;
+
+    font-family: $base-font;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    background-color: $white;
+    text-align: center;
+    overflow: hidden;
+
+    transition: top 3s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    transform: translateY(-150%);
+    animation: ani 1s forwards;
+
+    @include max-width-mobile {
+      position: absolute;
+      top: 66px;
+      right: 0;
+      left: 0;
+      z-index: 100;
+
+      width: 100%;
+      min-width: 320px;
+    }
+
+    @include tablet {
+      top: 0;
+
+      display: flex;
+      flex-flow: wrap;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 33px;
+
+      min-width: 436px;
+      height: 50px;
+    }
+
+    @include desktop {
+      position: relative;
+
+      gap: 34px;
+
+      min-width: 475px;
+      height: 59px;
+
+      background-color: transparent;
+    }
+
+    &__list--catalog-index {
+      display: block;
+    }
+  }
+
+  &__item {
+    height: 66px;
+
+    overflow: hidden;
+
+    @include max-width-mobile {
+      border-top: 1px solid $extra-light-grey;
+    }
+
+    @include tablet {
+      height: 50px;
+
+      border: none;
+    }
+
+    @include desktop {
+      height: 59px;
+    }
+  }
+
+  &__link {
+    @include reset-link;
+
+    display: block;
+
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: all 0.2s ease-out 0s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include max-width-mobile {
+      display: block;
+
+      min-height: 66px;
+      padding: 22px 0 24px;
+    }
+
+    @include tablet {
+      min-height: 50px;
+      padding: 14px 4px 0;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include desktop {
+      min-height: 59px;
+      padding: 16px 0 3px;
+
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @include max-width-mobile {
+    &--closed &__toggle::before {
+      @include pseudo-element;
+      top: 4px;
+      right: 1px;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: $black;
+      box-shadow:
+        0 8px 0 0 $black,
+        0 16px 0 0 $black;
+
+      transition: all 0.5s ease;
+    }
+
+    &--opened &__toggle::before,
+    &--opened &__toggle::after {
+      @include pseudo-element;
+      top: 11px;
+      right: 0;
+
+      width: 25px;
+      height: 1.5px;
+
+      background-color: $black;
+
+      transition: all 0.5s ease;
+    }
+
+    &--opened &__toggle::before {
+      box-shadow: none;
+
+      transition: all 0.5s ease;
+      transform: rotate(45deg);
+    }
+
+    &--opened &__toggle:hover::before {
+      background-color: $hover-green;
+      box-shadow:
+        0 8px 0 0 $hover-green,
+        0 16px 0 0 $hover-green;
+    }
+
+    &--opened &__toggle::after {
+      transition: all 0.5s ease;
+      transform: rotate(-45deg);
+    }
+
+    &--closed &__toggle:hover::after {
+      background-color: $hover-green;
+      box-shadow: none;
+    }
+
+    &--closed &__toggle:active::before,
+    &--closed &__toggle:active::after {
+      background-color: $active-white;
+      box-shadow:
+        0 8px 0 0 $active-white,
+        0 16px 0 0 $active-white;
+
+      transition: all 0.5s ease;
+    }
+
+    &--opened &__toggle:hover::before,
+    &--opened &__toggle:hover::after {
+      background-color: $hover-green;
+      box-shadow:
+        0 8px 0 0 $active-white,
+        0 16px 0 0 $active-white;
+
+      transition: all 0.5s ease;
+    }
+
+    &--opened &__toggle:active::before,
+    &--opened &__toggle:active::after {
+      background-color: $active-white;
+      box-shadow:
+        0 8px 0 0 $active-white,
+        0 16px 0 0 $active-white;
+
+      transition: all 0.5s ease;
+    }
+
+    &--closed &__list {
+      display: none;
+    }
+
+    &--opened &__list {
+      display: block;
+
+      width: 100%;
+    }
+
+    &--nojs &__list {
+      display: block;
+    }
+
+    & &__link--current {
+      pointer-events: none;
+    }
+  }
+
+  @include tablet {
+    & &__list {
+      display: flex;
+      flex-direction: column;
+
+      border: none;
+    }
+
+    &--active {
+      color: $black;
+      opacity: 1;
+    }
+
+    & &__link--current {
+      padding-bottom: 8px;
+
+      border-bottom: 2px solid $primary;
+    }
+  }
+
+  @include desktop {
+    &__list--index &__link {
+      color: $white;
+    }
+
+    &__list--index &__link--current {
+      border-bottom: 2px solid $white;
+    }
+
+    &__list--catalog &__link {
+      color: $black;
+    }
+
+    &__list--catalog &__link--catalog-current {
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
