@@ -1,1 +1,48 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  outline: 2px dotted #cf2164; // для себя, потом удалю
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-width: $breakpoint-mobile-min;
+  min-height: 100%;
+
+  font-family: $base-font, "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  word-wrap: break-word;
+  background-color: $accent-light-grey;
+  color: $accent-dark-grey;
+  user-select: none;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+picture,
+source {
+  display: contents;
+}

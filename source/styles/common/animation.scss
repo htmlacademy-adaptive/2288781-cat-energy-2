@@ -1,0 +1,23 @@
+// Плавное открытие меню
+@keyframes ani {
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Плавный переход от мобильной версии до десктопной версии
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
