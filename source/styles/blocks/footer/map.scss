@@ -11,7 +11,7 @@
 
   &__wrapper {
     @include container;
-  
+
     background-color: $white;
   }
 
@@ -19,37 +19,37 @@
     display: grid;
     grid-template-columns: repeat(2, 140px);
     grid-template-rows: 60px;
-  
+
     width: 320px;
     min-height: 112px;
     margin: 0 auto;
     padding-top: 26px;
     padding-bottom: 26px;
-  
+
     background-color: $white;
-  
+
     @include tablet {
       grid-template-columns: repeat(2, 163px);
       grid-template-rows: 80px;
       gap: 308px;
       justify-content: space-between;
       align-content: space-between;
-  
+
       width: 768px;
       min-height: 200px;
       margin: 0 auto;
       padding-top: 61px;
       padding-bottom: 61px;
     }
-  
+
     @include desktop {
       position: absolute;
       top: 0;
       left: 110px;
       z-index: 5;
-  
+
       gap: 87px;
-  
+
       width: 565px;
       min-height: 199px;
       margin: 95px 0 106px;
@@ -61,17 +61,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
+
     margin: 0;
-  
+
     font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
-  
+
     color: $extra-dark-grey;
     text-align: left;
     text-transform: uppercase;
-  
+
     @include tablet {
       font-size: 20px;
       line-height: 26px;
@@ -82,29 +82,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     width: 140px;
     margin: 0;
     margin-right: auto;
-  
+
     font-family: $base-font;
     line-height: 20px;
-  
+
     color: $accent-dark-grey;
-  
+
     @include tablet {
       width: 163px;
-  
+
       font-size: 16px;
-  
+
       text-align: right;
     }
-  
+
     @include desktop {
       text-align: left;
     }
   }
-  
+
   &__location {
     position: relative;
 
@@ -121,22 +121,22 @@
   &__iframe {
     position: absolute;
     top: 0;
-  
+
     display: block;
-  
+
     width: 100%;
     min-width: 320px;
     margin: 0 auto;
-  
+
     border: none;
     background-color: $specify-light-grey;
     background-repeat: no-repeat;
     background-size: cover;
-  
+
     @include max-width-mobile {
       min-width: 320px;
       min-height: 362px;
-  
+
       background-image:
         image-set(
           url("../../../images/maps/location-mobile@1x.webp") 1x type("image/webp"),
@@ -145,11 +145,11 @@
           url("../../../images/maps/location-mobile@2x.jpg") 2x type("image/jpeg")
         );
     }
-  
+
     @include tablet {
       min-width: 768px;
       min-height: 400px;
-  
+
       background-image:
         image-set(
           url("../../../images/maps/location-tablet@1x.webp") 1x type("image/webp"),
@@ -158,11 +158,11 @@
           url("../../../images/maps/location-tablet@2x.jpg") 2x type("image/jpeg")
         );
     }
-  
+
     @include desktop {
       min-width: 1220px;
       max-width: max-content;
-  
+
       background-image:
       image-set(
         url("../../../images/maps/location-desktop@1x.webp") 1x type("image/webp"),
@@ -178,10 +178,10 @@
     left: 50%;
     top: 50%;
     z-index: 10;
-  
+
     width: 60px;
     height: 60px;
-  
+
     background-image:
       image-set(
         url("../../../images/maps/pin-mobile@1x.webp") 1x type("image/webp"),
@@ -192,13 +192,13 @@
     background-size: 55px 53px;
     background-position: center;
     background-repeat: no-repeat;
-  
+
     transform: translate(-50%, -50%);
-  
+
     @include tablet {
       width: 115px;
       height: 115px;
-  
+
       background-image:
       image-set(
         url("../../../images/maps/pin-tablet@1x.webp") 1x type("image/webp"),
@@ -208,7 +208,7 @@
       );
       background-size: 113px 106px;
     }
-  
+
     @include desktop {
       transform: translate(250%, -50%);
     }

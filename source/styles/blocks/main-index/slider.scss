@@ -57,10 +57,10 @@
       width: 24px;
       height: 18px;
 
-      background-color: currentcolor;
       mask-image: url("../../../icons/stack.svg#icon-thumb");
       mask-repeat: no-repeat;
       mask-size: 24px 18px;
+      background-color: $very-dark-grey;
 
       transform: translate(-50%, -50%);
     }
@@ -118,15 +118,15 @@
         height: 151px;
 
         background-color: $white;
+
+        @include desktop {
+          height: 135px;
+        }
       }
     }
 
     @include desktop {
       background-color: $very-light-grey;
-
-      &::after {
-        height: 135px;
-      }
     }
   }
 
