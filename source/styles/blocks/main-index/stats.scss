@@ -25,7 +25,6 @@
     width: 100%;
 
     background-color: $very-light-grey;
-    box-shadow: 100% 0 0 0 $very-light-grey;
 
     @include desktop {
       background-color: $accent-light-grey;
@@ -59,7 +58,7 @@
 
     width: 1440px;
     padding-top: 0;
-    padding-bottom: 85px;
+    padding-bottom: 0;
   }
 }
 
@@ -123,6 +122,7 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0;
 
   @include tablet {
     flex-direction: row;

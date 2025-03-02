@@ -1,34 +1,50 @@
 .footer-logotext {
-  width: 128px;
-  height: 24px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 320px;
+  margin: 40px auto 20px;
 
   &__link {
     @include reset-link;
 
     width: 128;
     height: 24;
+    margin: 0;
 
     color: $extra-dark-grey;
+    cursor: pointer;
+    border-bottom: 1px solid $specify-light-grey;
 
-    &:hover {
-      color: $hover;
+    &::after {
+      @include pseudo-element;
+
+      width: 128px;
+      height: 24px;
+
+      background-color: $specify-light-grey;
+      mask-image: url(./icons/stack.svg#footer-logotext);
+      mask-position: center;
+      mask-size: 128px 24px;
+      mask-repeat: no-repeat;
     }
 
-    &:focus {
+    &[path]:hover {
       color: $hover;
+      fill: $hover;
     }
 
-    &:active {
+    &[path]:focus {
+      color: $hover;
+      fill: $hover;
+    }
+
+    &[path]:active {
       color: $active;
-    }
-
-    &__svg {
-      width: 128;
-      height: 24;
-
-      background-color: transparent;
-      vertical-align: middle;
-      fill: $extra-dark-grey;
+      fill: $active;
     }
 
     @include tablet {

@@ -234,8 +234,9 @@
   color: $color;
   background-color: $bg-color;
 
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  transition-duration: 1s;
+  transition-duration: 1s, 1s, 2s;
+  transition-property: color, background-color, transform;
+  transition-timing-function: ease-in-out;
 
   &:hover {
     $bg-color: $hover-green;

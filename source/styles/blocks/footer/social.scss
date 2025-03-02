@@ -6,14 +6,16 @@
 .social__list {
   @include reset-list;
 
-  display: grid;
-  grid-template-columns: repeat(3, 28px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 
   width: 132px;
+  padding: 7px 0;
 
-  margin: 20px auto;
-  padding: 0;
+  border-bottom: 1px solid $specify-light-grey;
 
   @include tablet {
     display: flex;
@@ -34,6 +36,13 @@
   max-height: 22px;
   margin: 0;
   padding: 0;
+
+  border-top: 1px solid $specify-light-grey;
+  border-bottom: 1px solid $specify-light-grey;
+
+  @include tablet {
+    border: none;
+  }
 }
 
 .social__link {
