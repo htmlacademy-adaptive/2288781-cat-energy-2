@@ -33,7 +33,7 @@
       grid-template-rows: 80px;
       gap: 308px;
       justify-content: space-between;
-      align-content: space-between;
+      align-content: center;
 
       width: 768px;
       min-height: 200px;
@@ -202,12 +202,12 @@
       height: 115px;
 
       background-image:
-      image-set(
-        url("../../../images/maps/pin-tablet@1x.webp") 1x type("image/webp"),
-        url("../../../images/maps/pin-tablet@1x.png") 1x type("image/jpeg"),
-        url("../../../images/maps/pin-tablet@2x.webp") 2x type("image/webp"),
-        url("../../../images/maps/pin-tablet@2x.png") 2x type("image/jpeg")
-      );
+        image-set(
+          url("../../../images/maps/pin-tablet@1x.webp") 1x type("image/webp"),
+          url("../../../images/maps/pin-tablet@1x.png") 1x type("image/jpeg"),
+          url("../../../images/maps/pin-tablet@2x.webp") 2x type("image/webp"),
+          url("../../../images/maps/pin-tablet@2x.png") 2x type("image/jpeg")
+        );
       background-size: 113px 106px;
     }
 
