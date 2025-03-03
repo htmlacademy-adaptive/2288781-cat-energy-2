@@ -12,146 +12,146 @@
     width: 560px;
     height: 512px;
   }
+}
 
-  &__thumb {
-    position: absolute;
+.slider__thumb {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+
+  display: grid;
+  place-items: center;
+
+  width: 4px;
+  height: 100%;
+  margin: 0 -2px;
+  padding: 0;
+
+  border: none;
+  border-radius: 2px;
+  background-color: $very-dark-grey;
+  cursor: col-resize;
+
+  transition: background-color 0.3s ease;
+
+  &::before {
+    @include pseudo-element;
+    top: 50%;
     left: 50%;
-    z-index: 3;
 
-    display: grid;
-    place-items: center;
+    width: 40px;
+    height: 40px;
 
-    width: 4px;
-    height: 100%;
-    margin: 0 -2px;
-    padding: 0;
-
-    border: none;
-    border-radius: 2px;
-    background-color: $very-dark-grey;
+    background-color: $white;
+    border: 2px solid $very-dark-grey;
+    border-radius: 50%;
     cursor: col-resize;
 
-    transition: background-color 0.3s ease;
+    transform: translate(-50%, -50%);
+  }
 
-    &::before {
-      @include pseudo-element;
-      top: 50%;
-      left: 50%;
+  &::after {
+    @include pseudo-element;
+    top: 50%;
+    left: 50%;
 
-      width: 40px;
-      height: 40px;
+    width: 24px;
+    height: 18px;
 
-      background-color: $white;
-      border: 2px solid $very-dark-grey;
-      border-radius: 50%;
-      cursor: col-resize;
+    mask-image: url("../../../icons/stack.svg#icon-thumb");
+    mask-repeat: no-repeat;
+    mask-size: 24px 18px;
+    background-color: $very-dark-grey;
 
-      transform: translate(-50%, -50%);
-    }
+    transform: translate(-50%, -50%);
+  }
 
+  &:hover,
+  &:hover::after {
+    background-color: $primary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $primary;
+  }
+
+  &:focus,
+  &:focus::after {
+    background-color: $primary;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $hover-green;
+  }
+
+  &:active::before {
+    border-color: $hover-green;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.slider__wrapper-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+  pointer-events: none;
+  background-color: $very-light-grey;
+
+  @include tablet {
     &::after {
       @include pseudo-element;
-      top: 50%;
-      left: 50%;
+      top: 0;
+      left: 0;
+      z-index: -1;
 
-      width: 24px;
-      height: 18px;
+      width: 100%;
+      height: 151px;
 
-      mask-image: url("../../../icons/stack.svg#icon-thumb");
-      mask-repeat: no-repeat;
-      mask-size: 24px 18px;
-      background-color: $very-dark-grey;
+      background-color: $white;
 
-      transform: translate(-50%, -50%);
-    }
-
-    &:hover,
-    &:hover::after {
-      background-color: $primary;
-    }
-
-    &:hover::before,
-    &:focus::before {
-      border-color: $primary;
-    }
-
-    &:focus,
-    &:focus::after {
-      background-color: $primary;
-    }
-
-    &:active,
-    &:active::after {
-      background-color: $hover-green;
-    }
-
-    &:active::before {
-      border-color: $hover-green;
-    }
-
-    &:disabled {
-      opacity: 0.6;
-    }
-  }
-
-  &__wrapper-before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    width: 50%;
-    height: 100%;
-
-    overflow: hidden;
-    pointer-events: none;
-    background-color: $very-light-grey;
-
-    @include tablet {
-      &::after {
-        @include pseudo-element;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-        width: 100%;
-        height: 151px;
-
-        background-color: $white;
-
-        @include desktop {
-          height: 135px;
-        }
+      @include desktop {
+        height: 135px;
       }
     }
-
-    @include desktop {
-      background-color: $very-light-grey;
-    }
   }
 
-  &__wrapper-after {
-    pointer-events: none;
+  @include desktop {
+    background-color: $very-light-grey;
+  }
+}
+
+.slider__wrapper-after {
+  pointer-events: none;
+}
+
+.slider__image {
+  width: 280px;
+  max-width: none;
+  height: 100%;
+
+  object-fit: cover;
+  pointer-events: none;
+
+  @include tablet {
+    width: 560px;
   }
 
-  &__image {
-    width: 280px;
-    max-width: none;
-    height: 100%;
+  &--before {
+    object-position: left;
+  }
 
-    object-fit: cover;
-    pointer-events: none;
-
-    @include tablet {
-      width: 560px;
-    }
-
-    &--before {
-      object-position: left;
-    }
-
-    &--after {
-      object-position: right;
-    }
+  &--after {
+    object-position: right;
   }
 }
