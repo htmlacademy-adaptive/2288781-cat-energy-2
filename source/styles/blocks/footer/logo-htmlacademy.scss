@@ -1,8 +1,13 @@
 .logo-htmlacademy {
-  border-top: 1px solid $specify-light-grey;
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  transition: all 0.8s ease-out;
 
   @include tablet {
-    border: none;
+    padding: 0;
   }
 
   &__link {
@@ -14,9 +19,8 @@
     justify-content: space-between;
     align-items: center;
 
-    min-width: 320px;
-
-    margin: 20px auto 40px;
+    width: 100%;
+    margin: 0;
 
     color: $accent-dark-grey;
 
@@ -52,7 +56,6 @@
   &__text {
     display: flex;
     align-items: center;
-
 
     min-height: 34px;
 

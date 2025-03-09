@@ -16,11 +16,11 @@
 
 .slider__thumb {
   position: absolute;
+  top: 0;
   left: 50%;
   z-index: 3;
 
-  display: grid;
-  place-items: center;
+  display: block;
 
   width: 4px;
   height: 100%;
@@ -31,8 +31,8 @@
   border-radius: 2px;
   background-color: $very-dark-grey;
   cursor: col-resize;
-
-  transition: background-color 0.3s ease;
+  font: icon;
+  color: currentColor;
 
   &::before {
     @include pseudo-element;
@@ -43,9 +43,8 @@
     height: 40px;
 
     background-color: $white;
-    border: 2px solid $very-dark-grey;
+    border: 2px solid  $very-dark-grey;
     border-radius: 50%;
-    cursor: col-resize;
 
     transform: translate(-50%, -50%);
   }
@@ -54,31 +53,29 @@
     @include pseudo-element;
     top: 50%;
     left: 50%;
+    z-index: 20;
 
     width: 24px;
     height: 18px;
 
-    mask-image: url("../../../icons/stack.svg#icon-thumb");
-    mask-repeat: no-repeat;
+    mask-image: url("../../../icons/stack.svg#icon-curtain");
     mask-size: 24px 18px;
+    mask-repeat: no-repeat;
     background-color: $very-dark-grey;
 
     transform: translate(-50%, -50%);
   }
 
   &:hover,
-  &:hover::after {
+  &:hover::after,
+  &:focus,
+  &:focus::after {
     background-color: $primary;
   }
 
   &:hover::before,
   &:focus::before {
     border-color: $primary;
-  }
-
-  &:focus,
-  &:focus::after {
-    background-color: $primary;
   }
 
   &:active,
@@ -95,63 +92,73 @@
   }
 }
 
-.slider__wrapper-before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+.slider__list {
+  @include reset-list;
 
-  width: 50%;
-  height: 100%;
+  position: relative;
+}
 
-  overflow: hidden;
-  pointer-events: none;
-  background-color: $very-light-grey;
+.slider__item {
+  position: relative;
 
-  @include tablet {
-    &::after {
-      @include pseudo-element;
-      top: 0;
-      left: 0;
-      z-index: -1;
+  &--before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 
-      width: 100%;
-      height: 151px;
+    width: 50%;
+    height: 100%;
 
-      background-color: $white;
+    overflow: hidden;
+    background-color: $very-light-grey;
+    pointer-events: none;
 
-      @include desktop {
+    @include tablet {
+      &::after {
+        @include pseudo-element;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 151px;
+
+        background-color: $white;
+      }
+    }
+
+    @include desktop {
+      background-color: $accent-light-grey;
+
+      &::after {
         height: 135px;
       }
     }
   }
 
-  @include desktop {
-    background-color: $very-light-grey;
+  &--after {
+    pointer-events: none;
   }
 }
 
-.slider__wrapper-after {
-  pointer-events: none;
-}
-
-.slider__image {
-  width: 280px;
+.slider__item-image {
   max-width: none;
+  width: 280px;
   height: 100%;
 
   object-fit: cover;
   pointer-events: none;
 
-  @include tablet {
-    width: 560px;
-  }
-
   &--before {
-    object-position: left;
+    object-fit: right;
   }
 
   &--after {
-    object-position: right;
+    object-fit: left;
+  }
+
+  @include tablet {
+    width: 560px;
   }
 }

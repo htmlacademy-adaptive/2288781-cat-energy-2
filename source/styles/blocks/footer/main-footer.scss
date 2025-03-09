@@ -1,20 +1,102 @@
 .main-footer {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   background-color: $accent-light-grey;
 
+  transition: all 0.8s ease-out;
+
   &__map {
     position: relative;
 
     display: grid;
+
+    width: 100%;
+    min-width: $breakpoint-mobile-min;
+    margin: 0 auto;
+
+    @include tablet {
+      min-width: $breakpoint-tablet-min;
+    }
+
+    @include desktop {
+      min-width: $breakpoint-desktop-min;
+      margin: 0;
+    }
   }
 
-  &__social-channels {
+  &__wrapper {
     @include container;
+
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 320px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      width: 768px;
+      height: 37px;
+      margin: 55px auto;
+    }
+
+    @include desktop {
+      width: 1440px;
+      margin: 66x auto;
+    }
+  }
+
+  &__item {
+    flex-basis: 100%;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $specify-light-grey;
+
+      @include tablet {
+        border: none;
+      }
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+
+    &--footer-logotext {
+      display: block;
+
+      width: 128px;
+      margin: 0 auto;
+
+      @include tablet {
+        margin: 0;
+      }
+    }
+
+    &--footer-social {
+      width: 154px;
+      margin: 0 auto;
+    }
+
+    &--logo-htmlacademy {
+      margin: 0 auto;
+
+      @include tablet {
+        margin: 0 0 0 auto;
+      }
+    }
   }
 }

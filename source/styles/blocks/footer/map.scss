@@ -1,58 +1,68 @@
 .map {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: $white;
 
   transition: all 0.8s ease-out;
 
-  @include desktop {
-    position: relative;
-  }
-
   &__wrapper {
     @include container;
-
-    background-color: $white;
   }
 
   &__content {
+    position: relative;
+
     display: grid;
     grid-template-columns: repeat(2, 140px);
     grid-template-rows: 60px;
+    justify-content: space-between;
+    align-content: flex-start;
 
-    width: 320px;
-    min-height: 112px;
-    margin: 0 auto;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    //цвет светло-серый в каталоге
+    &--color {
+      background-color: $accent-light-grey;
 
-    background-color: $white;
+      @include desktop {
+        background-color: $white;
+      }
+    }
+
+    @include max-width-mobile {
+      width: 280px;
+      min-height: 112px;
+      margin: 0 auto;
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
 
     @include tablet {
       grid-template-columns: repeat(2, 163px);
-      grid-template-rows: 80px;
+      grid-template-rows: 78px;
       gap: 308px;
-      justify-content: space-between;
 
       width: 768px;
       min-height: 200px;
       margin: 0 auto;
-      padding-top: 61px;
-      padding-bottom: 61px;
+      padding: 60px 40px;
     }
 
     @include desktop {
       position: absolute;
-      top: 0;
-      left: 110px;
-      z-index: 5;
+      top: 95px;
+      left: calc(110px + (100vw - 1440px) / 2);
+      z-index: 10;
 
-      gap: 87px;
+      gap: unset;
 
       width: 565px;
       min-height: 199px;
-      margin: 95px 0 106px;
-      padding: 61px 0 60px;
+      margin: 0;
+      padding: 60px 80px;
+
+      background-color: $white;
     }
   }
 
@@ -66,6 +76,7 @@
     font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
+    padding: 1x 0;
 
     color: $extra-dark-grey;
     text-align: left;
@@ -80,7 +91,7 @@
   &__direction {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
     width: 140px;
     margin: 0;
@@ -91,7 +102,24 @@
 
     color: $accent-dark-grey;
 
+    &__address {
+
+      margin-top: 0;
+      margin-bottom: 0;
+
+      @include tablet {
+        margin-bottom: 19px;
+      }
+    }
+
+    &__city {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
     @include tablet {
+      justify-content: space-between;
+
       width: 163px;
 
       font-size: 16px;
@@ -105,113 +133,77 @@
   }
 
   &__location {
-    position: relative;
+    height: 362px;
 
-    width: 100%;
-    min-width: 320px;
-    max-width: max-content;
-
-    & .map__location-iframe {
-      display: block;
-      flex-grow: 1;
+    @include tablet {
+      height: 400px;
     }
   }
 
-  &__iframe {
-    position: absolute;
-    top: 0;
+  &__location-image {
+    display: none;
+  }
 
-    display: block;
-
+  &__location-iframe {
     width: 100%;
-    min-width: 320px;
+    height: 362px;
     margin: 0 auto;
 
     border: none;
-    background-color: $specify-light-grey;
-    background-repeat: no-repeat;
-
-    @include max-width-mobile {
-      min-width: 320px;
-      min-height: 362px;
-
-      background-image:
-        image-set(
-          url("../../../images/maps/location-mobile@1x.webp") 1x type("image/webp"),
-          url("../../../images/maps/location-mobile@1x.jpg") 1x type("image/jpeg"),
-          url("../../../images/maps/location-mobile@2x.webp") 2x type("image/webp"),
-          url("../../../images/maps/location-mobile@2x.jpg") 2x type("image/jpeg")
-        );
-      background-size: 320px 362px;
-    }
+    object-fit: cover;
+    overflow: visible;
 
     @include tablet {
       min-width: 768px;
       min-height: 400px;
-
-      background-image:
-        image-set(
-          url("../../../images/maps/location-tablet@1x.webp") 1x type("image/webp"),
-          url("../../../images/maps/location-tablet@1x.jpg") 1x type("image/jpeg"),
-          url("../../../images/maps/location-tablet@2x.webp") 2x type("image/webp"),
-          url("../../../images/maps/location-tablet@2x.jpg") 2x type("image/jpeg")
-        );
-      background-size: 768px 400px;
     }
 
     @include desktop {
-      min-width: 1440px;
-      max-width: max-content;
-
-      background-image:
-        image-set(
-          url("../../../images/maps/location-desktop@1x.webp") 1x type("image/webp"),
-          url("../../../images/maps/location-desktop@1x.jpg") 1x type("image/jpeg"),
-          url("../../../images/maps/location-desktop@2x.webp") 2x type("image/webp"),
-          url("../../../images/maps/location-desktop@2x.jpg") 2x type("image/jpeg")
-        );
-      background-size: 1440px 400px;
+      height: 100%;
+      width: 100%;
     }
   }
 
   &__pin {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    top: 139px;
+    left: 134px;
     z-index: 10;
 
-    width: 60px;
-    height: 60px;
+    display: none;
 
-    background-image:
-      image-set(
-        url("../../../images/maps/pin-mobile@1x.webp") 1x type("image/webp"),
-        url("../../../images/maps/pin-mobile@1x.png") 1x type("image/jpeg"),
-        url("../../../images/maps/pin-mobile@2x.webp") 2x type("image/webp"),
-        url("../../../images/maps/pin-mobile@2x.png") 2x type("image/jpeg")
-      );
-    background-size: 55px 53px;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transform: translate(-50%, -50%);
+    width: 57px;
+    height: 53px;
 
     @include tablet {
-      width: 115px;
-      height: 115px;
+      top: 146px;
+      left: 333px;
 
-      background-image:
-        image-set(
-          url("../../../images/maps/pin-tablet@1x.webp") 1x type("image/webp"),
-          url("../../../images/maps/pin-tablet@1x.png") 1x type("image/jpeg"),
-          url("../../../images/maps/pin-tablet@2x.webp") 2x type("image/webp"),
-          url("../../../images/maps/pin-tablet@2x.png") 2x type("image/jpeg")
-        );
-      background-size: 113px 106px;
+      width: 113px;
+      height: 106px;
     }
 
     @include desktop {
-      transform: translate(250%, -50%);
+      top: 131px;
+      left: 908px;
+    }
+  }
+
+  &--nojs {
+    &__location {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: $accent-light-grey;
+    }
+
+    &_location-image {
+      display: none;
+    }
+
+    &__location-iframe {
+      display: block;
     }
   }
 }

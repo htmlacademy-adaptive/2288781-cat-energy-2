@@ -1,23 +1,27 @@
 .footer-logotext {
-  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.8s ease-out;
 
-  min-width: 320px;
-  margin: 40px auto 20px;
+  @include tablet {
+    padding: 0;
+  }
 
   &__link {
     @include reset-link;
 
-    width: 128;
-    height: 24;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    color: $extra-dark-grey;
-    cursor: pointer;
-    border-bottom: 1px solid $specify-light-grey;
+    width: 100%;
+    height: 24px;
+    margin: 0 auto;
+
+    color: currentColor;
 
     &::after {
       @include pseudo-element;
@@ -25,29 +29,29 @@
       width: 128px;
       height: 24px;
 
-      background-color: $specify-light-grey;
-      mask-image: url("./icons/stack.svg#footer-logotext");
-      mask-position: center;
+      background-color: $extra-dark-grey;
+      mask-image: url("../../../icons/stack.svg#icon-footer-logotext");
       mask-size: 128px 24px;
       mask-repeat: no-repeat;
+      mask-position: center;
     }
 
-    &[path]:hover {
-      color: $hover;
-      fill: $hover;
+    &:hover::after {
+      background-color: $hover;
     }
 
-    &[path]:focus {
-      color: $hover;
-      fill: $hover;
+    &:focus::after {
+      background-color: $hover;
     }
 
-    &[path]:active {
-      color: $active;
-      fill: $active;
+    &:active::after {
+      background-color: $active;
     }
 
     @include tablet {
+      justify-content: flex-start;
+
+      margin: 0;
       margin-right: 160px;
       padding: 7px 0;
     }

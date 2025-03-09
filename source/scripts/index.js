@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ползунок
   const slider = document.querySelector('.slider');
-  const before = slider.querySelector('.slider__wrapper-before');
+  const before = slider.querySelector('.slider__item--before');
   const changeBtn = document.querySelector('.slider__thumb');
 
   if (slider) {
@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isActive = false;
     const width = slider.offsetWidth / 2;
     before.style.width = `${width}px`;
-
 
     const beforeAfterSlider = (cursorPosition) => {
       const shift = Math.max(0, Math.min(cursorPosition, slider.offsetWidth));
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('mouseleave', () => {
       isActive = false;
     });
-
 
     slider.addEventListener('mousemove', (evt) => {
       if (!isActive) {
@@ -110,4 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
 });
