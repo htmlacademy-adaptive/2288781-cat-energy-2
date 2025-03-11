@@ -43,7 +43,6 @@
 
     @include tablet {
       flex-direction: row;
-      flex-wrap: nowrap;
       justify-content: space-between;
 
       width: 768px;
@@ -53,50 +52,50 @@
 
     @include desktop {
       width: 1440px;
-      margin: 66x auto;
+      margin: 66px auto;
+    }
+  }
+}
+
+.main-footer__item {
+  flex-basis: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $specify-light-grey;
+
+    @include tablet {
+      border: none;
     }
   }
 
-  &__item {
-    flex-basis: 100%;
+  @include tablet {
+    padding: 0;
+  }
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+  &--footer-logotext {
+    display: block;
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $specify-light-grey;
-
-      @include tablet {
-        border: none;
-      }
-    }
+    width: 128px;
+    margin: 0 auto;
 
     @include tablet {
-      padding: 0;
+      margin: 0;
     }
+  }
 
-    &--footer-logotext {
-      display: block;
+  &--footer-social {
+    width: 154px;
+    margin: 0 auto;
+  }
 
-      width: 128px;
-      margin: 0 auto;
+  &--logo-htmlacademy {
+    margin: 0 auto;
 
-      @include tablet {
-        margin: 0;
-      }
-    }
-
-    &--footer-social {
-      width: 154px;
-      margin: 0 auto;
-    }
-
-    &--logo-htmlacademy {
-      margin: 0 auto;
-
-      @include tablet {
-        margin: 0 0 0 auto;
-      }
+    @include tablet {
+      margin: 0 0 0 auto;
     }
   }
 }

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = slider.offsetWidth / 2;
     before.style.width = `${width}px`;
 
-    const beforeAfterSlider = (cursorPosition) => {
+    const beforeSlider = (cursorPosition) => {
       const shift = Math.max(0, Math.min(cursorPosition, slider.offsetWidth));
       before.style.width = `${shift}px`;
       changeBtn.style.left = `${shift}px`;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let cursorPosition = evt.pageX;
       cursorPosition -= slider.getBoundingClientRect().left;
-      beforeAfterSlider(cursorPosition);
+      beforeSlider(cursorPosition);
       pauseEvents(evt);
     });
 
@@ -103,10 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
       for (i = 0; i < evt.changedTouches.length; i++) {
         touchPosition = evt.changedTouches[i].pageX;
         touchPosition -= slider.getBoundingClientRect().left;
-        beforeAfterSlider(touchPosition);
+        beforeSlider(touchPosition);
         pauseEvents(evt);
       }
     });
   }
-
 });

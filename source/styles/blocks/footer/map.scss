@@ -21,15 +21,6 @@
     justify-content: space-between;
     align-content: flex-start;
 
-    //цвет светло-серый в каталоге
-    &--color {
-      background-color: $accent-light-grey;
-
-      @include desktop {
-        background-color: $white;
-      }
-    }
-
     @include max-width-mobile {
       width: 280px;
       min-height: 112px;
@@ -76,7 +67,7 @@
     font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
-    padding: 1x 0;
+    padding: 1px 0;
 
     color: $extra-dark-grey;
     text-align: left;
@@ -103,13 +94,8 @@
     color: $accent-dark-grey;
 
     &__address {
-
       margin-top: 0;
       margin-bottom: 0;
-
-      @include tablet {
-        margin-bottom: 19px;
-      }
     }
 
     &__city {
@@ -125,6 +111,10 @@
       font-size: 16px;
 
       text-align: right;
+
+      &__address {
+          margin-bottom: 19px;
+      }
     }
 
     @include desktop {
@@ -205,5 +195,14 @@
     &__location-iframe {
       display: block;
     }
+  }
+}
+
+//цвет светло-серый в каталоге
+.map__content--color {
+  background-color: $accent-light-grey;
+
+  @include desktop {
+    background-color: $white;
   }
 }

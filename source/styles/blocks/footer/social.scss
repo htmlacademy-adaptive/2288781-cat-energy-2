@@ -12,7 +12,7 @@
   justify-content: center;
   gap: 24px;
 
-  width: 100%;
+  width: 280px;
 
   @include tablet {
     display: flex;
@@ -21,7 +21,8 @@
 
     width: auto;
     margin: 0;
-    margin-left: 160px;
+    margin-left: auto;
+    padding: 0;
   }
 
   @include desktop {
@@ -30,10 +31,8 @@
 }
 
 .social__item {
-  min-width: 28px;
-  max-height: 22px;
-  margin: 0;
-  padding: 0;
+  width: 28px;
+  height: 22px;
 }
 
 .social__link {
@@ -41,20 +40,25 @@
 
   position: relative;
 
-  display: block;
+  display: inline-block;
 
-  width: 28px;
-  height: 22px;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+
+  text-decoration: none;
+  vertical-align: middle;
 
   transition: all 0.3s ease-in-out;
 
   &::before {
     @include pseudo-element;
+    inset: 0;
 
     width: 28px;
     height: 22px;
+    margin: auto;
 
     background-color: $very-dark-grey;
     mask-repeat: no-repeat;
@@ -63,17 +67,45 @@
   }
 
   &--vkontakte {
-    &::before {
+    &::after {
       @include pseudo-element;
+
+      width: 27px;
+      height: 17px;
 
       mask-image: url("../../../icons/stack.svg#icon-vkontakte");
       mask-size: 27px 17px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+
+      &:hover {
+        background-color: $hover-green;
+      }
+
+      &:focus {
+        background-color: $hover-green;
+        outline: none;
+
+        transition-duration: 0.3s;
+      }
+
+      &:active {
+        background-color: $hover-green;
+        opacity: 0.3;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+      }
     }
   }
 
   &--youtube {
-    &::before {
+    &::after {
       @include pseudo-element;
+
+      width: 24px;
+      height: 19px;
 
       mask-image: url("../../../icons/stack.svg#icon-youtube");
       mask-size: 24px 19px;
@@ -83,31 +115,16 @@
   }
 
   &--telegram {
-    &::before {
+    &::after {
       @include pseudo-element;
+
+      width: 20px;
+      height: 18px;
 
       mask-image: url("../../../icons/stack.svg#icon-telegram");
       mask-size: 20px 17px;
+      mask-position: center;
+      mask-repeat: no-repeat;
     }
-  }
-
-  &:hover::after {
-    background-color: $hover-green;
-  }
-
-  &:focus::after {
-    background-color: $hover-green;
-    outline: none;
-
-    transition-duration: 0.3s;
-  }
-
-  &:active::after {
-    background-color: $hover-green;
-    opacity: 0.3;
-  }
-
-  &:disabled {
-    opacity: 0.3;
   }
 }
