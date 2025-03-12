@@ -1,13 +1,19 @@
 .logo-htmlacademy {
-  width: 100%;
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  margin-bottom: 60px;
+
+  cursor: pointer;
 
   transition: all 0.8s ease-out;
 
   @include tablet {
+    min-width: 167px;
+    margin-bottom: 0;
+    margin-left: auto;
     padding: 0;
+  }
+
+  @include desktop {
+    min-width: 168px;
   }
 
   &__link {
@@ -19,10 +25,22 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
-    margin: 0;
+    min-width: 280px;
+    min-height: 34px;
+    margin: 20px auto 40px;
 
     color: $accent-dark-grey;
+
+    @include tablet {
+      min-width: 167px;
+      min-height: 37px;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include desktop {
+      width: 168px;
+    }
 
     &::after {
       @include pseudo-element;
@@ -57,6 +75,7 @@
     display: flex;
     align-items: center;
 
+    min-width: 113px;
     min-height: 34px;
 
     font-size: 16px;

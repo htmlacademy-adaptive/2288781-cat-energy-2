@@ -1,9 +1,4 @@
 .main-footer {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
   background-color: $accent-light-grey;
 
   transition: all 0.8s ease-out;
@@ -34,34 +29,36 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    width: 320px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
 
-      width: 768px;
+      min-width: 768px;
       height: 37px;
-      margin: 55px auto;
+      padding-top: 55px;
+      padding-bottom: 55px;
     }
 
     @include desktop {
-      width: 1440px;
-      margin: 66px auto;
+      min-width: 1220px;
+      padding-top: 66px;
+      padding-bottom: 66px;
     }
   }
 }
 
 .main-footer__item {
-  flex-basis: 100%;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 100%;
+  max-height: 37px;
 
   &:not(:last-child) {
     border-bottom: 1px solid $specify-light-grey;
@@ -71,19 +68,25 @@
     }
   }
 
+  @include max-width-mobile {
+    min-width: 320px;
+  }
+
   @include tablet {
     padding: 0;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--footer-logotext {
     display: block;
 
     width: 128px;
-    margin: 0 auto;
-
-    @include tablet {
-      margin: 0;
-    }
+    margin: 0;
   }
 
   &--footer-social {
@@ -91,14 +94,17 @@
     padding: 20px 0;
 
     @include tablet {
-      max-width: 132px;
+      width: 132px;
+      height: 22px;
       margin-right: auto;
       padding: 0;
     }
   }
 
   &--logo-htmlacademy {
-    margin: 0 auto;
+    min-width: 280px;
+    height: 34px;
+    margin: 0;
 
     @include tablet {
       margin: 0 0 0 auto;

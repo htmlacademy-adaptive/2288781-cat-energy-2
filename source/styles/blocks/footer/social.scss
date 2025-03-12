@@ -1,9 +1,8 @@
 .social {
-  width: 100%;
+  position: relative;
 
-  @include tablet {
-    justify-content: space-between;
-  }
+  margin: 0;
+  padding: 0;
 }
 
 .social__list {
@@ -15,10 +14,13 @@
   align-items: center;
   gap: 24px;
 
-  width: 280px;
+  width: 132px;
+  margin: 20px auto;
 
   @include tablet {
-    width: 132px;
+    justify-content: space-between;
+
+    margin: 0;
   }
 }
 
@@ -29,6 +31,7 @@
   height: 22px;
 
   background-color: $accent-dark-grey;
+  cursor: pointer;
 
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
