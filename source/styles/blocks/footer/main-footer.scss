@@ -87,8 +87,14 @@
   }
 
   &--footer-social {
-    width: 154px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 20px 0;
+
+    @include tablet {
+      max-width: 132px;
+      margin-right: auto;
+      padding: 0;
+    }
   }
 
   &--logo-htmlacademy {
