@@ -1,29 +1,42 @@
 .logo-htmlacademy {
-  margin-bottom: 60px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+  height: 34px;
 
   cursor: pointer;
 
   transition: all 0.8s ease-out;
 
+  @include outline($test-color: #6bec5a);
+
+  @include max-width-mobile {
+    width: 100%;
+    height: 100%;
+  }
+
   @include tablet {
-    min-width: 167px;
+    justify-content: flex-end;
+
+    width: 167px;
+    height: 37px;
     margin-bottom: 0;
-    margin-left: auto;
+    margin-left: 120px;
     padding: 0;
   }
 
   @include desktop {
-    min-width: 168px;
+    width: 168px;
+    margin-left: 376px;
   }
 
   &__link {
     @include reset-link;
 
     position: relative;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     min-width: 280px;
     min-height: 34px;

@@ -3,6 +3,12 @@
 
   margin: 0;
   padding: 0;
+
+  @include outline($test-color: #6bec5a);
+
+  @include max-width-mobile {
+    min-width: 100%;
+  }
 }
 
 .social__list {

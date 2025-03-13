@@ -1,4 +1,6 @@
 .main-footer {
+  position: relative;
+
   background-color: $accent-light-grey;
 
   transition: all 0.8s ease-out;
@@ -28,37 +30,32 @@
     position: relative;
 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    min-width: 320px;
-    margin: 0;
-    padding: 0;
     padding-top: 40px;
     padding-bottom: 40px;
 
     @include tablet {
-      flex-direction: row;
+      flex-wrap: nowrap;
       justify-content: space-between;
 
-      min-width: 768px;
-      height: 37px;
       padding-top: 55px;
       padding-bottom: 55px;
     }
 
     @include desktop {
-      min-width: 1220px;
       padding-top: 66px;
       padding-bottom: 66px;
     }
+
+    @include outline($test-color: #5a88ec);
   }
 }
 
 .main-footer__item {
   width: 100%;
-  max-height: 37px;
 
   &:not(:last-child) {
     border-bottom: 1px solid $specify-light-grey;
@@ -66,10 +63,6 @@
     @include tablet {
       border: none;
     }
-  }
-
-  @include max-width-mobile {
-    min-width: 320px;
   }
 
   @include tablet {
@@ -82,20 +75,31 @@
     }
   }
 
+  @include desktop {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
   &--footer-logotext {
-    display: block;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     width: 128px;
-    margin: 0;
+    height: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   &--footer-social {
+    width: 132px;
+    height: 22px;
     margin: 0;
     padding: 20px 0;
 
     @include tablet {
-      width: 132px;
-      height: 22px;
       margin-right: auto;
       padding: 0;
     }
@@ -107,6 +111,7 @@
     margin: 0;
 
     @include tablet {
+      height: 37px;
       margin: 0 0 0 auto;
     }
   }
