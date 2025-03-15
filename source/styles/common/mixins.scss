@@ -135,14 +135,14 @@
 
   color: $color;
 
-  @include tablet {
+  @media (min-width: $breakpoint-tablet-min) {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
-//h5 - catalog | info-title
-@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+//h5 - info
+@mixin info($font-family: $main-font, $color: $specify-dark-grey) {
   display: block;
 
   margin: 0;
