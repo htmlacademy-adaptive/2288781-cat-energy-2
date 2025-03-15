@@ -2,7 +2,8 @@
   position: relative;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
   width: 280px;
   height: 34px;
@@ -10,8 +11,6 @@
   cursor: pointer;
 
   transition: all 0.8s ease-out;
-
-  @include outline($test-color: #6bec5a);
 
   @include max-width-mobile {
     width: 100%;
@@ -21,16 +20,10 @@
   @include tablet {
     justify-content: flex-end;
 
-    width: 167px;
-    height: 37px;
-    margin-bottom: 0;
-    margin-left: 120px;
-    padding: 0;
-  }
-
-  @include desktop {
     width: 168px;
-    margin-left: 376px;
+    height: 37px;
+    margin: 0;
+    padding: 0;
   }
 
   &__link {
@@ -38,21 +31,21 @@
 
     position: relative;
 
-    min-width: 280px;
-    min-height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 280px;
+    height: 37px;
     margin: 20px auto 40px;
 
     color: $accent-dark-grey;
+    vertical-align: middle;
 
     @include tablet {
-      min-width: 167px;
-      min-height: 37px;
+      width: 168px;
       margin: 0;
       padding: 0;
-    }
-
-    @include desktop {
-      width: 168px;
     }
 
     &::after {
@@ -97,8 +90,9 @@
     @include tablet {
       gap: 23px;
 
+      min-height: 37px;
       margin: 0;
-      padding: 0 0 0 5px;
+      padding: 0;
     }
   }
 }
