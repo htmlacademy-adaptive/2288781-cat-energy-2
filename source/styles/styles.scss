@@ -22,9 +22,9 @@
 @import "./blocks/common-blocks/button.scss";
 
 //Шапка
-@import "./blocks/main-header/main-header.scss";
-@import "./blocks/main-header/header-logo.scss";
-@import "./blocks/main-header/navigation.scss";
+@import "./blocks/header/main-header.scss";
+@import "./blocks/header/header-logo.scss";
+@import "./blocks/header/navigation.scss";
 
 //Подвал
 @import "./blocks/footer/main-footer.scss";
@@ -41,14 +41,14 @@
 @import "./blocks/main-index/slider.scss";
 
 //Страница каталога
-// @import "./blocks/main-inner/main-inner.scss";
-// @import "./blocks/main-inner/catalog.scss";
+@import "./blocks/main-inner/main-inner.scss";
+@import "./blocks/main-inner/catalog.scss";
 // @import "./blocks/main-inner/card-info.scss";
 // @import "./blocks/main-inner/products.scss";
 // @import "./blocks/main-inner/product.scss";
-// @import "./blocks/main-inner/addition.scss";
+@import "./blocks/main-inner/addition.scss";
 // @import "./blocks/main-inner/gift.scss";
-// @import "./blocks/main-inner/promotions.scss";
+@import "./blocks/main-inner/promotions.scss";
 
 //Страница форм (не будут рассматривать на защите)
 // @import "./blocks/main-form/main-form.scss";

@@ -1,0 +1,147 @@
+.promotions {
+  padding: 40px 0;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    padding: 96px 0 104px;
+  }
+}
+
+.promotions__wrapper {
+  @include container;
+}
+
+.promotions__title {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+
+  max-width: 320px;
+  margin-bottom: 32px;
+  padding: 0 0 0 20px;
+
+  font-family: $main-font;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: block;
+
+    max-width: 108px;
+    height: 2px;
+    margin: 0;
+
+    background-color: $primary;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  @media (min-width: $breakpoint-tablet-min) {
+    margin: 0 0 66px 70px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    margin: 0 0 72px 110px;
+
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.promotions__slogan {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.promotions__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    justify-content: center;
+  }
+}
+
+.promotions__input {
+  width: 100%;
+  padding: 12px;
+
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29.64px;
+
+  color: $accent-dark-grey;
+  border: 1px solid $dark-grey;
+
+  &::placeholder {
+    color: $accent-dark-grey;
+  }
+
+  @media (min-width: $breakpoint-tablet-min) {
+    min-width: 376px;
+    height: 54px;
+    border: none;
+    outline: 1px solid $dark-grey;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    min-width: 496px;
+  }
+
+  &:hover {
+    outline: 1px solid $dark-grey;
+  }
+
+  &:focus {
+    outline: 2px solid $accent-dark-grey;
+  }
+
+  &:active {
+    outline: 2px solid $accent-dark-grey;
+  }
+}
+
+.promotions__button {
+  height: 56px;
+
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $breakpoint-tablet-min) {
+    width: 256px;
+  }
+}
