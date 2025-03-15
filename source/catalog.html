@@ -27,7 +27,9 @@
 
 <body class="page__body">
 
-  <header class="page__main-header main-header main-header--index main-header--catalog-index header--nojs">
+  <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Список продукции и акции</h1>
+
+  <header class="page__main-header main-header main-header--index">
 
     <div class="main-header__wrapper">
 
@@ -52,7 +54,7 @@
 
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--index">
+        <ul class="navigation__list navigation__list--catalog navigation__list--catalog-index">
 
           <li class="navigation__item">
             <a class="navigation__link" href="./index.html" aria-current="page">Главная</a>
@@ -76,58 +78,60 @@
 
   <main class="page__main-inner main-inner">
 
-    <h2 class="main-inner__title title">Каталог продукции</h2>
+    <div class="main-inner__wrapper">
 
-    <section class="catalog">
+      <h2 class="main-inner__title title">Каталог продукции</h2>
 
-      <h3 class="catalog__subtitle subtitle visually-hidden">Карточки</h3>
+      <section class="catalog">
 
-      <div class="catalog__wrapper">
+        <h3 class="catalog__subtitle subtitle visually-hidden">Карточки каталога продукции</h3>
 
         <ul class="catalog__list">
 
           <li class="catalog__item">
 
-            <div class="catalog__card">
+            <div class="card">
 
-              <a class="catalog__link" href="#">
+              <a class="card__link card__link-image" href="#">
 
                 <picture>
-                  <source media="(min-width: 1440px)" type="image/webp" width="169" height="210" srcset="images/catalog/desktop-chicken500@1x.webp 1x, images/catalog/desktop-chicken500@2x.webp 2x">
-                  <source media="(min-width: 768px)" type="image/webp" width="200" height="210" srcset="images/catalog/tablet-chicken500@1x.webp 1x, images/catalog/tablet-chicken500@2x.webp 2x">
-                  <source media="(min-width: 320px)" type="image/webp" width="140" height="107" srcset="images/catalog/mobile-chicken500@1x.webp 1x, images/catalog/mobile-chicken500@2x.webp 2x">
+                  <source media="(min-width: 1440px)" type="image/webp" width="169" height="210" srcset="./images/catalog/desktop-chicken500@1x.webp 1x, images/catalog/desktop-chicken500@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/webp" width="200" height="210" srcset="./images/catalog/tablet-chicken500@1x.webp 1x, images/catalog/tablet-chicken500@2x.webp 2x">
+                  <source media="(min-width: 320px)" type="image/webp" width="140" height="107" srcset="./images/catalog/mobile-chicken500@1x.webp 1x, images/catalog/mobile-chicken500@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" type="image/jpeg" width="169" height="210" srcset="images/catalog/desktop-chicken500@1x.jpg 1x, images/catalog/desktop-chicken500@2x.jpg 2x">
-                  <source media="(min-width: 768px)" type="image/jpeg" width="200" height="210" srcset="images/catalog/tablet-chicken500@1x.jpg 1x, images/catalog/tablet-chicken500@2x.jpg 2x">
-                  <img class="card-list__image" width="140" height="107" src="images/catalog/mobile-chicken500@1x.jpg" srcset="images/catalog/mobile-chicken500@2x.jpg 2x" alt="Упаковка Cat «Energy PRO 500 г» со вкусом курицы.">
+                  <source media="(min-width: 1440px)" type="image/jpeg" width="169" height="210" srcset="./images/catalog/desktop-chicken500@1x.jpg 1x, images/catalog/desktop-chicken500@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/jpeg" width="200" height="210" srcset="./images/catalog/tablet-chicken500@1x.jpg 1x, images/catalog/tablet-chicken500@2x.jpg 2x">
+                  <img class="card__image" width="140" height="107" src="./images/catalog/mobile-chicken500@1x.jpg" srcset="images/catalog/mobile-chicken500@2x.jpg 2x" alt="Упаковка Cat «Energy PRO 500 г» со вкусом курицы.">
                 </picture>
 
               </a>
 
-              <h4 class="catalog__name name">Cat Energy PRO 500 г</h4>
+              <div class="card__text">
 
-              <ul class="catalog__list">
+                <h4 class="card__denomination denomination">Cat Energy PRO 500 г</h4>
 
-                <li class="card-info__item">
-                  <span class="card-info__description">Масса</span>
-                  <span class="card-info__meaning">500 г</span>
-                </li>
+                <ul class="card__list">
 
-                <li class="card-info__item">
-                  <span class="card-info__description">Вкус</span>
-                  <span class="card-info__meaning">Курица</span>
-                </li>
+                  <li class="card__item">
+                    <span class="card__parameter">Масса</span>
+                    <span class="card__value">500 г</span>
+                  </li>
 
-                <li class="card-info__item">
-                  <span class="card-info__description">Цена</span>
-                  <span class="card-info__meaning">700 ₽</span>
-                </li>
+                  <li class="card__item">
+                    <span class="card__parameter">Вкус</span>
+                    <span class="card__value">Курица</span>
+                  </li>
 
-              </ul>
+                  <li class="card__item">
+                    <span class="card__parameter">Цена</span>
+                    <span class="card__value">700 ₽</span>
+                  </li>
 
-              <a class="card-list__order button" href="#">
-                <span class="card-list__text">Заказать</span>
-              </a>
+                </ul>
+
+              </div>
+
+              <a class="card__button button" href="#">Заказать</a>
 
             </div>
 
@@ -378,127 +382,131 @@
 
           <li class="catalog__item">
 
-            <h3 class="card-list__subtitle subtitle visually-hidden">Карточка № 8 | Открыть каталог</h3>
+            <div class="catalog__card card--add">
 
-            <a class="card-list__link" href="#">
+              <h3 class="card-list__subtitle subtitle visually-hidden">Карточка № 8 | Открыть каталог</h3>
 
-              <span class="card-list__opened visually-hidden">Открыть каталог</span>
+              <a class="card-list__link" href="#">
 
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <line x1="15" x2="15" y2="30" stroke="#d3d3d3" stroke-width="2" />
-                <line x1="30" y1="15" y2="15" stroke="#d3d3d3" stroke-width="2" />
-              </svg>
+                <span class="card-list__opened visually-hidden">Открыть каталог</span>
 
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <line x1="15" x2="15" y2="30" stroke="#d3d3d3" stroke-width="2" />
+                  <line x1="30" y1="15" y2="15" stroke="#d3d3d3" stroke-width="2" />
+                </svg>
 
-            <h4 class="card-list__name name">Показать еще 100500 товаров</h4>
+              </a>
 
-            <p class="card-list__slogan">На самом деле вкусов гораздо больше!</p>
+              <h4 class="card-list__name name">Показать еще 100500 товаров</h4>
 
-            <a class="card-list__order button" href="#">
+              <p class="card-list__slogan">На самом деле вкусов гораздо больше!</p>
 
-              <span class="card-list__text">Показать все</span>
+              <a class="card-list__order button" href="#">
 
-            </a>
+                <span class="card-list__text">Показать все</span>
+
+              </a>
+
+            </div>
 
           </li>
 
         </ul>
 
-      </div>
+      </section>
 
-    </section>
+      <section class="addition">
 
-    <section class="addition">
+        <h2 class="addition__title title">Дополнительные товары</h2>
 
-      <h2 class="addition__title title">Дополнительные товары</h2>
+        <div class="addition__products products">
 
-      <div class="addition__products products">
+          <ul class="products__list">
 
-        <ul class="products__list">
+            <li class="products__item">
 
-          <li class="products__item">
+              <h3 class="products__subtitle subtitle">Сахарозаменитель</h3>
 
-            <h3 class="products__subtitle subtitle">Сахарозаменитель</h3>
+              <div class="products__content">
 
-            <div class="products__content">
+                <ul class="products__list product">
 
-              <ul class="products__list product">
+                  <li class="product__item">
+                    <span class="product__meaning">1 упаковка (100 г)</span>
+                    <span class="product__price">200 ₽</span>
+                    <a class="product__order button" href="#">
+                      <span class="product__text">Заказать</span>
+                    </a>
+                  </li>
 
-                <li class="product__item">
-                  <span class="product__meaning">1 упаковка (100 г)</span>
-                  <span class="product__price">200 ₽</span>
-                  <a class="product__order button" href="#">
-                    <span class="product__text">Заказать</span>
-                  </a>
-                </li>
+                </ul>
 
-              </ul>
+              </div>
 
-            </div>
+            </li>
+            <li class="products__item">
+              <h3 class="products__subtitle subtitle">Питьевая вода</h3>
+              <div class="products__content">
+                <ul class="products__list product">
+                  <li class="product__item"><span class="product__meaning">5 литров</span> <span class="product__price">50 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="products__item">
+              <h3 class="products__subtitle subtitle">Молоко</h3>
+              <div class="products__content">
+                <ul class="products__list product">
+                  <li class="product__item"><span class="product__meaning">1 литр</span> <span class="product__price">100 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="products__item">
+              <h3 class="products__subtitle subtitle">Витамины</h3>
+              <div class="products__content product">
+                <ul class="product__list">
+                  <li class="product__item"><span class="product__meaning">1 упаковка (30 г)</span> <span class="product__price">300 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
 
-          </li>
-          <li class="products__item">
-            <h3 class="products__subtitle subtitle">Питьевая вода</h3>
-            <div class="products__content">
-              <ul class="products__list product">
-                <li class="product__item"><span class="product__meaning">5 литров</span> <span class="product__price">50 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="products__item">
-            <h3 class="products__subtitle subtitle">Молоко</h3>
-            <div class="products__content">
-              <ul class="products__list product">
-                <li class="product__item"><span class="product__meaning">1 литр</span> <span class="product__price">100 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="products__item">
-            <h3 class="products__subtitle subtitle">Витамины</h3>
-            <div class="products__content product">
-              <ul class="product__list">
-                <li class="product__item"><span class="product__meaning">1 упаковка (30 г)</span> <span class="product__price">300 ₽</span> <a class="product__order button" href="#"><span class="product__text">Заказать</span></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        </div>
 
-      </div>
+        <div class="addition__gift gift">
+          <p class="gift__slogan">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
 
-      <div class="addition__gift gift">
-        <p class="gift__slogan">Закажите все и получите чехол для кота в подарок!</p>
-      </div>
+      </section>
 
-    </section>
+      <section class="promotions">
 
-    <section class="promotions">
+        <div class="promotions__wrapper">
 
-      <div class="promotions__wrapper">
+          <h2 class="promotions__title title">Акции и новинки</h2>
 
-        <h2 class="promotions__title title">Акции и новинки</h2>
+          <p class="promotions__slogan">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
 
-        <p class="promotions__slogan">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+          <form class="promotions__form" action="https://echo.htmlacademy.ru" method="post">
 
-        <form class="promotions__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="promotions__label" for="email">
 
-          <label class="promotions__label" for="email">
+              <input class="promotions__input" type="text" id="email" name="email" placeholder="kuklachev@gmail.com" aria-label="Укажите вашу электронную почту" required>
 
-            <input class="promotions__input" type="text" id="email" name="email" placeholder="kuklachev@gmail.com" aria-label="Укажите вашу электронную почту" required>
+            </label>
 
-          </label>
+          </form>
 
-        </form>
+          <button class="promotions__button grey-button" aria-label="Переход на почту" type="submit">
 
-        <button class="promotions__button grey-button" aria-label="Переход на почту" type="submit">
+            <span class="promotions__text">Подписаться</span>
 
-          <span class="promotions__text">Подписаться</span>
+          </button>
 
-        </button>
+        </div>
 
-      </div>
+      </section>
 
-    </section>
+    </div>
 
   </main>
 

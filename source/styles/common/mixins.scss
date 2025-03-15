@@ -37,6 +37,7 @@
 // Контейнер
 @mixin container {
   width: 100%;
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
 
@@ -120,8 +121,8 @@
   }
 }
 
-//h4 - catalog | name
-@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+//h4 - denomination
+@mixin denomination($font-family: $main-font, $color: $specify-dark-grey) {
   display: block;
 
   margin: 0;
@@ -134,7 +135,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
   }
@@ -210,9 +211,19 @@
   cursor: pointer;
   background: none;
 
+  &:hover {
+    outline: none;
+    border: none;
+  }
+
   &:focus {
-    outline: 2px solid $white;
-    outline-offset: 1px;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+    border: none;
   }
 
   &:disabled {

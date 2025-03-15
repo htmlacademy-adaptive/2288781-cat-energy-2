@@ -14,14 +14,6 @@
   background-color: $white;
   color: $black;
 
-  @include tablet {
-    padding: 25px 4px 0;
-  }
-
-  @include desktop {
-    padding: 55px 0 0;
-  }
-
   &__wrapper {
     @include container;
 
@@ -79,12 +71,14 @@
 
   @include tablet {
     min-height: 75px;
+    padding: 25px 4px 0;
 
     border: none;
   }
 
   @include desktop {
     min-height: 114px;
+    padding: 55px 0 0;
 
     background-color: transparent;
     color: $white;
