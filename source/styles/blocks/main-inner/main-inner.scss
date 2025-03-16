@@ -15,15 +15,12 @@
     font-family: $main-font;
 
     text-align: left;
-    border-top: 1px solid $specify-light-grey;
 
     transition: all 0.8s ease-out;
 
     @include tablet {
       width: 768px;
       margin: 65px auto 84px;
-
-      border: none;
     }
 
     @include desktop {

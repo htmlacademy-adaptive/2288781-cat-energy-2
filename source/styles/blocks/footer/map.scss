@@ -20,8 +20,10 @@
     grid-template-rows: 60px;
     justify-content: space-between;
 
+    width: 100%;
+
     @include max-width-mobile {
-      width: 280px;
+      max-width: 280px;
       min-height: 112px;
       margin: 0 auto;
       padding-top: 26px;
@@ -198,7 +200,7 @@
 }
 
 //цвет светло-серый в каталоге
-.map__content--color {
+.map__wrapper--color {
   background-color: $accent-light-grey;
 
   @include desktop {

@@ -1,57 +1,63 @@
 .card {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 140px);
 
+  min-height: 107px;
   padding: 27px 0 25px;
 
   @include tablet {
+    position: relative;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr auto;
 
+    width: 324px;
+    min-height: 430px;
     padding: 0 37px 40px;
 
     background: linear-gradient(to top, $accent-light-grey 430px, $white 81px);
   }
 
   @include desktop {
+    width: 245px;
     padding: 17px 38px 40px;
   }
 }
 
-.card__text {
-  display: flex;
-  flex-direction: column;
-}
-
 .card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 140px;
+  height: 107px;
+  margin: 0;
+  padding: 0;
+
   text-decoration: none;
   cursor: pointer;
 
   @include tablet {
+    flex-direction: column;
+
     margin: 0 auto;
   }
-}
 
-.card__link:hover,
-.card__link:active {
-  opacity: 0.3;
-  color: $accent-dark-grey;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.card__link:active {
-  opacity: 0.6;
-}
-
-.card__link-image:hover,
-.card__link-image:active {
-  opacity: 0.7;
+  &:active {
+    opacity: 0.3;
+    color: $accent-light-grey;
+  }
 }
 
 .card__image {
   display: block;
 
-  background-color: transparent;
+  background: transparent;
 
   @include tablet {
     margin-top: 10px;
@@ -63,7 +69,21 @@
   }
 }
 
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include tablet {
+    width: 250px;
+    height: 107px;
+
+  }
+}
+
 .card__denomination {
+  @include denomination;
+
   max-width: 80px;
   margin: 0;
 
@@ -79,6 +99,14 @@
 
   @include desktop {
     max-width: 140px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
