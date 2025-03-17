@@ -37,7 +37,9 @@
 // Контейнер
 @mixin container {
   width: 100%;
-  margin: auto;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   @include max-width-mobile {
     min-width: $breakpoint-mobile-min;
@@ -119,8 +121,8 @@
   }
 }
 
-//h4 - catalog | name
-@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+//h4 - denomination
+@mixin denomination($font-family: $main-font, $color: $specify-dark-grey) {
   display: block;
 
   margin: 0;
@@ -139,23 +141,23 @@
   }
 }
 
-//h5 - catalog | info-title
-@mixin important($font-family: $main-font, $color: $specify-dark-grey) {
+//h5 - info
+@mixin info($font-family: $main-font, $color: $extra-dark-grey) {
   display: block;
 
   margin: 0;
   padding: 0;
 
   font-family: $font-family;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 
   color: $color;
 
   @media (min-width: $breakpoint-tablet-min) {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -191,7 +193,6 @@
 @mixin button {
   display: block;
 
-  width: 100%;
   min-height: 40px;
   margin: 0;
   padding: 10px 0;
@@ -209,9 +210,19 @@
   cursor: pointer;
   background: none;
 
+  &:hover {
+    outline: none;
+    border: none;
+  }
+
   &:focus {
-    outline: 2px solid $white;
-    outline-offset: 1px;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+    border: none;
   }
 
   &:disabled {
@@ -232,8 +243,9 @@
   color: $color;
   background-color: $bg-color;
 
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  transition-duration: 1s;
+  transition-duration: 1s, 1s, 2s;
+  transition-property: color, background-color, transform;
+  transition-timing-function: ease-in-out;
 
   &:hover {
     $bg-color: $hover-green;
@@ -279,6 +291,22 @@
 
   transform: translate(-50%, -50%);
 }
+
+@mixin error {
+  padding: 13px;
+
+  font-family: $main-font;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $accent-dark-grey;
+  text-transform: uppercase;
+
+  border: 1px solid $email;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
 
 // Тест
 @mixin outline($test-color: #ec5a5a) {

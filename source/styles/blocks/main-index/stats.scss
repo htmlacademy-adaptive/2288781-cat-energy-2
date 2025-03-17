@@ -1,23 +1,16 @@
 .stats {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   margin: 0 auto;
 
   transition: all 0.8s ease-out;
 
   @include tablet {
     --bg-top-shift: calc(100% - 462px);
-
     border-top: 1px solid $extra-light-grey;
   }
 
   @include desktop {
-    justify-content: space-between;
-
     --bg-top-shift: 135px;
     border-top: none;
   }
@@ -32,7 +25,6 @@
     width: 100%;
 
     background-color: $very-light-grey;
-    box-shadow: 100% 0 0 0 $very-light-grey;
 
     @include desktop {
       background-color: $accent-light-grey;
@@ -66,7 +58,7 @@
 
     width: 1440px;
     padding-top: 0;
-    padding-bottom: 85px;
+    padding-bottom: 0;
   }
 }
 
@@ -130,6 +122,7 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0;
 
   @include tablet {
     flex-direction: row;
@@ -259,16 +252,22 @@
 }
 
 .stats__compare {
-  place-self: start center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   max-width: 280px;
+  height: 256px;
   margin: 0 auto;
 
   @include tablet {
     max-width: 560px;
+    height: 512px;
   }
 
   @include desktop {
+    justify-content: space-between;
+
     margin: 0;
     margin-left: 224px;
   }

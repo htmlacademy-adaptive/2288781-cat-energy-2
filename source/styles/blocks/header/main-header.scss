@@ -5,22 +5,14 @@
   flex-direction: row;
   justify-content: flex-start;
 
-  padding: 13px 0 14px;
   min-height: 65px;
+  padding: 13px 0 14px;
 
   font-size: 0;
 
   border-bottom: 1px solid $extra-light-grey; /* декоративная граница */
   background-color: $white;
   color: $black;
-
-  @include tablet {
-    padding: 25px 4px 0;
-  }
-
-  @include desktop {
-    padding: 55px 0 0;
-  }
 
   &__wrapper {
     @include container;
@@ -79,12 +71,14 @@
 
   @include tablet {
     min-height: 75px;
+    padding: 25px 4px 0;
 
     border: none;
   }
 
   @include desktop {
     min-height: 114px;
+    padding: 55px 0 0;
 
     background-color: transparent;
     color: $white;

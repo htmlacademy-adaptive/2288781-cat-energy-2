@@ -2,63 +2,111 @@
   position: relative;
 
   background-color: $accent-light-grey;
-  color: $black;
 
-  padding-top: 40px;
-  padding-bottom: 40px;
+  transition: all 0.8s ease-out;
+
+  &__map {
+    position: relative;
+
+    display: grid;
+
+    width: 100%;
+    min-width: $breakpoint-mobile-min;
+    margin: 0 auto;
+
+    @include tablet {
+      min-width: $breakpoint-tablet-min;
+    }
+
+    @include desktop {
+      min-width: $breakpoint-desktop-min;
+      margin: 0;
+    }
+  }
 
   &__wrapper {
     @include container;
 
+    position: relative;
+
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 
-    min-width: 320px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    @include desktop {
+      padding-top: 66px;
+      padding-bottom: 66px;
+    }
   }
+}
 
-  &__footer-logotext {
-    @include reset-link;
+.main-footer__item {
+  width: 100%;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 0;
-
-    cursor: pointer;
-    text-align: center;
-    color: $extra-dark-grey;
+  &:not(:last-child) {
     border-bottom: 1px solid $specify-light-grey;
 
-    &:hover img,
-    &:focus img {
-      fill: $hover;
-    }
-
-    &:active img {
-      fill: $active;
+    @include tablet {
+      border: none;
     }
   }
 
-  &__footer-logotext-image {
+  @include tablet {
+    padding: 0;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--footer-logotext {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 128px;
     height: 24px;
-
-    vertical-align: middle;
+    margin: 0;
   }
 
-  &__social {
-    display: flex;
-    align-self: center;
-    gap: 24px;
-
-    min-width: 132px;
+  &--footer-social {
+    width: 132px;
+    height: 22px;
     margin: 0;
     padding: 20px 0;
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0;
+    }
   }
 
-  &__logo-htmlacademy {
-    position: relative;
+  &--logo-htmlacademy {
+    min-width: 320px;
+    min-height: 34px;
+    margin: 0;
+
+    @include tablet {
+      min-width: 168px;
+      min-height: 37px;
+      margin: 0 0 0 auto;
+    }
   }
 }

@@ -283,11 +283,13 @@
       border-bottom: 2px solid $white;
     }
 
-    &__list--catalog &__link {
+    &__list--catalog &__link,
+    &__list--form &__link {
       color: $black;
     }
 
-    &__list--catalog &__link--catalog-current {
+    &__list--catalog &__link--catalog-current,
+    &__list--form &__link--catalog-current {
       border-bottom: 2px solid $primary;
     }
   }

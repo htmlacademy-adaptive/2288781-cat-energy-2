@@ -1,43 +1,78 @@
 .footer-logotext {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 128px;
   height: 24px;
+
+  cursor: pointer;
+
+  transition: all 0.8s ease-out;
+
+  @include max-width-mobile {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include tablet {
+    justify-content: flex-start;
+
+    width: 128px;
+    height: 37px;
+    margin: 0;
+    padding: 0;
+  }
 
   &__link {
     @include reset-link;
 
-    width: 128;
-    height: 24;
+    position: relative;
 
-    color: $extra-dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-      color: $hover;
+    width: 128px;
+    height: 24px;
+    margin: 40px auto 20px;
+
+    color: currentColor;
+
+    &::after {
+      @include pseudo-element;
+
+      width: 128px;
+      height: 24px;
+
+      background-color: $extra-dark-grey;
+      mask-image: url("../../../icons/stack.svg#icon-footer-logotext");
+      mask-size: 128px 24px;
+      mask-repeat: no-repeat;
+      mask-position: center;
     }
 
-    &:focus {
-      color: $hover;
+    &:hover::after {
+      background-color: $hover;
     }
 
-    &:active {
-      color: $active;
+    &:focus::after {
+      background-color: $hover;
     }
 
-    &__svg {
-      width: 128;
-      height: 24;
-
-      background-color: transparent;
-      vertical-align: middle;
-      fill: $extra-dark-grey;
+    &:active::after {
+      background-color: $active;
     }
 
     @include tablet {
-      margin-right: 160px;
-      padding: 7px 0;
-    }
+      justify-content: flex-start;
 
-    @include desktop {
-      margin-right: 416px;
+      min-width: 128px;
+      min-height: 37px;
+      margin: 7px 0;
+      padding: 0;
     }
   }
 }

@@ -1,0 +1,31 @@
+.main-inner {
+  background-color: $white;
+
+  transition: all 0.8s ease-out;
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__title {
+    width: 320px;
+    margin: 0 auto;
+    padding: 27px 0 41px;
+
+    font-family: $main-font;
+
+    text-align: left;
+
+    transition: all 0.8s ease-out;
+
+    @include tablet {
+      width: 768px;
+      margin: 65px auto 84px;
+    }
+
+    @include desktop {
+      width: 1220px;
+      margin: 74px auto 84px;
+    }
+  }
+}

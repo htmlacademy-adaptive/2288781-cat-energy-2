@@ -218,18 +218,14 @@
     min-width: 457px;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
-
   &:hover .programs__link-text::after {
     background-position: 0;
 
     transition: background-position 0.5s;
   }
 
-  &:focus .programs__link-text::after {
-    color: $primary;
+  &:active {
+    opacity: 0.3;
   }
 
   &:active .programs__link-text::after {
