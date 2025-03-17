@@ -46,10 +46,10 @@
 @import "./blocks/main-inner/main-inner.scss";
 @import "./blocks/main-inner/catalog.scss";
 @import "./blocks/main-inner/card.scss";
-// @import "./blocks/main-inner/products.scss";
-// @import "./blocks/main-inner/product.scss";
+@import "./blocks/main-inner/card-add.scss";
 @import "./blocks/main-inner/addition.scss";
-// @import "./blocks/main-inner/gift.scss";
+@import "./blocks/main-inner/products.scss";
+@import "./blocks/main-inner/product.scss";
 @import "./blocks/main-inner/promotions.scss";
 
 //Страница форм (не будут рассматривать на защите)

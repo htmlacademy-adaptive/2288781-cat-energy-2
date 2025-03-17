@@ -1,0 +1,116 @@
+.card-add {
+  width: 100%;
+  padding: 25px 0;
+
+  border-bottom: 1px solid $extra-light-grey;
+}
+
+.card-add__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  min-width: 280px;
+  height: 207px;
+
+  @include tablet {
+    min-width: 250px;
+    height: 429px;
+  }
+
+  @include tablet {
+    min-width: 250px;
+    height: 431px;
+  }
+}
+
+.card-add__plus {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after,
+  &::before {
+    @include pseudo-element;
+    top: 25px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: $light-grey;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+
+  @include tablet {
+    &::after,
+    &::before {
+      @include pseudo-element;
+      top: 82px;
+
+      width: 60px;
+      height: 2px;
+      margin-top: 15px;
+
+      background-color: $light-grey;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.card-add__info {
+  @include info;
+
+  margin: 53px 0 8px;
+
+  text-transform: uppercase;
+  color: $extra-dark-grey;
+  text-align: center;
+
+  @include tablet {
+    margin: 110px 0 23px;
+    padding: 0 18px;
+  }
+
+  @include desktop {
+    margin: 150px 0 26px;
+  }
+}
+
+.card-add__description {
+  font-family: $base-font;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 0 21px;
+
+  color: $accent-dark-grey;
+  text-align: center;
+}
+
+.card-add__button {
+  @include grey-button;
+
+  grid-column: 1/-1;
+
+  min-width: 280px;
+  height: fit-content;
+  margin-top: 17px;
+  padding: 10px;
+
+  @include tablet {
+    min-width: 250px;
+    margin-top: 32px;
+  }
+
+  @include desktop {
+    min-width: 169px;
+    margin: 82px 37px 40px;
+  }
+}
