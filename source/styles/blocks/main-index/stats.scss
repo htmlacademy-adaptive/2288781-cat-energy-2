@@ -187,7 +187,7 @@
 
 .stats__action {
   position: absolute;
-  top: 46px;
+  // top: 46px;
   left: 50%;
 
   width: 77px;
@@ -204,7 +204,7 @@
   transform: translateX(-50%);
 
   @include tablet {
-    top: 63px;
+    top: 123px;
 
     width: 143px;
     height: 14px;

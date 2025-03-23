@@ -36,7 +36,6 @@
 
 // Контейнер
 @mixin container {
-  width: 100%;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -161,7 +160,6 @@
   }
 }
 
-
 // Списки
 @mixin reset-list {
   padding: 0;
@@ -193,7 +191,7 @@
 @mixin button {
   display: block;
 
-  min-height: 40px;
+  height: 40px;
   margin: 0;
   padding: 10px 0;
 
@@ -209,6 +207,7 @@
   border-style: none;
   cursor: pointer;
   background: none;
+  vertical-align: middle;
 
   &:hover {
     outline: none;
@@ -302,7 +301,7 @@
   color: $accent-dark-grey;
   text-transform: uppercase;
 
-  border: 1px solid $email;
+  border: 1px solid $color-email;
   width: 100%;
   margin-bottom: 14px;
 }

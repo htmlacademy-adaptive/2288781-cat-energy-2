@@ -1,230 +1,215 @@
 .card {
   position: relative;
-
-  margin: 0 auto;
-
   transition: all 0.8s ease-out;
-}
 
-.card__block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
-  padding: 20px 0 25px;
-
-  @include tablet {
-    min-height: 511px;
-    padding: 10px 37px 40px;
-  }
-
-  @include desktop {
-    padding: 0 38px 40px;
-  }
-}
-
-.card__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 0;
-
-  @include tablet {
+  &__block {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr auto;
-  }
-}
+    grid-template-columns: 280px;
+    grid-template-rows: 107px 40px;
+    row-gap: 17px;
+    justify-content: center;
+    height: 209px;
+    padding-top: 20px;
+    padding-bottom: 25px;
 
-.card__link {
-  @include reset-link;
+    @include tablet {
+      grid-template-columns: 250px;
+      grid-template-rows: 399px 40px;
+      row-gap: 32px;
+      height: 511px;
+      padding: 10px 37px 40px;
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 107px;
-  margin: 0;
-  padding: 0;
-
-  color: transparent;
-
-  @include tablet {
-    flex-direction: column;
-
-    margin: 0 auto;
+    @include desktop {
+      grid-template-columns: 169px;
+      padding: 10px 38px 40px;
+    }
   }
 
-  &:hover {
-    opacity: 0.9;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content 1fr auto;
+      justify-content: center;
+      align-items: end;
+    }
   }
 
-  &:active {
-    opacity: 0.3;
-    color: $accent-light-grey;
-  }
-}
-
-.card__image {
-  position: relative;
-  top: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include tablet {
-    position: absolute;
-    top: 0;
-
-    width: 200px;
-    height: 210px;
-  }
-
-  @include desktop {
-    width: 169px;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active,
-  &:focus-visible {
-    opacity: 0.7;
-    outline: none;
-    border: none;
-  }
-}
-
-.card__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  height: 107px;
-
-  @include tablet {
-    justify-content: flex-end;
-
-    width: 250px;
+  &__link-image {
+    @include reset-link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
     height: 107px;
-  }
-}
+    margin: 0;
+    padding: 0;
 
-.card__denomination {
-  @include denomination;
+    @include tablet {
+      flex-direction: column;
+      width: 200px;
+      height: 210px;
+      margin: 0 auto;
+    }
 
-  max-width: 80px;
-  margin: 0 0 14px;
+    &:hover {
+      opacity: 0.9;
+    }
 
-  text-transform: uppercase;
-  vertical-align: middle;
-
-  @include tablet {
-    max-width: 135px;
-    margin: 22px auto 21px;
-
-    text-align: center;
-  }
-
-  @include desktop {
-    max-width: 140px;
-    margin: 12px auto 23px;
+    &:active {
+      opacity: 0.3;
+      color: $accent-light-grey;
+    }
   }
 
-  &:hover {
-    color: $hover-green;
+  &__image {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      width: 200px;
+      height: 210px;
+    }
+
+    @include desktop {
+      width: 169px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active,
+    &:focus-visible {
+      opacity: 0.7;
+      outline: none;
+      border: none;
+    }
   }
 
-  &:active,
-  &:focus {
-    color: $hover-green;
-    opacity: 0.5;
-    outline: none;
-    border: none;
-  }
-}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 140px;
+    height: 103px;
+    margin: 0 auto;
 
-.card__list {
-  @include reset-list;
+    @include tablet {
+      justify-content: flex-end;
+      width: 250px;
+      height: 157px;
+    }
 
-  justify-items: center;
-
-  padding-top: 14px;
-
-  @include tablet {
-    padding-top: 18px;
-  }
-
-  @include desktop {
-    padding-top: 23px;
-  }
-}
-
-.card__item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  min-width: 140px;
-
-  font-size: 12px;
-  line-height: 16px;
-
-  @include tablet {
-    flex-wrap: nowrap;
-
-    min-width: 250px;
-    margin-bottom: 6px;
-    padding-bottom: 5px;
-
-    font-size: 16px;
-    line-height: 20px;
-
-    border-bottom: 1px solid $dark-grey;
+    @include desktop {
+      width: 169px;
+      height: 167px;
+    }
   }
 
-  @include desktop {
-    min-width: 169px;
-    min-height: 21px;
-
-    // &:nth-child(2) {
-    //   margin-bottom: 2px;
-    //   padding-bottom: 6px;
-    // }
-
-    // &:nth-child(3) {
-    //   margin: 0;
-    //   padding-top: 2px;
-    //   padding-bottom: 9px;
-    // }
-  }
-}
-
-.card__parameter {
-  max-width: 40%;
-}
-
-.card__value {
-  max-width: 50%;
-}
-
-.card__button {
-  grid-column: 1/-1;
-
-  min-width: 280px;
-  height: fit-content;
-  margin-top: 17px;
-  padding: 10px;
-
-  @include tablet {
-    min-width: 250px;
-    margin-top: 32px;
+  &__link-info {
+    @include reset-link;
   }
 
-  @include desktop {
-    min-width: 169px;
+  &__denomination {
+    @include denomination;
+    max-width: 76px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    @include tablet {
+      max-width: 135px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include desktop {
+      max-width: 140px;
+    }
+
+    &:hover {
+      color: $hover-green;
+    }
+
+    &:active,
+    &:focus {
+      color: $hover-green;
+      opacity: 0.5;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+    justify-items: center;
+    padding-top: 14px;
+
+    @include tablet {
+      padding-top: 21px;
+    }
+
+    @include desktop {
+      padding-top: 23px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      width: 250px;
+      height: 25px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      border-bottom: 1px solid $dark-grey;
+    }
+
+    @include desktop {
+      width: 169px;
+    }
+  }
+
+  &__parameter {
+    max-width: 40%;
+  }
+
+  &__value {
+    max-width: 50%;
+  }
+
+  &__button {
+    @include primary-button;
+    min-width: 280px;
+    height: fit-content;
+    padding: 10px 0;
+
+    @include tablet {
+      min-width: 250px;
+      padding: 10px 0;
+    }
+
+    @include desktop {
+      min-width: 169px;
+    }
   }
 }

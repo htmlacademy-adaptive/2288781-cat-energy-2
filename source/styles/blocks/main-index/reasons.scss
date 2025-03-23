@@ -155,7 +155,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-leaf");
+      background-image: url("../../icons/stack.svg#icon-leaf");
       background-size: 25px 28px;
     }
   }
@@ -166,7 +166,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-powder");
+      background-image: url("../../icons/stack.svg#icon-powder");
       background-size: 27px 29px;
       background-repeat: no-repeat;
     }
@@ -178,7 +178,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-food");
+      background-image: url("../../icons/stack.svg#icon-food");
       background-size: 25px 30px;
       background-repeat: no-repeat;
     }
@@ -190,7 +190,7 @@
     &::before {
       @include pseudo-element;
 
-      background-image: url("../../../icons/stack.svg#icon-time");
+      background-image: url("../../icons/stack.svg#icon-time");
       background-size: 26px 31px;
       background-repeat: no-repeat;
     }

@@ -3,12 +3,7 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-
   box-sizing: border-box;
-
-  outline: 2px dotted #cf2164; // для себя, потом удалю
 }
 
 html {
@@ -21,15 +16,15 @@ body {
 
   min-width: $breakpoint-mobile-min;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 
   font-family: $base-font, "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 
-  word-wrap: break-word;
   background-color: $accent-light-grey;
   color: $accent-dark-grey;
-  user-select: none;
 }
 
 img {

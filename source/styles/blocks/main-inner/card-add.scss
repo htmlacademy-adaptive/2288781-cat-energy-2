@@ -1,8 +1,7 @@
 .card-add {
-  width: 100%;
-  padding: 25px 0;
+  position: relative;
 
-  border-bottom: 1px solid $extra-light-grey;
+  transition: all 0.8s ease-out;
 }
 
 .card-add__block {
@@ -10,22 +9,28 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  min-width: 280px;
+  width: 280px;
   height: 207px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 24px;
 
   @include tablet {
-    min-width: 250px;
+    width: 250px;
     height: 429px;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 
-  @include tablet {
-    min-width: 250px;
+  @include desktop {
+    width: 245px;
     height: 431px;
   }
 }
 
 .card-add__plus {
   position: relative;
+  top: 39px;
 
   display: flex;
   justify-content: center;
@@ -34,7 +39,6 @@
   &::after,
   &::before {
     @include pseudo-element;
-    top: 25px;
 
     width: 30px;
     height: 2px;
@@ -47,14 +51,14 @@
   }
 
   @include tablet {
+    top: 0;
+
     &::after,
     &::before {
       @include pseudo-element;
-      top: 82px;
 
       width: 60px;
       height: 2px;
-      margin-top: 15px;
 
       background-color: $light-grey;
     }
@@ -63,54 +67,75 @@
       transform: rotate(90deg);
     }
   }
+
+  @include desktop {
+    top: 0;
+  }
+}
+
+.card-add__link {
+  @include reset-link;
 }
 
 .card-add__info {
   @include info;
 
-  margin: 53px 0 8px;
+  width: 280px;
+  margin: 78px auto 8px;
 
   text-transform: uppercase;
   color: $extra-dark-grey;
   text-align: center;
 
   @include tablet {
-    margin: 110px 0 23px;
-    padding: 0 18px;
+    width: 170px;
+    margin: 80px auto 23px;
   }
 
   @include desktop {
-    margin: 150px 0 26px;
+    margin: 70px auto 26px;
   }
 }
 
-.card-add__description {
-  font-family: $base-font;
+.card-add__slogan {
+  width: 280px;
+  margin: 0 auto 21px;
+
   font-size: 12px;
   line-height: 16px;
-  margin: 0 0 21px;
+
 
   color: $accent-dark-grey;
   text-align: center;
+
+  @include tablet {
+    width: 170px;
+    margin-bottom: 82px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
 }
 
 .card-add__button {
   @include grey-button;
 
-  grid-column: 1/-1;
-
-  min-width: 280px;
+  width: 280px;
   height: fit-content;
-  margin-top: 17px;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 10px 0;
 
   @include tablet {
-    min-width: 250px;
-    margin-top: 32px;
+    width: 250px;
+    height: fit-content;
+    padding: 10px 0;
   }
 
   @include desktop {
-    min-width: 169px;
-    margin: 82px 37px 40px;
+    width: 169px;
   }
 }

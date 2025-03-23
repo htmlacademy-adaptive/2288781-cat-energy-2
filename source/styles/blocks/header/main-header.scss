@@ -10,7 +10,6 @@
 
   font-size: 0;
 
-  border-bottom: 1px solid $extra-light-grey; /* декоративная граница */
   background-color: $white;
   color: $black;
 
@@ -72,8 +71,6 @@
   @include tablet {
     min-height: 75px;
     padding: 25px 4px 0;
-
-    border: none;
   }
 
   @include desktop {
