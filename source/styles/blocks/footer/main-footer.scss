@@ -1,0 +1,106 @@
+.main-footer {
+  position: relative;
+
+  background-color: $accent-light-grey;
+
+  transition: all 0.8s ease-out;
+
+  &__map {
+    position: relative;
+
+    display: grid;
+
+    width: 100%;
+    min-width: $breakpoint-mobile-min;
+    margin: 0 auto;
+
+    @include tablet {
+      min-width: $breakpoint-tablet-min;
+    }
+
+    @include desktop {
+      min-width: $breakpoint-desktop-min;
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    @include container;
+
+    position: relative;
+
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      flex-flow: nowrap row;
+      justify-content: space-between;
+
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    @include desktop {
+      padding-top: 66px;
+      padding-bottom: 66px;
+    }
+  }
+}
+
+.main-footer__item {
+  &:not(:last-child) {
+    border-bottom: 1px solid $specify-light-grey;
+
+    @include tablet {
+      border: none;
+    }
+  }
+
+  @include tablet {
+    padding: 0;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--footer-logotext {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 128px;
+    margin: 0;
+  }
+
+  &--footer-social {
+    min-width: 132px;
+    margin: 0;
+    padding: 20px 0;
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0;
+    }
+  }
+
+  &--logo-htmlacademy {
+    min-width: 280px;
+    margin: 0;
+
+    @include tablet {
+      min-width: 168px;
+      margin: 0 0 0 auto;
+    }
+  }
+}

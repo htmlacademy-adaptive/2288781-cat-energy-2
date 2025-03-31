@@ -1,0 +1,129 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: $white;
+
+  &--index {
+    @include max-width-mobile {
+      &::before {
+        @include pseudo-element;
+        top: 65px;
+        right: 0;
+        left: 0;
+        z-index: -1;
+
+        height: 302px;
+
+        background-color: $primary;
+        background-image:
+          linear-gradient(to bottom, $primary-fon, $primary-fon),
+          image-set(
+            url("../../images/index-page/cat-mobile@1x.webp") 1x type("image/webp"),
+            url("../../images/index-page/cat-mobile@1x.jpg") 1x type("image/jpeg")
+          ),
+          linear-gradient(to right, #5a5a62 50%, #42425b 50%);
+        background-repeat: no-repeat;
+        background-position: 60% center;
+        background-size: cover, auto 302px, cover;
+
+        transition: all 0.8s ease-out;
+      }
+    }
+
+    @include tablet {
+      &::before {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        @include pseudo-element;
+        top: 0;
+        left: 50%;
+        z-index: -2;
+
+        min-width: 50%;
+        height: 694px;
+
+        background-color: $primary;
+        background-image:
+          linear-gradient($primary-fon 50% 50%),
+          image-set(
+            url("../../images/index-page/cat-desktop@1x.webp") 1x type("image/webp"),
+            url("../../images/index-page/cat-desktop@1x.jpg") 1x type("image/jpeg")
+          ),
+          linear-gradient(104deg, #3c3c52, #3c3c52);
+        background-repeat: no-repeat;
+        background-size: auto, 1040px  694px;
+
+        transition: all 0.8s ease-out;
+      }
+    }
+
+    @media (min-resolution: 2x) {
+      @include max-width-mobile {
+        &::before {
+          background-color: $primary;
+          background-image:
+            linear-gradient(to top, $primary-fon, $primary-fon),
+            image-set(
+              url("../../images/index-page/cat-mobile@2x.webp") 2x type("image/webp"),
+              url("../../images/index-page/cat-mobile@2x.jpg") 2x type("image/jpeg"),
+            ),
+            linear-gradient(to right, #5a5a62 50%, #42425b 50%);
+          background-repeat: no-repeat;
+          background-position: 60% center;
+          background-size: cover, auto 302px, cover;
+        }
+      }
+
+      @include desktop {
+        &::before {
+          background-color: $primary;
+          background-image:
+            linear-gradient($primary-fon 50% 50%),
+            image-set(
+              url("../../images/index-page/cat-desktop@2x.webp") 2x type("image/webp"),
+              url("../../images/index-page/cat-desktop@2x.jpg") 2x type("image/jpeg"),
+            ),
+            linear-gradient(104deg, #3c3c52, #3c3c52);
+          background-repeat: no-repeat;
+          background-size: auto, 1040px  694px;
+        }
+      }
+    }
+  }
+}
+
+.page__headline {
+  @include headline;
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+}
+
+.page__main-index,
+.page__main-inner,
+.page__main-form {
+  flex-grow: 1;
+}
+
+.page__main-header,
+.page__main-footer {
+  flex: 0 0 1;
+}

@@ -1,0 +1,230 @@
+.card {
+  position: relative;
+
+  transition: all 0.8s ease-out;
+
+  &__block {
+    display: grid;
+    grid-template-columns: 280px;
+    grid-template-rows: 107px 40px;
+    row-gap: 17px;
+    justify-content: center;
+
+    min-height: 209px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    @include tablet {
+      grid-template-columns: 250px;
+      grid-template-rows: 399px 40px;
+      row-gap: 32px;
+
+      min-height: 511px;
+      padding: 10px 37px 40px;
+    }
+
+    @include desktop {
+      grid-template-columns: 169px;
+      padding: 10px 38px 40px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content 1fr auto;
+      justify-content: center;
+      align-items: end;
+    }
+  }
+
+  &__link-image {
+    @include reset-link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 140px;
+    min-height: 107px;
+    margin: 0;
+    padding: 0;
+
+    @include tablet {
+      flex-direction: column;
+      min-width: 200px;
+      min-height: 210px;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 0.3;
+      color: $accent-light-grey;
+    }
+  }
+
+  &__image {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      min-width: 200px;
+      min-height: 210px;
+    }
+
+    @include desktop {
+      min-width: 169px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active,
+    &:focus-visible {
+      opacity: 0.7;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 140px;
+    min-height: 103px;
+    margin: 0 auto;
+
+    @include tablet {
+      justify-content: flex-end;
+
+      min-width: 250px;
+      min-height: 157px;
+    }
+
+    @include desktop {
+      min-width: 169px;
+      min-height: 167px;
+    }
+  }
+
+  &__link-info {
+    @include reset-link;
+  }
+
+  &__denomination {
+    @include denomination;
+
+    max-width: 76px;
+    margin: 0;
+    padding: 0;
+
+    text-transform: uppercase;
+
+    @include tablet {
+      max-width: 135px;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    @include desktop {
+      max-width: 140px;
+    }
+
+    &:hover {
+      color: $hover-green;
+    }
+
+    &:active,
+    &:focus {
+      color: $hover-green;
+      opacity: 0.5;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+    justify-items: center;
+    padding-top: 14px;
+
+    @include tablet {
+      padding-top: 21px;
+    }
+
+    @include desktop {
+      padding-top: 23px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 140px;
+    min-height: 16px;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    vertical-align: middle;
+
+    @include tablet {
+      flex-wrap: nowrap;
+
+      min-width: 250px;
+      min-height: 25px;
+      margin-bottom: 10px;
+
+      font-size: 16px;
+      line-height: 20px;
+
+      border-bottom: 1px solid $dark-grey;
+    }
+
+    @include desktop {
+      min-width: 169px;
+    }
+  }
+
+  &__parameter {
+    max-width: 40%;
+  }
+
+  &__value {
+    max-width: 50%;
+  }
+
+  &__button {
+    @include primary-button;
+    min-width: 280px;
+    min-height: fit-content;
+    padding: 10px 0;
+
+    @include tablet {
+      min-width: 250px;
+      padding: 10px 0;
+    }
+
+    @include desktop {
+      min-width: 169px;
+    }
+  }
+}

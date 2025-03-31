@@ -1,0 +1,141 @@
+.card-add {
+  position: relative;
+
+  transition: all 0.8s ease-out;
+}
+
+.card-add__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 280px;
+  height: 207px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 24px;
+
+  @include tablet {
+    width: 250px;
+    height: 429px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  @include desktop {
+    width: 245px;
+    height: 431px;
+  }
+}
+
+.card-add__plus {
+  position: relative;
+  top: 39px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after,
+  &::before {
+    @include pseudo-element;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: $light-grey;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+
+  @include tablet {
+    top: 0;
+
+    &::after,
+    &::before {
+      @include pseudo-element;
+
+      width: 60px;
+      height: 2px;
+
+      background-color: $light-grey;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  @include desktop {
+    top: 0;
+  }
+}
+
+.card-add__link {
+  @include reset-link;
+}
+
+.card-add__info {
+  @include info;
+
+  width: 280px;
+  margin: 78px auto 8px;
+
+  text-transform: uppercase;
+  color: $extra-dark-grey;
+  text-align: center;
+
+  @include tablet {
+    width: 170px;
+    margin: 80px auto 23px;
+  }
+
+  @include desktop {
+    margin: 70px auto 26px;
+  }
+}
+
+.card-add__slogan {
+  width: 280px;
+  margin: 0 auto 21px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+
+  color: $accent-dark-grey;
+  text-align: center;
+
+  @include tablet {
+    width: 170px;
+    margin-bottom: 82px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
+}
+
+.card-add__button {
+  @include grey-button;
+
+  width: 280px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  @include tablet {
+    width: 250px;
+    height: fit-content;
+    padding: 10px 0;
+  }
+
+  @include desktop {
+    width: 169px;
+  }
+}

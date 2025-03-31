@@ -1,0 +1,206 @@
+.reasons {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px 20px 49px;
+
+  transition: all 0.8s ease-out;
+
+  @include tablet {
+    min-width: 768px;
+    padding: 45px 30px 47px;
+
+    &::after {
+      @include pseudo-element;
+
+      height: 1px;
+      margin-right: auto;
+      margin-left: auto;
+
+      background-color: $extra-light-grey;
+    }
+  }
+
+  @include desktop {
+    min-width: 1440px;
+    padding: 71px 110px 69px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &__title {
+    @include title;
+
+    max-width: 280px;
+    margin: 0 auto 40px;
+    padding: 0;
+
+    text-align: left;
+
+    @include tablet {
+      max-width: 708px;
+      margin: 0 auto 32px;
+    }
+
+    @include desktop {
+      max-width: 1220px;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    @include tablet {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 37px 136px;
+
+      max-width: 708px;
+
+      counter-reset: number;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+      gap: 80px;
+
+      max-width: 1220px;
+    }
+  }
+}
+
+.reasons__item {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  &::before {
+    @include pseudo-element;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $primary;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      top: 40px;
+
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @include tablet {
+    flex-flow: column wrap;
+    gap: 31px;
+
+    max-width: 250px;
+    min-height: 280px;
+    padding-top: 40px;
+    padding-bottom: 13px;
+
+    counter-increment: number;
+
+    &::after {
+      content: counter(number);
+      position: absolute;
+      top: 92px;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+
+      font-family: $main-font;
+      font-size: 280px;
+
+      color: $accent-light-grey;
+    }
+  }
+
+  @include desktop {
+    flex-flow: row nowrap;
+    gap: 76px;
+  }
+
+  &--leaf {
+    position: relative;
+
+    &::before {
+      @include pseudo-element;
+
+      background-image: url("../../icons/stack.svg#icon-leaf");
+      background-size: 25px 28px;
+    }
+  }
+
+  &--powder {
+    position: relative;
+
+    &::before {
+      @include pseudo-element;
+
+      background-image: url("../../icons/stack.svg#icon-powder");
+      background-size: 27px 29px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--food {
+    position: relative;
+
+    &::before {
+      @include pseudo-element;
+
+      background-image: url("../../icons/stack.svg#icon-food");
+      background-size: 25px 30px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--time {
+    position: relative;
+
+    &::before {
+      @include pseudo-element;
+
+      background-image: url("../../icons/stack.svg#icon-time");
+      background-size: 26px 31px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.reasons__item-text {
+  max-width: 200px;
+  min-height: 60px;
+  margin: 0 0 0 80px;
+  padding: 2px 0 4px;
+
+  @include tablet {
+    max-width: 245px;
+    min-height: 72px;
+    margin: 91px 0 57px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    vertical-align: middle;
+  }
+}

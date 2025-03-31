@@ -1,0 +1,189 @@
+.promotions {
+  position: relative;
+
+  transition: all 0.8s ease-out;
+
+  &__subtitle {
+    @include subtitle;
+
+    position: relative;
+
+    margin: 40px auto 32px;
+
+    line-height: 24px;
+
+    white-space: nowrap;
+    text-align: center;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 12px, $primary 12px, $primary 14px, transparent 14px, transparent 100%);
+    overflow: hidden;
+
+    @include tablet {
+      margin: 80px auto 66px;
+      padding: 0 calc((100vw - 768px) / 2);
+      font-size: 32px;
+      line-height: 32px;
+      text-align: left;
+      background-image: linear-gradient(to bottom, transparent 0, transparent 16px, $primary 16px, $primary 18px, transparent 18px, transparent 100%);
+    }
+
+    @include desktop {
+      margin: 96px auto 72px;
+      padding: 0 calc((100vw - 1220px) / 2);
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &__text-subtitle {
+    display: inline-block;
+    margin-left: -120px;
+    padding: 0 40px;
+    background-color: #ffffff;
+
+    @include tablet {
+      margin-left: 24px;
+    }
+
+    @include desktop {
+      margin-left: -50px;
+    }
+  }
+
+  &__wrapper {
+    @include container;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24;
+
+    @include tablet {
+      min-width: 768px;
+    }
+
+    @include desktop {
+      min-width: 1440px;
+    }
+  }
+
+  &__slogan {
+    width: 280px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    @include tablet {
+      width: 632px;
+      height: 64px;
+      padding: 0 40px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include desktop {
+      width: 752px;
+      height: 40px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 280px;
+    height: 128px;
+    margin: 0 auto;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      width: 632px;
+      height: 56px;
+    }
+
+    @include desktop {
+      width: 752px;
+    }
+  }
+
+  &__form {
+    width: 280px;
+    height: 56px;
+    background-color: $white;
+    border: none;
+    outline: 1px solid $color-email;
+
+    @include tablet {
+      width: 376px;
+    }
+
+    @include desktop {
+      width: 496px;
+    }
+  }
+
+  &__input {
+    @include error;
+    width: 100%;
+    padding: 13px;
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    &::placeholder {
+      font-family: $main-font;
+      font-size: 20px;
+      line-height: 100%;
+      color: $accent-dark-grey;
+      text-transform: uppercase;
+    }
+
+    @include tablet {
+      width: auto;
+      min-width: 376px;
+      height: 56px;
+    }
+
+    @include desktop {
+      min-width: 496px;
+    }
+
+    &:hover {
+      outline: 1px solid $dark-grey;
+    }
+
+    &:focus {
+      outline: 2px solid $accent-dark-grey;
+    }
+
+    &:active {
+      outline: 2px solid $accent-dark-grey;
+      opacity: 0.8;
+    }
+
+    &--error {
+      &:active {
+        outline: 2px solid $error-color;
+      }
+    }
+  }
+
+  &__button {
+    @include primary-button;
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include tablet {
+      width: auto;
+      min-width: 256px;
+    }
+  }
+}

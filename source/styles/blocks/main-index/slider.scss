@@ -1,0 +1,163 @@
+.slider {
+  position: relative;
+
+  justify-self: center;
+
+  width: 280px;
+  height: 256px;
+
+  touch-action: none;
+
+  @include tablet {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+
+  display: block;
+
+  width: 4px;
+  height: 100%;
+  margin: 0 -2px;
+  padding: 0;
+
+  border: none;
+  border-radius: 2px;
+  background-color: $very-dark-grey;
+  cursor: col-resize;
+  color: currentColor;
+
+  &::before {
+    @include pseudo-element;
+    top: 50%;
+    left: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: $white;
+    border: 2px solid  $very-dark-grey;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    @include pseudo-element;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+
+    width: 24px;
+    height: 18px;
+
+    mask-image: url("../../icons/stack.svg#icon-curtain");
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
+    background-color: $very-dark-grey;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover,
+  &:hover::after,
+  &:focus,
+  &:focus::after {
+    background-color: $primary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $primary;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $hover-green;
+  }
+
+  &:active::before {
+    border-color: $hover-green;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.slider__list {
+  @include reset-list;
+
+  position: relative;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__item--before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+  background-color: $very-light-grey;
+  pointer-events: none;
+
+  @include tablet {
+    &::after {
+      @include pseudo-element;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 151px;
+
+      background-color: $white;
+    }
+  }
+
+  @include desktop {
+    background-color: $accent-light-grey;
+
+    &::after {
+      height: 135px;
+    }
+  }
+}
+
+.slider__item--after {
+  pointer-events: none;
+}
+
+.slider__item-image {
+  max-width: none;
+  width: 280px;
+  height: 100%;
+
+  object-fit: cover;
+  pointer-events: none;
+
+  &--before {
+    object-fit: right;
+  }
+
+  &--after {
+    object-fit: left;
+  }
+
+  @include tablet {
+    width: 560px;
+  }
+}

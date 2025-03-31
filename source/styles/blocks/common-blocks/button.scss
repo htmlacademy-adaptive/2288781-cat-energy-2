@@ -1,0 +1,7 @@
+.button {
+  @include primary-button;
+}
+
+.button--grey {
+  @include grey-button;
+}
