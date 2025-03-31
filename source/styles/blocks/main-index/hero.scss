@@ -102,6 +102,7 @@
 .hero__image {
   display: block;
 
+  min-width: 280px;
   margin: 29px auto 3px;
 
   animation-name: fadeOut;
@@ -112,6 +113,7 @@
     top: 266px;
     left: 50%;
 
+    min-width: 570px;
     margin: 0;
 
     transform: translate(-50%);
