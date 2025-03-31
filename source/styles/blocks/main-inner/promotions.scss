@@ -1,15 +1,21 @@
 .promotions {
   position: relative;
+
   transition: all 0.8s ease-out;
 
   &__subtitle {
     @include subtitle;
+
     position: relative;
+
     margin: 40px auto 32px;
+
     line-height: 24px;
+
     white-space: nowrap;
     text-align: center;
     background-image: linear-gradient(to bottom, transparent 0, transparent 12px, $primary 12px, $primary 14px, transparent 14px, transparent 100%);
+    overflow: hidden;
 
     @include tablet {
       margin: 80px auto 66px;
@@ -56,7 +62,7 @@
       min-width: 768px;
     }
 
-    @include tablet {
+    @include desktop {
       min-width: 1440px;
     }
   }

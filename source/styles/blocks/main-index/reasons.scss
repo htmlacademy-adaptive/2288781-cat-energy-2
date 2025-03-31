@@ -1,58 +1,50 @@
 .reasons {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px 20px 49px;
+
   transition: all 0.8s ease-out;
 
-  @include max-width-mobile {
-    max-width: 320px;
-    margin: 20px auto 49px;
-  }
-
   @include tablet {
-    max-width: 768px;
-    min-height: 597px;
-    margin: 45px auto 47px;
+    min-width: 768px;
+    padding: 45px 30px 47px;
 
     &::after {
       @include pseudo-element;
-      right: -30;
-      bottom: -47px;
-      left: -30;
 
       height: 1px;
+      margin-right: auto;
+      margin-left: auto;
 
       background-color: $extra-light-grey;
     }
   }
 
   @include desktop {
-    max-width: 1440px;
-    min-height: 280px;
-    margin: auto;
+    min-width: 1440px;
+    padding: 71px 110px 69px;
 
     &::after {
       content: none;
     }
   }
 
-  &__wrapper {
-    @include container;
-
-    margin: auto;
-  }
-
   &__title {
-    width: 280px;
-    margin: 0 0 40px;
+    @include title;
+
+    max-width: 280px;
+    margin: 0 auto 40px;
+    padding: 0;
 
     text-align: left;
 
     @include tablet {
-      width: 708px;
-      margin: 0 0 32px;
+      max-width: 708px;
+      margin: 0 auto 32px;
     }
 
     @include desktop {
-      width: 1220px;
-      padding-top: 71px;
+      max-width: 1220px;
     }
   }
 
@@ -60,28 +52,29 @@
     @include reset-list;
 
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 280px;
+
+    margin: 0 auto;
 
     @include tablet {
-      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 37px 136px;
 
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 37px 137px;
-      align-items: start;
+      max-width: 708px;
 
-      margin: 0 75px 0 0;
+      counter-reset: number;
     }
 
     @include desktop {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr;
-      gap: 74px;
       justify-content: space-between;
+      gap: 80px;
 
-      margin: 0 auto;
+      max-width: 1220px;
     }
   }
 }
@@ -90,48 +83,12 @@
   position: relative;
 
   display: flex;
-
-  min-height: 60px;
-  margin: 0;
-  padding: 0;
-
-  counter-increment: number 1;
-
-  @include max-width-mobile {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  }
-
-  @include tablet {
-    position: relative;
-
-    min-width: 250px;
-    min-height: 280px;
-    margin: 0;
-    padding: 0;
-
-    &::after {
-      content: counter(number);
-      position: absolute;
-      top: 48%;
-      right: 0;
-      z-index: -1;
-
-      font-family: $main-font;
-      font-size: 280px;
-
-      color: $accent-light-grey;
-    }
-  }
-
-  @include desktop {
-    margin: 0 0 69px;
-  }
+  align-items: flex-start;
+  gap: 20px;
 
   &::before {
     @include pseudo-element;
-    top: -2px;
+    top: 0;
     left: 0;
 
     width: 60px;
@@ -147,6 +104,38 @@
       width: 80px;
       height: 80px;
     }
+  }
+
+  @include tablet {
+    flex-flow: column wrap;
+    gap: 31px;
+
+    max-width: 250px;
+    min-height: 280px;
+    padding-top: 40px;
+    padding-bottom: 13px;
+
+    counter-increment: number;
+
+    &::after {
+      content: counter(number);
+      position: absolute;
+      top: 92px;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+
+      font-family: $main-font;
+      font-size: 280px;
+
+      color: $accent-light-grey;
+    }
+  }
+
+  @include desktop {
+    flex-flow: row nowrap;
+    gap: 76px;
   }
 
   &--leaf {
@@ -198,21 +187,20 @@
 }
 
 .reasons__item-text {
-  width: 100%;
-  min-width: 200px;
-  min-height: 72px;
+  max-width: 200px;
+  min-height: 60px;
   margin: 0 0 0 80px;
   padding: 2px 0 4px;
 
   @include tablet {
-    min-width: 204px;
-    margin: 151px 0 57px;
+    max-width: 245px;
+    min-height: 72px;
+    margin: 91px 0 57px;
     padding: 0;
 
     font-size: 16px;
     line-height: 24px;
 
-    word-break: break-word;
-    overflow-wrap: break-word;
+    vertical-align: middle;
   }
 }

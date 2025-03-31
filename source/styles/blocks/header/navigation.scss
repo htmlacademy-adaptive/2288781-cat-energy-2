@@ -271,8 +271,6 @@
       padding-bottom: 8px;
 
       border-bottom: 2px solid $primary;
-
-      transition: width 0.3s ease;
     }
   }
 
@@ -283,8 +281,6 @@
 
     &__list--index &__link--current {
       border-bottom: 2px solid $white;
-
-      transition: width 0.3s ease;
     }
 
     &__list--catalog &__link,

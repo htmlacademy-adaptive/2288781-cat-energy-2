@@ -1,5 +1,6 @@
 .card {
   position: relative;
+
   transition: all 0.8s ease-out;
 
   &__block {
@@ -8,7 +9,8 @@
     grid-template-rows: 107px 40px;
     row-gap: 17px;
     justify-content: center;
-    height: 209px;
+
+    min-height: 209px;
     padding-top: 20px;
     padding-bottom: 25px;
 
@@ -16,7 +18,8 @@
       grid-template-columns: 250px;
       grid-template-rows: 399px 40px;
       row-gap: 32px;
-      height: 511px;
+
+      min-height: 511px;
       padding: 10px 37px 40px;
     }
 
@@ -43,15 +46,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 107px;
+
+    min-width: 140px;
+    min-height: 107px;
     margin: 0;
     padding: 0;
 
     @include tablet {
       flex-direction: column;
-      width: 200px;
-      height: 210px;
+      min-width: 200px;
+      min-height: 210px;
       margin: 0 auto;
     }
 
@@ -75,12 +79,12 @@
     @include tablet {
       position: absolute;
       top: 0;
-      width: 200px;
-      height: 210px;
+      min-width: 200px;
+      min-height: 210px;
     }
 
     @include desktop {
-      width: 169px;
+      min-width: 169px;
     }
 
     &:hover {
@@ -99,19 +103,21 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 140px;
-    height: 103px;
+
+    min-width: 140px;
+    min-height: 103px;
     margin: 0 auto;
 
     @include tablet {
       justify-content: flex-end;
-      width: 250px;
-      height: 157px;
+
+      min-width: 250px;
+      min-height: 157px;
     }
 
     @include desktop {
-      width: 169px;
-      height: 167px;
+      min-width: 169px;
+      min-height: 167px;
     }
   }
 
@@ -121,14 +127,17 @@
 
   &__denomination {
     @include denomination;
+
     max-width: 76px;
     margin: 0;
     padding: 0;
+
     text-transform: uppercase;
 
     @include tablet {
       max-width: 135px;
       margin: 0 auto;
+
       text-align: center;
     }
 
@@ -168,24 +177,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 140px;
-    height: 16px;
+
+    min-width: 140px;
+    min-height: 16px;
+
     font-size: 12px;
     line-height: 16px;
+
     vertical-align: middle;
 
     @include tablet {
       flex-wrap: nowrap;
-      width: 250px;
-      height: 25px;
+
+      min-width: 250px;
+      min-height: 25px;
       margin-bottom: 10px;
+
       font-size: 16px;
       line-height: 20px;
+
       border-bottom: 1px solid $dark-grey;
     }
 
     @include desktop {
-      width: 169px;
+      min-width: 169px;
     }
   }
 
@@ -200,7 +215,7 @@
   &__button {
     @include primary-button;
     min-width: 280px;
-    height: fit-content;
+    min-height: fit-content;
     padding: 10px 0;
 
     @include tablet {

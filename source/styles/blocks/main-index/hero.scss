@@ -2,7 +2,19 @@
   position: relative;
   z-index: 1;
 
+  min-width: 280px;
+
+  transition: all 0.8s ease-out;
+
   @include tablet {
+    min-width: 708px;
+
+    background-color: transparent;
+  }
+
+  @include desktop {
+    min-width: 1220px;
+
     background-color: transparent;
   }
 }
@@ -17,54 +29,49 @@
   align-items: center;
   justify-content: start;
 
-  width: $breakpoint-mobile-min;
-  margin: auto;
-  padding: 0;
+  min-height: 480px;
+
+  margin: 0 auto;
 
   @include tablet {
     align-items: flex-start;
 
-    width: $breakpoint-tablet-min;
     min-height: 875px;
-    padding: 0 0 1px;
 
     background-color: $white;
   }
 
   @include desktop {
-    width: $breakpoint-desktop-min;
-    min-height: 694px;
-    padding: 0;
+    min-height: 580px;
+    margin-bottom: 82px;
 
     background-color: transparent;
   }
 }
 
 .hero__title {
-  width: 100%;
+  max-width: 280px;
   margin: 27px 0 25px;
   padding: 0;
 
   color: $white;
   text-align: center;
 
-  transition: all 0.8s ease-out;
-
   @include tablet {
-    width: 420px;
-    margin: 65px 20px 20px 120px;
+    max-width: 416px;
+    margin: 65px 0 20px 90px;
 
     color: $black;
     text-align: left;
   }
 
   @include desktop {
-    margin: 110px 0 0 190px;
+    margin: 110px 0 0 80px;
   }
 }
 
 .hero__slogan {
-  width: 100%;
+  max-width: 416px;
   padding: 0;
   margin: 0;
 
@@ -78,7 +85,7 @@
 
   @include tablet {
     width: 420px;
-    margin: 20px 20px 50px 120px;
+    margin: 20px 0 50px 90px;
 
     font-size: 20px;
     line-height: 20px;
@@ -88,7 +95,7 @@
   }
 
   @include desktop {
-    margin: 40px 0 0 190px;
+    margin: 40px 0 0 80px;
   }
 }
 
@@ -97,14 +104,12 @@
 
   margin: 29px auto 3px;
 
-  transition: all 0.8s ease-out;
-  animation-name: fadeInLeft;
+  animation-name: fadeOut;
   animation-duration: 1.5s;
 
   @include tablet {
     position: absolute;
     top: 266px;
-    bottom: 0;
     left: 50%;
 
     margin: 0;
@@ -114,15 +119,13 @@
 
   @include desktop {
     top: 29px;
-    right: 331px;
-    left: auto;
+    left: 557px;
 
     transform: none;
   }
 }
 
 .hero__button {
-  width: 100%;
   min-width: 280px;
   height: 40px;
 
@@ -139,6 +142,6 @@
     position: static;
 
     width: 244px;
-    margin: 52px 0 0 190px;
+    margin: 52px 0 0 80px;
   }
 }

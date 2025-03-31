@@ -1,16 +1,13 @@
 .social {
   position: relative;
 
-  height: 37px;
+  min-width: 280px;
+  min-height: 37px;
   margin: 0;
   padding: 20px 0;
 
-  @include max-width-mobile {
-    min-width: 100%;
-    height: auto;
-  }
-
   @include tablet {
+    min-width: 132px;
     padding: 0;
   }
 }
@@ -25,6 +22,7 @@
   gap: 24px;
 
   width: 132px;
+  height: 37px;
   margin: 0 auto;
 
   @include tablet {

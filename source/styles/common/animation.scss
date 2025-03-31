@@ -10,14 +10,18 @@
 }
 
 // Плавный переход от мобильной версии до десктопной версии
-@keyframes fadeInLeft {
+@keyframes fadeOut {
   0% {
+    left: 30px;
+
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(-50px);
   }
 
   100% {
+    left: 30px;
+
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
