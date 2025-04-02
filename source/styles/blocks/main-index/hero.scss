@@ -72,8 +72,10 @@
 
 .hero__slogan {
   max-width: 416px;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  padding-right: 100px;
+  padding-left: 100px;
 
   font-family: $main-font;
   font-size: 14px;
@@ -86,6 +88,8 @@
   @include tablet {
     width: 420px;
     margin: 20px 0 50px 90px;
+    padding-right: 30px;
+    padding-left: 30px;
 
     font-size: 20px;
     line-height: 20px;
@@ -128,8 +132,9 @@
 }
 
 .hero__button {
-  min-width: 280px;
-  height: 40px;
+  width: 280px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @include tablet {
     position: absolute;
@@ -138,6 +143,8 @@
 
     width: 242px;
     min-height: 54px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   @include desktop {
