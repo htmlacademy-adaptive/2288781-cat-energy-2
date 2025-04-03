@@ -142,11 +142,11 @@
     }
 
     &_location-image {
-      display: none;
+      display: block;
     }
 
     &__location-iframe {
-      display: block;
+      display: none;
     }
   }
 }
