@@ -77,8 +77,6 @@
     align-items: center;
 
     @include tablet {
-      position: absolute;
-      top: 0;
       min-width: 200px;
       min-height: 210px;
     }

@@ -1,21 +1,17 @@
 .hero {
-  position: relative;
-  z-index: 1;
-
-  min-width: 280px;
+  max-width: 320px;
+  margin: 0 auto;
 
   transition: all 0.8s ease-out;
 
   @include tablet {
-    min-width: 708px;
+    max-width: 768px;
 
     background-color: transparent;
   }
 
   @include desktop {
-    min-width: 1220px;
-
-    background-color: transparent;
+    max-width: 1440px;
   }
 }
 
@@ -36,14 +32,13 @@
   @include tablet {
     align-items: flex-start;
 
-    min-height: 875px;
+    min-height: 809px;
 
     background-color: $white;
   }
 
   @include desktop {
-    min-height: 580px;
-    margin-bottom: 82px;
+    min-height: 550px;
 
     background-color: transparent;
   }
@@ -51,22 +46,26 @@
 
 .hero__title {
   max-width: 280px;
-  margin: 27px 0 25px;
+  margin: 25px 0;
   padding: 0;
+
+  line-height: 38px;
 
   color: $white;
   text-align: center;
 
   @include tablet {
     max-width: 416px;
-    margin: 65px 0 20px 90px;
+    margin: 0 0 20px 90px;
+
+    line-height: 60px;
 
     color: $black;
     text-align: left;
   }
 
   @include desktop {
-    margin: 110px 0 0 80px;
+    margin: 0 0 0 80px;
   }
 }
 
@@ -74,8 +73,6 @@
   max-width: 416px;
   margin: 0;
   padding: 0;
-  padding-right: 100px;
-  padding-left: 100px;
 
   font-family: $main-font;
   font-size: 14px;
@@ -88,8 +85,6 @@
   @include tablet {
     width: 420px;
     margin: 20px 0 50px 90px;
-    padding-right: 30px;
-    padding-left: 30px;
 
     font-size: 20px;
     line-height: 20px;
@@ -114,7 +109,7 @@
 
   @include tablet {
     position: absolute;
-    top: 266px;
+    top: 200px;
     left: 50%;
 
     min-width: 570px;
@@ -124,8 +119,10 @@
   }
 
   @include desktop {
-    top: 29px;
+    top: -81px;
     left: 557px;
+
+    min-width: 552px;
 
     transform: none;
   }
@@ -138,7 +135,7 @@
 
   @include tablet {
     position: absolute;
-    top: 295px;
+    top: 230px;
     left: 120px;
 
     width: 242px;

@@ -3,11 +3,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Меню сайта
+  const navNojs = document.querySelector('.navigation');
   const navMain = document.querySelector('.navigation');
   const navToggle = document.querySelector('.navigation__toggle');
 
-  if (navMain) {
-    navMain.classList.remove('navigation--nojs');
+  if (navNojs) {
+    navNojs.classList.remove('navigation--nojs');
   }
 
   navToggle.addEventListener('click', () => {

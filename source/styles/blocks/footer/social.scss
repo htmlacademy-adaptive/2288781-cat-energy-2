@@ -1,14 +1,22 @@
 .social {
   position: relative;
 
+  display: flex;
+
   min-width: 280px;
   min-height: 37px;
   margin: 0;
+  margin-right: auto;
+  margin-left: auto;
   padding: 20px 0;
 
   @include tablet {
     min-width: 132px;
     padding: 0;
+  }
+
+  @include desktop {
+    left: 22px;
   }
 }
 
@@ -21,9 +29,9 @@
   align-items: center;
   gap: 24px;
 
-  width: 132px;
-  height: 37px;
+  min-height: 37px;
   margin: 0 auto;
+  padding: 0;
 
   @include tablet {
     justify-content: space-between;

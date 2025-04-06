@@ -1,12 +1,10 @@
 .main-header {
-  position: relative;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  width: 100%;
-  min-width: 320px;
+  max-width: 320px;
+
   margin: 0 auto;
   padding: 13px 0 14px;
 
@@ -18,13 +16,13 @@
   transition: all 0.5s ease;
 
   @include tablet {
-    min-width: 768px;
-    padding: 25px 0 0;
+    max-width: 768px;
+    padding: 25px 0 65px;
   }
 
   @include desktop {
     min-width: 1440px;
-    padding: 55px 0 0;
+    padding: 55px 0 74px;
 
     background-color: transparent;
     color: $white;
@@ -38,18 +36,8 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 320px;
+    height: auto;
     margin: 0 auto;
-
-    @include tablet {
-      align-items: flex-end;
-
-      width: 768px;
-    }
-
-    @include desktop {
-      width: 1220px;
-    }
   }
 
   &__header-logo {
@@ -60,24 +48,26 @@
     display: flex;
     align-items: center;
 
-    width: 190px;
+    min-width: 190px;
+    min-height: 38px;
     margin-right: auto;
     padding: 0;
 
     color: $extra-dark-grey;
 
     @include tablet {
-      width: 174px;
+      min-width: 174px;
+      min-height: 50px;
     }
 
     @include desktop {
-      width: 202px;
+      min-width: 202px;
+      min-height: 59px;
     }
   }
 
   &__navigation {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
   }
 }

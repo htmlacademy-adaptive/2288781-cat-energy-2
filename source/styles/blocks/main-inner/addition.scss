@@ -24,7 +24,7 @@
     }
 
     @include desktop {
-      margin-top: 45px;
+      margin-top: 71px;
       padding: 0 calc((100vw - 1220px) / 2);
       font-size: 40px;
       line-height: 40px;
@@ -339,7 +339,7 @@
 
     @include desktop {
       margin-left: 0;
-      margin-bottom: 149px;
+      margin-bottom: 155px;
     }
   }
 
@@ -382,7 +382,7 @@
     justify-content: center;
 
     margin-left: 0;
-    margin-bottom: 43px;
+    margin-bottom: 49px;
 
     text-align: center;
   }

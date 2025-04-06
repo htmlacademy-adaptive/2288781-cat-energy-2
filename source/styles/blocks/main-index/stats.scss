@@ -128,7 +128,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    margin-top: 55px;
+    margin-top: 54px;
     margin-bottom: 99px;
   }
 
@@ -136,7 +136,6 @@
     flex-direction: column;
     row-gap: 60px;
 
-    margin-top: 69px;
     margin-bottom: 75px;
   }
 }
@@ -165,19 +164,15 @@
 .stats__item {
   position: relative;
 
-  width: 124px;
-  min-height: 56px;
-  padding: 15px 0 18px;
+  max-height: 77px;
 
   border: 1px solid $dark-grey;
   border-radius: 3px;
-
-  @include tablet {
-    padding: 15px 0 20px;
-  }
 }
 
 .stats__number {
+  margin: 11px 0 20px;
+
   font-size: 24px;
   line-height: 24px;
 
@@ -191,7 +186,7 @@
   position: absolute;
   left: 50%;
 
-  width: 77px;
+  min-width: 77px;
   margin: 0;
   padding: 0;
 
@@ -205,9 +200,9 @@
   transform: translateX(-50%);
 
   @include tablet {
-    top: 123px;
+    top: 60px;
 
-    width: 143px;
+    min-width: 143px;
     height: 14px;
     padding-right: 9px;
     padding-left: 9px;
@@ -244,7 +239,7 @@
   @include desktop {
     flex-wrap: wrap;
     align-self: flex-start;
-    column-gap: 63px;
+    column-gap: 65px;
 
     height: 20px;
 

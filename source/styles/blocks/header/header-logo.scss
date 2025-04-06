@@ -2,6 +2,7 @@
   @include reset-link;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 56px;
 
@@ -17,7 +18,7 @@
   text-align: left;
   background-color: transparent;
 
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 
   @include tablet {
     justify-content: space-between;
@@ -25,19 +26,17 @@
     gap: 13px;
 
     width: 174px;
-
   }
 
   @include desktop {
     gap: 14px;
 
-    width: 174px;
-
+    width: 202px;
   }
 
   &:hover {
     opacity: 0.8;
-    transition: 0.5s;
+    transition: opacity 0.3s ease;
   }
 
   &:focus {
@@ -68,10 +67,13 @@
   &__logo-text {
     width: 101px;
     height: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     @include desktop {
       width: 118px;
       height: 21px;
+      margin: 0;
     }
   }
 }

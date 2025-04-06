@@ -30,7 +30,9 @@
   <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Приветственная страница</h1>
 
   <header class="page__main-header main-header main-header--index" data-test="header">
+
     <div class="main-header__wrapper">
+
       <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Активная главная страница">
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
@@ -43,30 +45,44 @@
           <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
       </a>
+
       <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
-      <nav class="main-header__navigation navigation navigation--nojs navigation--closed">
+      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
+
         <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+
         <ul class="navigation__list navigation__list--index">
+
           <li class="navigation__item">
             <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
           </li>
+
           <li class="navigation__item">
             <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
           </li>
+
           <li class="navigation__item">
             <a class="navigation__link" href="./form.html">Подбор программы</a>
           </li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
 
   <main class="page__main-index">
 
     <section class="hero" data-test="hero">
+
       <div class="hero__wrapper">
+
         <h2 class="hero__title title">Функциональное питание для котов</h2>
+
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
+
         <picture>
           <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" width="709" height="609" type="image/webp" srcset="images/index-glass/hero-glass-tablet@1x.webp 1x, images/index-glass/hero-glass-tablet@2x.webp 2x">
@@ -75,8 +91,11 @@
           <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index-glass/hero-glass-tablet@1x.png 1x, images/index-glass/hero-glass-tablet@2x.png 2x">
           <img class="hero__image" width="280" height="270" src="images/index-glass/hero-glass-mobile@1x.png" srcset="images/index-glass/hero-glass-mobile@2x.png 2x" alt="Корм для котов в виде упаковки-стаканчика онлайн-магазина «Кэт энерджи» объемом 1000 г со вкусом курицы «Cat Energy Pro».">
         </picture>
+
         <a class="hero__button button" href="./form.html">Подобрать программу</a>
+
       </div>
+
     </section>
 
     <section class="programs" data-test="programs">
@@ -120,7 +139,7 @@
         </li>
 
         <li class="reasons__item reasons__item--time">
-          <p class="reasons__item-text ">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="reasons__item-text ">Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!</p>
         </li>
 
       </ol>
@@ -167,7 +186,7 @@
                 <picture>
                   <source media="(min-width: 768px)" type="image/webp" width="560" height="512" srcset="./images/cats/cat-after@1x.webp 1x, ./images/cats/cat-after@1x.webp 2x">
                   <source media="(min-width: 320px)" type="image/webp" width="280" height="256" srcset="./images/cats/cat-after-mobile@1x.webp 1x, ./images/cats/cat-after-mobile@2x.webp  2x">
-                  <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-after@1x.png 1x, ./images/cats/cat-after@2x.png  2x">
+                  <source media="(min-width: 768px)" type="image/png" width="560" height="512" srcset="./images/cats/cat-after@1x.png 1x, ./images/cats/cat-after@2x.png 2x">
                   <img class="slider__item-image slider__item-image--after" width="280" height="256" src="./images/cats/cat-after-mobile@1x.png" srcset="./images/cats/cat-after-mobile@2x.png 2x" alt="Фото худого кота после приема функционального питания «Кэт энерджи».">
                 </picture>
               </li>
@@ -187,40 +206,28 @@
     <section class="main-footer__map map map--nojs" data-test="contacts">
       <h2 class="map__title title visually-hidden">Контакты и местонахождение офиса онлайн-магазина «Кэт Энерджи» с кастомным курсором на карте</h2>
       <div class="map__wrapper">
-
         <div class="map__content">
-
           <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-
           <p class="map__direction">
             <span class="map__address">Ул.&nbsp;Большая Конюшенная, д.&nbsp;19&#47;8</span>
             <span class="map__city">Санкт-Петербург</span>
           </p>
-
         </div>
-
       </div>
-
       <div class="map__location">
-
         <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19&#47;8</span>
-
-        <picture>
+        <!-- <picture>
           <source media="(min-width: 1440px)" type="image/webp" width="1440" height="400" srcset="images/maps/location-desktop@1x.webp 1x, images/maps/location-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" type="image/webp" width="768" height="400" srcset="images/maps/location-tablet@1x.webp 1x, images/maps/location-tablet@2x.webp 2x">
           <source media="(min-width: 320px)" type="image/webp" width="320" height="320" srcset="images/maps/location-mobile@1x.webp 1x, images/maps/location-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="400" srcset="images/maps/location-desktop@1x.jpg 1x, images/maps/location-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" type="image/jpeg" width="768" height="400" srcset="images/maps/location-tablet@1x.jpg 1x, images/maps/location-tablet@2x.jpg 2x">
           <img class="map__location-image" width="320" height="320" src="images/maps/location-mobile@1x.jpg" srcset="images/maps/location-mobile@2x.jpg 2x" alt="Фрагмент карты города Санкт-Петербурга" loading="lazy">
-        </picture>
-
+        </picture> -->
         <iframe class="map__location-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;source=constructor" width="1440" height="362" title="Офис онлайн-магазина «Кэт Энерджи» по адресу ул. Большая Конюшенная д.19&#47;8, Санкт-Петербург">
         </iframe>
-
         <span class="map__pin visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19&#47;8</span>
-
       </div>
-
     </section>
 
     <div class="main-footer__wrapper" data-test="footer">
