@@ -6,9 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navNojs = document.querySelector('.navigation');
   const navMain = document.querySelector('.navigation');
   const navToggle = document.querySelector('.navigation__toggle');
+  const LocationNojs = document.querySelector('.map__location');
 
   if (navNojs) {
     navNojs.classList.remove('navigation--nojs');
+  }
+
+  if (LocationNojs) {
+    navNojs.classList.remove('map__location--nojs');
   }
 
   navToggle.addEventListener('click', () => {

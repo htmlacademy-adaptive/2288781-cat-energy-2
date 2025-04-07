@@ -20,6 +20,12 @@
     min-width: $breakpoint-mobile-min;
     margin: 0 auto;
 
+    background-color: $white;
+
+    &--color {
+      background-color: $accent-light-grey;
+    }
+
     @include tablet {
       min-width: $breakpoint-tablet-min;
     }
