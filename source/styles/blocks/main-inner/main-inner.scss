@@ -38,21 +38,22 @@
   }
 
   &__title {
-    min-width: 280px;
+    width: 320px;
     margin: 0 auto;
-    padding-bottom: 41px;
+    padding: 27px 20px 41px;
 
     text-align: left;
     transition: width 0.8s ease-in-out;
 
     @include tablet {
-      min-width: 708px;
-      padding-bottom: 84px;
+      width: 768px;
+      padding: 0 30px 84px;
     }
 
     @include desktop {
-      min-width: 1220px;
+      width: 1440px;
       margin-left: 0;
+      padding: 0 110px 84px 0;
     }
   }
 }

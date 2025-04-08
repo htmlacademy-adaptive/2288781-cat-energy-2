@@ -1,7 +1,7 @@
 .reasons {
   min-width: 320px;
   margin: 0 auto;
-  padding: 20px 20px 49px;
+  padding: 0 20px 49px;
 
   transition: all 0.8s ease-out;
 
@@ -191,6 +191,10 @@
   margin: 0 0 0 80px;
   padding: 2px 0 4px;
 
+  & br {
+    display: none;
+  }
+
   @include tablet {
     max-width: 245px;
     min-height: 72px;
@@ -201,5 +205,9 @@
     line-height: 24px;
 
     vertical-align: middle;
+
+    & br {
+      display: block;
+    }
   }
 }

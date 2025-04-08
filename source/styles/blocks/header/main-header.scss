@@ -26,6 +26,10 @@
 
     background-color: transparent;
     color: $white;
+
+    &--catalog {
+      padding-bottom: 75px;
+    }
   }
 
   &__wrapper {

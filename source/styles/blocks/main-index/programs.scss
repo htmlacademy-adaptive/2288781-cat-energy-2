@@ -56,7 +56,7 @@
   &__item {
     width: 100%;
     min-width: 280px;
-    min-height: 266px;
+    height: 266px;
     padding: 24px 20px 18px;
 
     background-color: $accent-light-grey;
@@ -126,28 +126,29 @@
   display: flex;
   align-items: flex-start;
 
-  min-width: 156px;
-  margin: 30px 0 29px 71px;
-  padding: 10px 0 5px;
+  width: 156px;
+  margin: 5px 0 29px 71px;
 
   text-transform: uppercase;
 
   transition: all 0.8s ease-out;
 
   @include tablet {
-    max-width: 340px;
-    margin: 0 0 24px;
+    width: 340px;
+    margin: -9px 0 29px 2px;
+    padding: 10px 0 5px;
   }
 
   @include desktop {
-    max-width: 295px;
-    margin: 21px 0 34px 161px;
+    width: 294px;
+    margin: 22px 0 29px 163px;
+    padding: 10px 0 5px;
   }
 }
 
 .programs__description {
   width: 227px;
-  margin: 29px 0 23px;
+  margin: 29px 0 40px;
   padding: 0;
 
   @include max-width-mobile {
@@ -169,7 +170,7 @@
 
   @include tablet {
     width: 340px;
-    margin: -6px 0 49px;
+    margin: -10px 0 49px;
     padding: 0;
 
     font-size: 16px;
@@ -196,8 +197,8 @@
   align-items: center;
   gap: 15px;
 
-  width: 139px;
-  margin: 15px 0 18px;
+  width: 145px;
+  margin: 21px 0 18px;
   padding: 0;
 
   text-decoration: none;
@@ -248,7 +249,7 @@
   justify-content: flex-start;
 
   margin-top: 2px;
-  padding-right: 61px;
+  padding-right: 51px;
 
   font-family: $main-font;
   font-size: 16px;
@@ -256,6 +257,8 @@
   text-transform: uppercase;
 
   @include tablet {
+    padding-right: 60px;
+
     font-size: 20px;
     line-height: 30px;
   }

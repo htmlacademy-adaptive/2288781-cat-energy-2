@@ -22,7 +22,7 @@
       max-width: 280px;
       min-height: 112px;
       margin: 0 auto;
-      padding-top: 26px;
+      padding-top: 65px;
       padding-bottom: 26px;
     }
 
@@ -42,6 +42,7 @@
       left: calc(110px + (100vw - 1440px) / 2);
       z-index: 10;
 
+      justify-content: start;
       gap: 87px;
 
       width: 555px;
@@ -50,6 +51,16 @@
       padding: 60px 45px;
 
       background-color: $white;
+    }
+
+    &--catalog {
+      @include max-width-mobile {
+        padding-top: 26px;
+      }
+
+      @include tablet {
+        padding: 106px 37px 62px 43px;
+      }
     }
   }
 
@@ -232,15 +243,5 @@
         background-image: url("../../images/maps/location-desktop@2x.jpg");
       }
     }
-  }
-}
-
-.map__location--nojs {
-  &_location-image {
-    display: block;
-  }
-
-  &__location-iframe {
-    display: none;
   }
 }

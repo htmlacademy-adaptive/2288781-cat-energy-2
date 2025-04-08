@@ -11,7 +11,7 @@
     justify-content: center;
 
     min-height: 209px;
-    padding-top: 20px;
+    padding-top: 16px;
     padding-bottom: 25px;
 
     @include tablet {
@@ -134,7 +134,7 @@
 
     @include tablet {
       max-width: 135px;
-      margin: 0 auto;
+      margin: -7px auto;
 
       text-align: center;
     }
@@ -162,7 +162,7 @@
     padding-top: 14px;
 
     @include tablet {
-      padding-top: 21px;
+      padding-top: 20px;
     }
 
     @include desktop {
