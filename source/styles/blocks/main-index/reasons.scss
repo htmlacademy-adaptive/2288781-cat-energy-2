@@ -1,7 +1,7 @@
 .reasons {
   min-width: 320px;
   margin: 0 auto;
-  padding: 20px 20px 49px;
+  padding: 0 20px 49px;
 
   transition: all 0.8s ease-out;
 
@@ -63,7 +63,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
-      gap: 37px 136px;
+      gap: 32px 139px;
 
       max-width: 708px;
 
@@ -113,7 +113,6 @@
     max-width: 250px;
     min-height: 280px;
     padding-top: 40px;
-    padding-bottom: 13px;
 
     counter-increment: number;
 
@@ -192,15 +191,23 @@
   margin: 0 0 0 80px;
   padding: 2px 0 4px;
 
+  & br {
+    display: none;
+  }
+
   @include tablet {
     max-width: 245px;
     min-height: 72px;
-    margin: 91px 0 57px;
+    margin: 114px 0 57px;
     padding: 0;
 
     font-size: 16px;
     line-height: 24px;
 
     vertical-align: middle;
+
+    & br {
+      display: block;
+    }
   }
 }

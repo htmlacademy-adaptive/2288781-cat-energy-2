@@ -22,16 +22,15 @@
       max-width: 280px;
       min-height: 112px;
       margin: 0 auto;
-      padding-top: 26px;
+      padding-top: 65px;
       padding-bottom: 26px;
     }
 
     @include tablet {
       grid-template-columns: repeat(2, 163px);
       grid-template-rows: 78px;
-      gap: 308px;
+      gap: 274px;
 
-      width: 768px;
       min-height: 200px;
       margin: 0 auto;
       padding: 60px 40px;
@@ -43,12 +42,13 @@
       left: calc(110px + (100vw - 1440px) / 2);
       z-index: 10;
 
-      gap: unset;
+      justify-content: start;
+      gap: 87px;
 
-      width: 565px;
+      width: 555px;
       min-height: 199px;
       margin: 0;
-      padding: 60px 80px;
+      padding: 60px 45px;
 
       background-color: $white;
     }
@@ -77,18 +77,28 @@
   }
 
   &__location {
+    width: 100%;
     height: 362px;
+
+    background-color: $dark-grey;
+    // background-image:
+    //   image-set(url("../../images/maps/location-mobile@1x.jpg" 1x,
+    //             "../../images/maps/location-mobile@2x.jpg" 2x,
+    //             "../../images/maps/location-mobile@1x.webp" 1x,
+    //             "../../images/maps/location-mobile@2x.webp" 2x)
+    //   );
+    // background-size: 320px 362px;
+    // background-position: center;
+    // background-repeat: no-repeat;
 
     @include tablet {
       height: 400px;
     }
   }
 
-  &__location-image {
-    display: none;
-  }
-
   &__location-iframe {
+    display: block;
+
     width: 100%;
     height: 362px;
     margin: 0 auto;
@@ -97,13 +107,11 @@
     object-fit: cover;
 
     @include tablet {
-      min-width: 768px;
-      min-height: 400px;
+      height: 400px;
     }
 
     @include desktop {
       height: 100%;
-      width: 100%;
     }
   }
 
@@ -129,24 +137,6 @@
     @include desktop {
       top: 131px;
       left: 908px;
-    }
-  }
-
-  &--nojs {
-    &__location {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-color: $accent-light-grey;
-    }
-
-    &_location-image {
-      display: none;
-    }
-
-    &__location-iframe {
-      display: block;
     }
   }
 }
@@ -204,5 +194,58 @@
 
   @include desktop {
     text-align: left;
+  }
+}
+
+.map__location-wrapper {
+  width: 100%;
+  height: 362px;
+
+  background: $accent-light-grey url("../../images/maps/location-mobile@1x.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/maps/location-mobile@2x.jpg");
+  }
+}
+
+@include tablet {
+  .map__location-wrapper {
+    height: 400px;
+    background: $accent-light-grey url("../../images/maps/location-tablet@1x.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/maps/location-tablet@2x.jpg");
+      height: 100%;
+    }
+  }
+}
+
+@include desktop {
+  .map__location-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: unset;
+    background-image: url("../../images/maps/location-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/maps/location-desktop@2x.jpg");
+    }
+  }
+}
+
+.map__content--catalog {
+  @include max-width-mobile {
+    padding-top: 26px;
+  }
+
+  @include tablet {
+    padding: 106px 37px 62px 43px;
   }
 }
