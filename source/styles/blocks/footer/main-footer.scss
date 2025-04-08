@@ -1,6 +1,12 @@
 .main-footer {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+
   background-color: $accent-light-grey;
 
   transition: all 0.8s ease-out;
@@ -13,6 +19,12 @@
     width: 100%;
     min-width: $breakpoint-mobile-min;
     margin: 0 auto;
+
+    background-color: $white;
+
+    &--color {
+      background-color: $accent-light-grey;
+    }
 
     @include tablet {
       min-width: $breakpoint-tablet-min;
