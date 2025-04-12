@@ -1,6 +1,35 @@
 .navigation {
   transition: margin 3s cubic-bezier(0.17, 0.04, 0.03, 0.94);
 
+  &__content {
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+
+    @include max-width-mobile {
+      min-width: 280px;
+      max-height: 38px;
+      padding: 13px 0 14px;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+
+      max-height: 50px;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include desktop {
+      max-height: 59px;
+
+      &--catalog {
+        padding-bottom: 75px;
+      }
+    }
+  }
+
   &__toggle {
     position: relative;
     right: 0;
@@ -25,6 +54,7 @@
     vertical-align: middle;
     text-decoration: none;
     text-align: center;
+    overflow: visible;
 
     @include tablet {
       display: none;
@@ -34,6 +64,8 @@
   &__list {
     @include reset-list;
 
+    display: flex;
+
     background-color: $white;
     text-align: center;
 
@@ -42,37 +74,36 @@
     animation: ani 1s forwards;
 
     @include max-width-mobile {
-      position: absolute;
-      top: 65px;
-      right: 0;
+      position: relative;
+      top: 0;
       left: 0;
-      z-index: 100;
+      right: 0;
+      z-index: 1;
 
       width: 100%;
-      min-width: 320px;
-      margin-right: auto;
-      margin-left: auto;
+      min-width: 280px;
+      margin: 0 auto;
     }
 
     @include tablet {
-      top: 0;
+      position: static;
 
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: flex-start;
-      gap: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 33px;
 
-      max-width: 436px;
-      height: 50px;
+      min-width: 438px;
+      margin-top: 14px;
+      margin-right: 1px;
+      margin-left: auto;
     }
 
     @include desktop {
-      position: relative;
-
       gap: 33px;
 
-      max-width: 475px;
-      height: 59px;
+      min-width: 479px;
+      margin-right: 0;
 
       background-color: transparent;
     }
@@ -84,7 +115,10 @@
 
   &__item {
     @include max-width-mobile {
-      border-top: 1px solid $extra-light-grey;
+      margin-left: -20px;
+      margin-right: -20px;
+
+      @include bordered-t(1px, $extra-light-grey);
     }
 
     @include tablet {
@@ -107,6 +141,25 @@
 
     transition: all 0.2s ease-out 0s;
 
+    @include max-width-mobile {
+      height: 66px;
+      padding: 22px 0 24px;
+    }
+
+    @include tablet {
+      height: 50px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include desktop {
+      height: 59px;
+
+      font-size: 20px;
+      line-height: 100%;
+    }
+
     &:hover,
     &:focus {
       opacity: 0.6;
@@ -114,29 +167,6 @@
 
     &:active {
       opacity: 0.3;
-    }
-
-    @include max-width-mobile {
-      display: block;
-
-      min-height: 66px;
-      padding: 22px 0 24px;
-    }
-
-    @include tablet {
-      min-height: 50px;
-      padding: 14px 4px 0;
-
-      font-size: 18px;
-      line-height: 24px;
-    }
-
-    @include desktop {
-      min-height: 59px;
-      padding: 16px 0 3px;
-
-      font-size: 20px;
-      line-height: 30px;
     }
   }
 
@@ -236,6 +266,14 @@
     }
 
     // Если не используются скрипты
+    &--nojs {
+      position: static;
+
+      // min-height: 264px;
+
+      transition: height 0.5s, opacity 1s;
+    }
+
     &--nojs &__list {
       display: block;
     }
@@ -244,29 +282,19 @@
       display: none;
     }
 
-    & &__link--current {
+    &--nojs &__link--current {
       pointer-events: none;
     }
   }
 
   @include tablet {
-    & &__list {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: flex-start;
-
-      border: none;
-    }
-
     &--active {
       color: $black;
       opacity: 1;
     }
 
     & &__link--current {
-      padding-bottom: 2px;
-
-      border-bottom: 2px solid $primary;
+      @include bordered-b(2px, $primary);
     }
   }
 
@@ -276,7 +304,7 @@
     }
 
     &__list--index &__link--current {
-      border-bottom: 2px solid $white;
+      @include bordered-b(2px, $white);
     }
 
     &__list--catalog &__link,
@@ -286,7 +314,7 @@
 
     &__list--catalog &__link--catalog-current,
     &__list--form &__link--catalog-current {
-      border-bottom: 2px solid $primary;
+      @include bordered-b(2px, $primary);
     }
   }
 }

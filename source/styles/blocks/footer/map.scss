@@ -144,6 +144,8 @@
 .map__wrapper {
   @include container;
 
+  position: relative;
+
   &--color {
     margin: 0;
     background-color: $accent-light-grey;

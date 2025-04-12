@@ -29,66 +29,82 @@
 
   <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Приветственная страница</h1>
 
-  <header class="page__main-header main-header main-header--index" data-test="header">
-    <div class="main-header__wrapper">
-      <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Активная главная страница">
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
-          <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
-          <img class="header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
-        </picture>
-        <picture>
-          <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
-          <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
-          <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
-        </picture>
-      </a>
-      <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
-      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
-        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
-        <ul class="navigation__list navigation__list--index">
+  <header class="page__main-header main-header" data-test="header">
 
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
-          </li>
+    <div class="main-header__block">
 
-          <li class="navigation__item">
-            <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
-          </li>
+      <div class="main-header__wrapper">
 
-          <li class="navigation__item">
-            <a class="navigation__link" href="./form.html">Подбор программы</a>
-          </li>
+        <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+        <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
 
-        </ul>
-      </nav>
-    </div>
-  </header>
+          <div class="navigation__content">
 
-  <main class="page__main-index">
+            <a class="navigation__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Активная главная страница">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
+                <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
+                <img class="header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
+              </picture>
+              <picture>
+                <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
+                <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
+                <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
+              </picture>
+            </a>
 
-    <section class="hero" data-test="hero">
+            <button class="navigation__toggle navigation__toggle--nojs" type="button" aria-label="Открыть/скрыть меню"></button>
 
-      <div class="hero__wrapper">
+          </div>
 
-        <h2 class="hero__title title">Функциональное питание для котов</h2>
+          <ul class="navigation__list navigation__list--index">
 
-        <p class="hero__slogan">Занялся собой? Займись котом!</p>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
+            </li>
 
-        <picture>
-          <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="709" height="609" type="image/webp" srcset="images/index-glass/hero-glass-tablet@1x.webp 1x, images/index-glass/hero-glass-tablet@2x.webp 2x">
-          <source media="(min-width: 320px)" width="280" height="270" type="image/webp" srcset="images/index-glass/hero-glass-mobile@1x.webp 1x, images/index-glass/hero-glass-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/index-glass/hero-glass-desktop@1x.png 1x, images/index-glass/hero-glass-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index-glass/hero-glass-tablet@1x.png 1x, images/index-glass/hero-glass-tablet@2x.png 2x">
-          <img class="hero__image" width="280" height="270" src="images/index-glass/hero-glass-mobile@1x.png" srcset="images/index-glass/hero-glass-mobile@2x.png 2x" alt="Корм для котов в виде упаковки-стаканчика онлайн-магазина «Кэт энерджи» объемом 1000 г со вкусом курицы «Cat Energy Pro».">
-        </picture>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
+            </li>
 
-        <a class="hero__button button" href="./form.html">Подобрать программу</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./form.html">Подбор программы</a>
+            </li>
+
+          </ul>
+
+        </nav>
 
       </div>
 
-    </section>
+      <section class="hero hero--index" data-test="hero">
+
+        <div class="hero__wrapper">
+
+          <h2 class="hero__title title">Функциональное питание для котов</h2>
+
+          <p class="hero__slogan">Занялся собой? Займись котом!</p>
+
+          <picture>
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/webp" srcset="images/index-glass/hero-glass-desktop@1x.webp 1x, images/index-glass/hero-glass-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/webp" srcset="images/index-glass/hero-glass-tablet@1x.webp 1x, images/index-glass/hero-glass-tablet@2x.webp 2x">
+            <source media="(min-width: 320px)" width="280" height="270" type="image/webp" srcset="images/index-glass/hero-glass-mobile@1x.webp 1x, images/index-glass/hero-glass-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/index-glass/hero-glass-desktop@1x.png 1x, images/index-glass/hero-glass-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index-glass/hero-glass-tablet@1x.png 1x, images/index-glass/hero-glass-tablet@2x.png 2x">
+            <img class="hero__image" width="280" height="270" src="images/index-glass/hero-glass-mobile@1x.png" srcset="images/index-glass/hero-glass-mobile@2x.png 2x" alt="Корм для котов в виде упаковки-стаканчика онлайн-магазина «Кэт энерджи» объемом 1000 г со вкусом курицы «Cat Energy Pro».">
+          </picture>
+
+          <a class="hero__button button" href="./form.html">Подобрать программу</a>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </header>
+
+  <main class="page__main-index">
 
     <section class="programs" data-test="programs">
       <div class="programs__wrapper">
@@ -139,29 +155,44 @@
     </section>
 
     <section class="stats" data-test="proof">
+
       <div class="stats__wrapper">
+
         <div class="stats__content">
+
           <h2 class="stats__title title">Живой пример</h2>
+
           <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+
           <div class="stats__info">
+
             <div class="stats__info-wrapper">
+
               <ul class="stats__list">
+
                 <li class="stats__item">
                   <p class="stats__number">5 кг</p>
                   <p class="stats__action">Снижение веса</p>
                 </li>
+
                 <li class="stats__item">
                   <p class="stats__number">60 дней</p>
                   <p class="stats__action">Затрачено времени</p>
                 </li>
+
               </ul>
+
               <p class="stats__cost">
                 <span>Затраты на питание:</span>
                 <span>15 000 руб.</span>
               </p>
+
             </div>
+
           </div>
+
         </div>
+
         <figure class="stats__compare">
           <figcaption class="stats__text visually-hidden">Кот Борис до и после 2-х месячного питания кормом Cat Energy</figcaption>
           <div class="slider">

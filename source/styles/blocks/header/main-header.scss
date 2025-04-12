@@ -1,12 +1,10 @@
 .main-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-
-  max-width: 320px;
+  align-items: flex-end;
 
   margin: 0 auto;
-  padding: 13px 0 14px;
 
   font-size: 0;
 
@@ -16,32 +14,39 @@
   transition: all 0.5s ease;
 
   @include tablet {
-    max-width: 768px;
-    padding: 25px 0 65px;
+    flex-direction: row;
+
+    padding-top: 25px;
+
+    background-color: transparent;
   }
 
   @include desktop {
-    min-width: 1440px;
-    padding: 55px 0 110px;
+    padding-top: 55px;
 
-    background-color: transparent;
     color: $white;
+  }
 
-    &--catalog {
-      padding-bottom: 75px;
-    }
+  &__block {
+    height: auto;
   }
 
   &__wrapper {
     @include container;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 
-    height: auto;
+    height: 100%;
     margin: 0 auto;
+
+    @include tablet {
+      min-height: 50px;
+    }
+
+    @include desktop {
+      min-height: 59px;
+    }
   }
 
   &__header-logo {
@@ -55,23 +60,29 @@
     min-width: 190px;
     min-height: 38px;
     margin-right: auto;
-    padding: 0;
+    padding: 13px 0 14px;
 
     color: $extra-dark-grey;
 
     @include tablet {
       min-width: 174px;
-      min-height: 50px;
+      padding: 25px 0 0;
     }
 
     @include desktop {
       min-width: 202px;
-      min-height: 59px;
+      padding: 55px 0 0;
     }
   }
 
   &__navigation {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+
+      height: 100%;
+    }
   }
 }

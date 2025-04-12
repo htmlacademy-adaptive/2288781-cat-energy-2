@@ -36,17 +36,19 @@
 .stats__wrapper {
   @include container;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 280px;
+  min-width: 280px;
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @include tablet {
-    width: 768px;
+    min-width: 768px;
     padding-top: 45px;
     padding-bottom: 101px;
   }
@@ -66,6 +68,12 @@
   display: flex;
   flex-direction: column;
 
+  width: 280px;
+
+  @include tablet {
+    width: 708px;
+  }
+
   @include desktop {
     align-items: flex-start;
 
@@ -76,6 +84,7 @@
 .stats__title {
   min-width: min-content;
   margin: 0;
+  margin-top: 25px;
   margin-bottom: 40px;
   padding: 0;
 
@@ -150,16 +159,16 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 32px;
 
-  width: 280px;
+  min-width: 280px;
   margin: 0;
+  padding: 0;
 
   @include tablet {
-    width: 367px;
+    min-width: 367px;
     column-gap: 43px;
   }
 
   @include desktop {
-    width: 366px;
     column-gap: 42px;
   }
 }
@@ -167,10 +176,14 @@
 .stats__item {
   position: relative;
 
-  max-height: 77px;
+  max-height: 56px;
 
   border: 1px solid $dark-grey;
   border-radius: 3px;
+
+  @include tablet {
+    max-height: 72px;
+  }
 }
 
 .stats__number {

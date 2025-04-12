@@ -71,7 +71,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 60px;
     line-height: 60px;
   }
@@ -91,7 +91,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 60px;
     line-height: 60px;
   }
@@ -111,7 +111,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 36px;
     line-height: 36px;
   }
@@ -131,7 +131,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
   }
@@ -151,7 +151,7 @@
 
   color: $color;
 
-  @media (min-width: $breakpoint-tablet-min) {
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
   }
@@ -200,7 +200,8 @@
   text-decoration: none;
   text-align: center;
   word-break: break-word;
-  border-style: none;
+  border: none;
+  outline: none;
   cursor: pointer;
   background: none;
   vertical-align: middle;
@@ -283,12 +284,19 @@
 
 
 // Линия
-@mixin bordered($color, $width) {
+@mixin bordered($width, $color) {
   border: $width solid $color;
+  transition: border-color 0.3s ease;
 }
 
-@mixin bordered-b($color, $width) {
+@mixin bordered-t($width, $color) {
+  border-top: $width solid $color;
+  transition: border-color 0.3s ease;
+}
+
+@mixin bordered-b($width, $color) {
   border-bottom: $width solid $color;
+  transition: border-color 0.3s ease;
 }
 
 
