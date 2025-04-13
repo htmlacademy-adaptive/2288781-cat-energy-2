@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMain = document.querySelector('.navigation');
   const toggleNojs = document.querySelector('.navigation__toggle');
   const navToggle = document.querySelector('.navigation__toggle');
-  const LocationNojs = document.querySelector('.map__location');
+  const locationNojs = document.querySelector('.map__location-iframe');
 
   if (navNojs) {
     navNojs.classList.remove('navigation--nojs');
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleNojs.classList.remove('navigation__toggle--nojs');
   }
 
-  if (LocationNojs) {
-    navNojs.classList.remove('map__location--nojs');
+  if (locationNojs) {
+    navNojs.classList.remove('map__location-iframe--nojs');
   }
 
   navToggle.addEventListener('click', () => {

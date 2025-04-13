@@ -9,21 +9,18 @@
 
     @include max-width-mobile {
       min-width: 280px;
-      max-height: 38px;
       padding: 13px 0 14px;
     }
 
     @include tablet {
       justify-content: space-between;
 
-      max-height: 50px;
+      min-width: 174px;
       margin: 0;
       padding: 0;
     }
 
     @include desktop {
-      max-height: 59px;
-
       &--catalog {
         padding-bottom: 75px;
       }
@@ -90,11 +87,9 @@
 
       flex-direction: row;
       flex-wrap: wrap;
-      align-items: flex-end;
       gap: 33px;
 
       min-width: 438px;
-      margin-top: 14px;
       margin-right: 1px;
       margin-left: auto;
     }
@@ -129,7 +124,9 @@
   &__link {
     @include reset-link;
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     font-family: $main-font;
     font-size: 20px;
@@ -138,24 +135,23 @@
     color: $black;
     text-transform: uppercase;
     text-align: center;
+    vertical-align: middle;
 
     transition: all 0.2s ease-out 0s;
 
     @include max-width-mobile {
-      height: 66px;
+      height: 100%;
       padding: 22px 0 24px;
     }
 
     @include tablet {
-      height: 50px;
+      padding-top: 14px;
 
       font-size: 18px;
       line-height: 24px;
     }
 
     @include desktop {
-      height: 59px;
-
       font-size: 20px;
       line-height: 100%;
     }
@@ -294,6 +290,7 @@
     }
 
     & &__link--current {
+      padding-bottom: 10px;
       @include bordered-b(2px, $primary);
     }
   }

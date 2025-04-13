@@ -186,7 +186,7 @@
 
 // Кнопки
 @mixin button {
-  display: block;
+  display: inline-block;
 
   margin: 0;
   padding: 10px 0;
