@@ -7,8 +7,6 @@
 
   transition: all 0.8s ease-out;
 
-  @include outline($test-color: #5aeca8);
-
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -26,12 +24,18 @@
 
   &__wrapper {
     @include container;
+
+    max-height: 480px;
+
+    @include tablet {
+
+    }
   }
 
   &__inner-wrapper {
     position: relative;
 
-    height: 302px;
+    height: 305px;
     padding: 27px 0 29px;
 
     &::before {
@@ -55,7 +59,7 @@
         ),
         linear-gradient(to right, #5a5a62 50%, #42425b 50%);
       background-repeat: no-repeat;
-      background-position: 60% center;
+      background-position: 47% center;
       background-size: cover, auto 302px, cover;
 
       transition: all 0.8s ease-out;
@@ -80,9 +84,10 @@
     z-index: 3;
 
     width: 280px;
-    margin: 0 auto 25px;
+    margin: 0 auto 22px;
 
     font-family: $main-font;
+    line-height: 37px;
 
     color: $white;
     text-align: center;
@@ -105,7 +110,7 @@
     z-index: 3;
 
     width: 280px;
-    margin: 0 auto;
+    margin: 0 auto 29px;
 
     font-family: $main-font;
     font-size: 14px;
@@ -137,7 +142,7 @@
 
     display: block;
 
-    margin: 0 auto 3px;
+    margin: -137px auto 3px;
 
     animation-name: fadeOut;
     animation-duration: 1.5s;
@@ -167,7 +172,7 @@
   }
 
   &__button {
-    width: auto;
+    width: 280px;
     margin: 0 0 20px 0;
 
     @include tablet {
