@@ -1,38 +1,14 @@
 .navigation {
   transition: margin 3s cubic-bezier(0.17, 0.04, 0.03, 0.94);
 
-  &__toggle {
-    position: relative;
-    right: 0;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 auto;
-
-    width: 24px;
-    height: 24px;
-    margin-left: auto;
-    padding: 7px 0;
-
-    font-family: $base-font;
-
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: middle;
-    text-decoration: none;
-    text-align: center;
-
-    @include tablet {
-      display: none;
-    }
-  }
+  @include outline($test-color: #ec5a92);
 
   &__list {
     @include reset-list;
+
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 0;
 
     background-color: $white;
     text-align: center;
@@ -42,13 +18,13 @@
     animation: ani 1s forwards;
 
     @include max-width-mobile {
-      position: absolute;
-      top: 65px;
+      position: relative;
       right: 0;
       left: 0;
       z-index: 100;
 
-      width: 320px;
+      width: 100%;
+      min-width: 320px;
       margin-right: auto;
       margin-left: auto;
     }
@@ -57,12 +33,11 @@
       top: 0;
 
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: row wrap;
       justify-content: flex-start;
       gap: 20px;
 
-      width: 436px;
-      height: 50px;
+      max-width: 436px;
     }
 
     @include desktop {
@@ -70,8 +45,7 @@
 
       gap: 33px;
 
-      width: 475px;
-      height: 59px;
+      max-width: 476px;
 
       background-color: transparent;
     }
@@ -235,8 +209,13 @@
     }
 
     // Если не используются скрипты
+    &--nojs main-header__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
     &--nojs &__list {
-      display: block;
+       display: block;
     }
 
     &--nojs &__toggle {
@@ -251,7 +230,7 @@
   @include tablet {
     & &__list {
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: row wrap;
       justify-content: flex-start;
 
       border: none;

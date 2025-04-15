@@ -1,12 +1,14 @@
 .main-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
 
-  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1220px;
 
   margin: 0 auto;
-  padding: 13px 0 14px;
 
   font-size: 0;
 
@@ -15,58 +17,89 @@
 
   transition: all 0.5s ease;
 
-  @include tablet {
-    max-width: 768px;
-    padding: 25px 0 65px;
+  @include max-width-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 320px;
   }
 
-  @include desktop {
-    min-width: 1440px;
-    padding: 55px 0 110px;
-
+  @include tablet {
     background-color: transparent;
-    color: $white;
-
-    &--catalog {
-      padding-bottom: 75px;
-    }
   }
 
   &__wrapper {
     @include container;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    height: auto;
-    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 14px;
+
+    @include tablet {
+      width: 174px;
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      width: 202px;
+      margin-top: 55px;
+    }
   }
 
   &__header-logo {
     @include reset-link;
 
-    position: relative;
-
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    min-width: 190px;
-    min-height: 38px;
-    margin-right: auto;
-    padding: 0;
-
-    color: $extra-dark-grey;
+    @include outline($test-color: #5aeca8);
 
     @include tablet {
       min-width: 174px;
-      min-height: 50px;
+      height: 50px;
     }
 
     @include desktop {
       min-width: 202px;
-      min-height: 59px;
+      height: 59px;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    right: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    padding: 7px 0;
+
+    font-family: $base-font;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+
+    @include outline($test-color: #5aeca8);
+
+    @include tablet {
+      display: none;
     }
   }
 

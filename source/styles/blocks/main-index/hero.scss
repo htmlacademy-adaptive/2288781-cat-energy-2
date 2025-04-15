@@ -4,10 +4,41 @@
 
   transition: all 0.8s ease-out;
 
+  @include max-width-mobile {
+    &::before {
+      @include pseudo-element;
+      right: 0;
+      left: 0;
+      z-index: -1;
+
+      height: 302px;
+
+      background-color: $primary;
+      background-image:
+        linear-gradient(to bottom, $primary-fon, $primary-fon),
+        image-set(
+          url("../../images/index-page/cat-mobile@2x.webp") 2x type("image/webp"),
+          url("../../images/index-page/cat-mobile@2x.jpg") 2x type("image/jpeg"),
+          url("../../images/index-page/cat-mobile@1x.webp") 1x type("image/webp"),
+          url("../../images/index-page/cat-mobile@1x.jpg") 1x type("image/jpeg")
+        ),
+        linear-gradient(to right, #5a5a62 50%, #42425b 50%);
+      background-repeat: no-repeat;
+      background-position: 60% center;
+      background-size: cover, auto 302px, cover;
+
+      transition: all 0.8s ease-out;
+    }
+  }
+
   @include tablet {
     max-width: 768px;
 
     background-color: transparent;
+
+    &::before {
+      display: none;
+    }
   }
 
   @include desktop {
@@ -32,7 +63,7 @@
   @include tablet {
     align-items: flex-start;
 
-    min-height: 809px;
+    min-height: 875px;
 
     background-color: $white;
   }
@@ -45,6 +76,8 @@
 }
 
 .hero__title {
+  position: relative;
+
   max-width: 280px;
   margin: 25px 0;
   padding: 0;
@@ -56,7 +89,7 @@
 
   @include tablet {
     max-width: 416px;
-    margin: 0 0 20px 90px;
+    margin: 65px 0 20px 90px;
 
     line-height: 60px;
 
@@ -70,6 +103,8 @@
 }
 
 .hero__slogan {
+  position: relative;
+
   max-width: 416px;
   margin: 0;
   padding: 0;
@@ -109,7 +144,7 @@
 
   @include tablet {
     position: absolute;
-    top: 200px;
+    bottom: 0;
     left: 50%;
 
     min-width: 570px;
@@ -135,7 +170,7 @@
 
   @include tablet {
     position: absolute;
-    top: 230px;
+    top: 295px;
     left: 120px;
 
     width: 242px;
