@@ -43,6 +43,7 @@
 
   @include desktop {
     max-width: 1440px;
+    margin-bottom: 82px;
   }
 }
 
@@ -69,7 +70,7 @@
   }
 
   @include desktop {
-    min-height: 550px;
+    min-height: 558px;
 
     background-color: transparent;
   }
@@ -98,7 +99,7 @@
   }
 
   @include desktop {
-    margin: 0 0 0 80px;
+    margin: 110px 0 0 80px;
   }
 }
 
@@ -154,7 +155,7 @@
   }
 
   @include desktop {
-    top: -81px;
+    top: 29px;
     left: 557px;
 
     min-width: 552px;

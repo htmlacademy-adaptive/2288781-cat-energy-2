@@ -209,7 +209,7 @@
     }
 
     // Если не используются скрипты
-    &--nojs main-header__wrapper {
+    &--nojs &__wrapper {
       display: flex;
       flex-direction: column;
     }

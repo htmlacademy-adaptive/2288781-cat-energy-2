@@ -6,7 +6,7 @@
   transition: all 0.8s ease-out;
 
   @include tablet {
-    --bg-top-shift: calc(100% - 462px);
+    --bg-top-shift: calc(100% - 461px);
     border-top: 1px solid $extra-light-grey;
   }
 

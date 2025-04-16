@@ -2,14 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Меню сайта
-  const navNojs = document.querySelector('.navigation');
-  const navMain = document.querySelector('.navigation');
-  const navToggle = document.querySelector('.navigation__toggle');
+  // Меню сайта + карта
+  const navNojs = document.querySelector('.main-header__navigation');
+  const navMain = document.querySelector('.main-header__navigation');
+  const navToggle = document.querySelector('.main-header__toggle');
   const LocationNojs = document.querySelector('.map__location');
 
   if (navNojs) {
-    navNojs.classList.remove('navigation--nojs');
+    navNojs.classList.remove('main-header__navigation--nojs');
   }
 
   if (LocationNojs) {
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navToggle.addEventListener('click', () => {
 
-    if (navMain.classList.contains('navigation--closed')) {
-      navMain.classList.remove('navigation--closed');
-      navMain.classList.add('navigation--opened');
+    if (navMain.classList.contains('main-header__navigation--closed')) {
+      navMain.classList.remove('main-header__navigation--closed');
+      navMain.classList.add('main-header__navigation--opened');
       navToggle.setAttribute('aria-label', 'закрыть меню');
     } else {
-      navMain.classList.add('navigation--closed');
-      navMain.classList.remove('navigation--opened');
+      navMain.classList.add('main-header__navigation--closed');
+      navMain.classList.remove('main-header__navigation--opened');
       navToggle.setAttribute('aria-label', 'открыть меню');
     }
   });

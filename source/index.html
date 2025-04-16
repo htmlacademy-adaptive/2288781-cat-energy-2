@@ -31,7 +31,8 @@
 
   <header class="page__main-header main-header" data-test="header">
 
-    <div class="main-header__wrapper">
+    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+    <nav class="main-header__navigation main-header__navigation--index main-header__navigation--closed main-header__navigation--nojs">
 
       <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Активная главная страница">
         <picture>
@@ -48,23 +49,18 @@
 
       <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-    </div>
+      <ul class="main-header__list main-header__list--index">
 
-    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
-    <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
-
-      <ul class="navigation__list navigation__list--index">
-
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="./index.html" aria-current="page">Главная</a>
+        <li class="main-header__item main-header__item--active">
+          <a class="main-header__link main-header__link--current" href="./index.html" aria-current="page">Главная</a>
         </li>
 
-        <li class="navigation__item">
-          <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./catalog.html">Каталог продукции</a>
         </li>
 
-        <li class="navigation__item">
-          <a class="navigation__link" href="./form.html">Подбор программы</a>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./form.html">Подбор программы</a>
         </li>
 
       </ul>
