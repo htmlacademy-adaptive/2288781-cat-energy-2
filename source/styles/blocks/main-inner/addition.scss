@@ -33,7 +33,7 @@
 
   &__text-subtitle {
     display: inline-block;
-    margin-left: -40px;
+    margin-left: -54px;
     padding: 0 40px;
     background-color: #ffffff;
 
@@ -130,7 +130,7 @@
     @include denomination;
 
     min-width: 100%;
-    margin: 13px 0;
+    margin: 15px 0;
 
     line-height: 16px;
 
@@ -279,7 +279,6 @@
       url("../../images/index-catalog/foto-addition@2x.jpg") 2x type("image/jpeg")
     );
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
 
   @include tablet {
@@ -386,5 +385,31 @@
     margin-bottom: 49px;
 
     text-align: center;
+  }
+}
+
+.addition__item:nth-child(2) {
+  & .addition__denomination {
+    margin: 12px 0;
+  }
+}
+
+.addition__item:nth-child(3) {
+  & .addition__denomination {
+    margin: 14px 0;
+  }
+
+  & .addition__button {
+    margin: 14px auto 0;
+  }
+}
+
+.addition__item:nth-child(4) {
+  & .addition__denomination {
+    margin: 12px 0;
+  }
+
+  & .addition__button {
+    margin: 16px auto 0;
   }
 }
