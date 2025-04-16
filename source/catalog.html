@@ -29,46 +29,43 @@
 
   <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Список продукции и акции</h1>
 
-  <header class="page__main-header main-header main-header--index main-header--catalog">
+  <header class="page__main-header main-header" data-test="header">
 
-    <div class="main-header__wrapper">
+    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+    <nav class="main-header__navigation main-header__navigation--index main-header__navigation--catalog main-header__navigation--closed main-header__navigation--nojs">
 
       <a class="main-header__header-logo header-logo" href="./index.html" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
-
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
           <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
           <img class="header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
         </picture>
-
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
           <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
           <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
-
       </a>
 
-      <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
-      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
+      <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+      <ul class="main-header__list main-header__list--index main-header__list--catalog">
 
-        <ul class="navigation__list navigation__list--catalog navigation__list--catalog-index">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./index.html" aria-current="page">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="./catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./index.html">Главная</a>
+        </li>
 
-      </nav>
+        <li class="main-header__item main-header__item--active">
+          <a class="main-header__link main-header__link--current" href="./catalog.html" aria-current="page">Каталог продукции</a>
+        </li>
 
-    </div>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./form.html">Подбор программы</a>
+        </li>
+
+      </ul>
+
+    </nav>
 
   </header>
 
@@ -580,36 +577,48 @@
       <h2 class="map__title title visually-hidden">Контакты и местонахождение офиса онлайн-магазина «Кэт Энерджи» с кастомным курсором на карте</h2>
 
       <div class="map__wrapper">
-        <div class="map__content map__content--catalog">
+
+        <div class="map__content">
+
           <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+
           <p class="map__direction">
+
             <span class="map__address">Ул.&nbsp;Большая Конюшенная, д.&nbsp;19&#47;8</span>
+
             <span class="map__city">Санкт-Петербург</span>
+
           </p>
+
         </div>
+
       </div>
 
       <div class="map__location map__location--nojs">
+
         <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19&#47;8</span>
+
         <div class="map__location-wrapper">
+
           <iframe class="map__location-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;source=constructor" width="1440" height="362" title="Офис онлайн-магазина «Кэт Энерджи» по адресу ул. Большая Конюшенная д.19&#47;8, Санкт-Петербург">
           </iframe>
+
         </div>
+
         <span class="map__pin visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19&#47;8</span>
+
       </div>
 
     </section>
 
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper" data-test="footer">
 
       <div class="main-footer__item main-footer__item--footer-logotext footer-logotext">
 
-        <h2 class="footer-logotext__title title visually-hidden">Текстовый логотип онлайн-магазина «Кэт энерджи» в футоре | Переход на главную страницу</h2>
+        <h2 class="footer-logotext__title title visually-hidden">Текстовый логотип онлайн-магазина «Кэт энерджи» в футоре | Переход на начало главной страницы</h2>
 
-        <a class="footer-logotext__link" href="./index.html">
-
+        <a class="footer-logotext__link" href="./index.html" aria-current="page">
           <span class="visually-hidden">Иконка текстового логотипа онлайн-магазина «Кэт энерджи»</span>
-
         </a>
 
       </div>
@@ -619,37 +628,21 @@
         <h2 class="social__title title visually-hidden">Социальные каналы HTML Academy</h2>
 
         <ul class="social__list">
-
           <li class="social__item">
-
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
-
               <span class="visually-hidden">Переход на канал HTML Academy в «Вконтакте»</span>
-
             </a>
-
           </li>
-
           <li class="social__item">
-
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
-
               <span class="visually-hidden">Переход на канал HTML Academy в «Youtube»</span>
-
             </a>
-
           </li>
-
           <li class="social__item">
-
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
-
               <span class="visually-hidden">Переход на канал HTML Academy в «Телеграмм»</span>
-
             </a>
-
           </li>
-
         </ul>
 
       </div>
@@ -659,11 +652,8 @@
         <h2 class="logo-htmlacademy__title title visually-hidden">Логотип HTML Academy | Переход на страницу онлайн-курса «HTML и CSS. Адаптивная верстка автоматизации»</h2>
 
         <a class="logo-htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
-
           <span class="logo-htmlacademy__text">HTML Academy</span>
-
           <span class="visually-hidden">Иконка логотипа HTML Academy</span>
-
         </a>
 
       </div>

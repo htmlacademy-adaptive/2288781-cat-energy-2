@@ -16,6 +16,7 @@
 
   border: none;
   text-align: left;
+  cursor: pointer;
   background-color: transparent;
 
   transition: all 0.3s ease-out;
@@ -36,15 +37,20 @@
 
   &:hover {
     opacity: 0.8;
+
     transition: opacity 0.3s ease;
   }
 
   &:focus {
     opacity: 0.8;
+
+    transition: opacity 0.3s ease;
   }
 
   &:active {
     opacity: 0.6;
+
+    transition: opacity 0.3s ease;
   }
 
   &__logo-image {
@@ -67,13 +73,10 @@
   &__logo-text {
     width: 101px;
     height: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 
     @include desktop {
       width: 118px;
       height: 21px;
-      margin: 0;
     }
   }
 }

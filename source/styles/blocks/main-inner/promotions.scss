@@ -36,7 +36,7 @@
 
   &__text-subtitle {
     display: inline-block;
-    margin-left: -120px;
+    margin-left: -127px;
     padding: 0 40px;
     background-color: #ffffff;
 
@@ -56,7 +56,7 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 17;
+    gap: 24;
 
     @include tablet {
       min-width: 768px;
@@ -95,7 +95,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 21px;
+    gap: 16px;
     width: 280px;
     height: 133px;
     margin: 0 auto;

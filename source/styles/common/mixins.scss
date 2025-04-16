@@ -202,6 +202,7 @@
   word-break: break-word;
   border-style: none;
   cursor: pointer;
+  outline: none;
   background: none;
   vertical-align: middle;
 
@@ -245,15 +246,15 @@
   transition-timing-function: ease-in-out;
 
   &:hover {
-    $bg-color: $hover-green;
+    background-color: $hover-green;
   }
 
   &:focus {
-    $bg-color: $hover-green;
+    background-color: $hover-green;
   }
 
   &:active {
-    $bg-color: $hover-green;
+    background-color: $hover-green;
     opacity: 0.3;
   }
 }
@@ -264,19 +265,19 @@
   color: $color;
   background-color: $bg-color;
 
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-  transition-duration: 1s;
+  transition: background-color 5s ease-in-out, color 5s ease-in-out;
+  transition-duration: 5s;
 
   &:hover {
-    $bg-color: $extra-light-grey;
+    background-color: $extra-light-grey;
   }
 
   &:focus {
-    $bg-color: $extra-light-grey;
+    background-color: $extra-light-grey;
   }
 
   &:active {
-    $bg-color: $extra-light-grey;
+    background-color: $extra-light-grey;
     opacity: 0.3;
   }
 }
