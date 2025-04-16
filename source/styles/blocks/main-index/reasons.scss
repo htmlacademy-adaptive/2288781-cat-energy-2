@@ -33,7 +33,7 @@
     @include title;
 
     max-width: 280px;
-    margin: 0 auto 40px;
+    margin: 2px auto 40px;
     padding: 0;
 
     text-align: left;
@@ -63,7 +63,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
-      gap: 32px 139px;
+      gap: 35px 139px;
 
       max-width: 708px;
 
@@ -119,7 +119,7 @@
     &::after {
       content: counter(number);
       position: absolute;
-      top: 92px;
+      top: 134px;
       right: 0;
       z-index: -1;
 
@@ -198,7 +198,7 @@
   @include tablet {
     max-width: 245px;
     min-height: 72px;
-    margin: 114px 0 57px;
+    margin: 112px 0 57px;
     padding: 0;
 
     font-size: 16px;
@@ -209,5 +209,16 @@
     & br {
       display: block;
     }
+  }
+}
+
+@include tablet {
+  .reasons__item:first-child::after {
+    top: 131px;
+    left: 119px;
+  }
+
+  .reasons__item:last-child::after {
+    left: 114px;
   }
 }
