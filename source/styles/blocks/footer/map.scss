@@ -1,9 +1,4 @@
 .map {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
   background-color: $white;
 
   transition: all 0.5s ease-out;
@@ -39,16 +34,16 @@
     @include desktop {
       position: absolute;
       top: 95px;
-      left: calc(110px + (100vw - 1440px) / 2);
+      left: 110px;
       z-index: 10;
 
       justify-content: start;
       gap: 87px;
 
-      width: 555px;
+      width: 563px;
       min-height: 199px;
       margin: 0;
-      padding: 60px 45px;
+      padding: 60px 80px;
 
       background-color: $white;
     }
@@ -81,15 +76,16 @@
     height: 362px;
 
     background-color: $dark-grey;
-    // background-image:
-    //   image-set(url("../../images/maps/location-mobile@1x.jpg" 1x,
-    //             "../../images/maps/location-mobile@2x.jpg" 2x,
-    //             "../../images/maps/location-mobile@1x.webp" 1x,
-    //             "../../images/maps/location-mobile@2x.webp" 2x)
-    //   );
-    // background-size: 320px 362px;
-    // background-position: center;
-    // background-repeat: no-repeat;
+    background-image:
+      image-set(
+        url("../../images/maps/location-mobile@2x.webp") 2x type("image/webp"),
+        url("../../images/maps/location-mobile@2x.jpg") 2x type("image/jpeg"),
+        url("../../images/maps/location-mobile@1x.webp") 1x type("image/webp"),
+        url("../../images/maps/location-mobile@1x.jpg") 1x type("image/jpeg")
+      );
+    background-size: 320px 362px;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include tablet {
       height: 400px;
@@ -97,7 +93,7 @@
   }
 
   &__location-iframe {
-    display: block;
+    display: none;
 
     height: 362px;
 

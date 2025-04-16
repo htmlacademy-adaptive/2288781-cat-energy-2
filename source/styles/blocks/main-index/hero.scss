@@ -1,5 +1,6 @@
 .hero {
-  max-width: 320px;
+  position: relative;
+
   margin: 0 auto;
 
   transition: all 0.8s ease-out;
@@ -70,7 +71,7 @@
   }
 
   @include desktop {
-    min-height: 558px;
+    min-height: 579px;
 
     background-color: transparent;
   }

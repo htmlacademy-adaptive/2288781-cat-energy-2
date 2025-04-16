@@ -21,17 +21,21 @@
 
     &::after {
       @include pseudo-element;
-      top: 0;
+      top: -4px;
       right: 0;
 
       width: 27px;
-      height: 27px;
+      height: 34px;
 
       background-color: $very-dark-grey;
       mask-image: url("../../icons/stack.svg#icon-htmlacademy");
       mask-size: 27px 34px;
       mask-repeat: no-repeat;
       mask-position: center;
+
+      @include tablet {
+        top: 0;
+      }
     }
 
     &:hover::after {
@@ -49,19 +53,20 @@
 
     @include tablet {
       margin: 0;
+      margin-left: auto;
     }
   }
 
   &__text {
     display: flex;
-    align-items: center;
 
-    height: 30px;
+    height: 34px;
 
     font-size: 16px;
     line-height: 20px;
 
     @include tablet {
+      align-items: center;
       gap: 23px;
 
       margin: 0;
