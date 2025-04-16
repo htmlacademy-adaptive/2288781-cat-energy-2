@@ -4,73 +4,73 @@
   @include tablet {
     border: none;
   }
+}
 
-  &__link {
-    @include reset-link;
+.logo-htmlacademy__link {
+  @include reset-link;
 
-    position: relative;
+  position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    margin: 20px auto 40px;
-    padding: 0;
+  margin: 20px auto 40px;
+  padding: 0;
 
-    color: $accent-dark-grey;
+  color: $accent-dark-grey;
 
-    &::after {
-      @include pseudo-element;
-      top: -4px;
-      right: 0;
+  &::after {
+    @include pseudo-element;
+    top: -4px;
+    right: 0;
 
-      width: 27px;
-      height: 34px;
+    width: 27px;
+    height: 34px;
 
-      background-color: $very-dark-grey;
-      mask-image: url("../../icons/stack.svg#icon-htmlacademy");
-      mask-size: 27px 34px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-
-      @include tablet {
-        top: 0;
-      }
-    }
-
-    &:hover::after {
-      background-color: $primary;
-    }
-
-    &:focus::after {
-      background-color: $primary;
-    }
-
-    &:active::after {
-      background-color: $primary;
-      opacity: 0.3;
-    }
+    background-color: $very-dark-grey;
+    mask-image: url("../../icons/stack.svg#icon-htmlacademy");
+    mask-size: 27px 34px;
+    mask-repeat: no-repeat;
+    mask-position: center;
 
     @include tablet {
-      margin: 0;
-      margin-left: auto;
+      top: 0;
     }
   }
 
-  &__text {
-    display: flex;
+  &:hover::after {
+    background-color: $primary;
+  }
 
-    height: 34px;
+  &:focus::after {
+    background-color: $primary;
+  }
 
-    font-size: 16px;
-    line-height: 20px;
+  &:active::after {
+    background-color: $primary;
+    opacity: 0.3;
+  }
 
-    @include tablet {
-      align-items: center;
-      gap: 23px;
+  @include tablet {
+    margin: 0;
+    margin-left: auto;
+  }
+}
 
-      margin: 0;
-      padding: 0 0 0 5px;
-    }
+.logo-htmlacademy__text {
+  display: flex;
+
+  height: 34px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    align-items: center;
+    gap: 23px;
+
+    margin: 0;
+    padding: 0 0 0 5px;
   }
 }

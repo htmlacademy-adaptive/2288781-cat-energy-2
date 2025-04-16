@@ -14,7 +14,6 @@
       max-width: 279px;
       margin: 0 auto;
       padding-top: 13px;
-
     }
 
     @include tablet {
@@ -104,8 +103,7 @@
     @include reset-list;
 
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -165,28 +163,6 @@
 
       font-size: 20px;
       line-height: 100%;
-    }
-  }
-
-  &__item {
-    .main-header__list & {
-      max-height: 66px;
-      padding-top: 22px;
-      padding-bottom: 24px;
-
-      border-top: 1px solid $extra-light-grey;
-
-      @include tablet {
-        max-height: 50px;
-        padding: 0;
-
-        border: none;
-      }
-
-      @include desktop {
-        max-height: 59px;
-        padding: 0;
-      }
     }
   }
 
@@ -357,5 +333,25 @@
   .main-header__list--catalog .main-header__list__link--catalog-current,
   .main-header__list--form .main-header__list__link--catalog-current {
     border-bottom: 2px solid $primary;
+  }
+}
+
+.main-header__list .main-header__item {
+  max-height: 66px;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  border-top: 1px solid $extra-light-grey;
+
+  @include tablet {
+    max-height: 50px;
+    padding: 0;
+
+    border: none;
+  }
+
+  @include desktop {
+    max-height: 59px;
+    padding: 0;
   }
 }

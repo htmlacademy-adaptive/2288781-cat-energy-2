@@ -212,15 +212,13 @@
   }
 }
 
-.reasons__item:first-child:after {
-  @include tablet{
+@include tablet {
+  .reasons__item:first-child::after {
     top: 131px;
     left: 119px;
   }
-}
 
-.reasons__item:last-child:after {
-  @include tablet{
+  .reasons__item:last-child::after {
     left: 114px;
   }
 }
