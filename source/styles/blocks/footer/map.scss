@@ -1,9 +1,4 @@
 .map {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
   background-color: $white;
 
   transition: all 0.5s ease-out;
@@ -39,16 +34,16 @@
     @include desktop {
       position: absolute;
       top: 95px;
-      left: calc(110px + (100vw - 1440px) / 2);
+      left: 110px;
       z-index: 10;
 
       justify-content: start;
       gap: 87px;
 
-      width: 555px;
+      width: 563px;
       min-height: 199px;
       margin: 0;
-      padding: 60px 45px;
+      padding: 60px 80px;
 
       background-color: $white;
     }
@@ -76,32 +71,10 @@
     }
   }
 
-  &__location {
-    width: 100%;
-    height: 362px;
-
-    background-color: $dark-grey;
-    // background-image:
-    //   image-set(url("../../images/maps/location-mobile@1x.jpg" 1x,
-    //             "../../images/maps/location-mobile@2x.jpg" 2x,
-    //             "../../images/maps/location-mobile@1x.webp" 1x,
-    //             "../../images/maps/location-mobile@2x.webp" 2x)
-    //   );
-    // background-size: 320px 362px;
-    // background-position: center;
-    // background-repeat: no-repeat;
-
-    @include tablet {
-      height: 400px;
-    }
-  }
-
   &__location-iframe {
-    display: block;
+    display: none;
 
-    width: 100%;
     height: 362px;
-    margin: 0 auto;
 
     border: none;
     object-fit: cover;
@@ -197,46 +170,44 @@
   }
 }
 
-.map__location-wrapper {
+.map__location {
   width: 100%;
   height: 362px;
 
-  background: $accent-light-grey url("../../images/maps/location-mobile@1x.jpg") no-repeat;
-  background-size: cover;
+  background-color: $dark-grey;
+  background-image:
+    image-set(
+      url("../../images/maps/location-mobile@2x.webp") 2x type("image/webp"),
+      url("../../images/maps/location-mobile@2x.jpg") 2x type("image/jpeg"),
+      url("../../images/maps/location-mobile@1x.webp") 1x type("image/webp"),
+      url("../../images/maps/location-mobile@1x.jpg") 1x type("image/jpeg")
+    );
+  background-size: 320px 362px;
   background-position: center;
+  background-repeat: no-repeat;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../images/maps/location-mobile@2x.jpg");
-  }
-}
-
-@include tablet {
-  .map__location-wrapper {
+  @include tablet {
     height: 400px;
-    background: $accent-light-grey url("../../images/maps/location-tablet@1x.jpg") no-repeat;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/maps/location-tablet@2x.jpg");
-      height: 100%;
-    }
+    background-image:
+      image-set(
+        url("../../images/maps/location-tablet@2x.webp") 2x type("image/webp"),
+        url("../../images/maps/location-tablet@2x.jpg") 2x type("image/jpeg"),
+        url("../../images/maps/location-tablet@1x.webp") 1x type("image/webp"),
+        url("../../images/maps/location-tablet@1x.jpg") 1x type("image/jpeg")
+      );
+    background-size: 768px 400px;
   }
-}
 
-@include desktop {
-  .map__location-wrapper {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
-    width: 100%;
-    height: 100%;
-
-    min-height: unset;
-    background-image: url("../../images/maps/location-desktop@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/maps/location-desktop@2x.jpg");
-    }
+  @include desktop {
+    background-image:
+      image-set(
+        url("../../images/maps/location-desktop@2x.webp") 2x type("image/webp"),
+        url("../../images/maps/location-desktop@2x.jpg") 2x type("image/jpeg"),
+        url("../../images/maps/location-desktop@1x.webp") 1x type("image/webp"),
+        url("../../images/maps/location-desktop@1x.jpg") 1x type("image/jpeg")
+      );
+    background-size: 1440px 400px;
   }
 }
 
