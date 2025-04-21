@@ -11,7 +11,7 @@
   }
 
   @include desktop {
-    --bg-top-shift: 135px;
+    --bg-top-shift: 136px;
     border-top: none;
   }
 
@@ -42,9 +42,12 @@
 
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 41px;
-  padding-top: 25px;
-  padding-bottom: 40px;
+
+  @include max-width-mobile {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
 
   @include tablet {
     width: 768px;
@@ -76,7 +79,7 @@
 
 .stats__title {
   min-width: min-content;
-  margin: 25px 0 40px;
+  margin: 0 0 40px;
   padding: 0;
 
   text-align: left;

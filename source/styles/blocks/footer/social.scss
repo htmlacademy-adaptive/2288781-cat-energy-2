@@ -2,8 +2,9 @@
   position: relative;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
-  min-width: 280px;
   margin: 0;
   margin-right: auto;
   margin-left: auto;
@@ -11,6 +12,7 @@
 
   @include tablet {
     min-width: 132px;
+    min-height: 37px;
     padding: 0;
   }
 
@@ -27,17 +29,21 @@
   justify-content: center;
   gap: 24px;
 
-  min-width: 280px;
-
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
+
+  border-top: 1px solid $specify-light-grey;
+  border-bottom: 1px solid $specify-light-grey;
 
   @include tablet {
     justify-content: space-between;
 
-    min-width: 132px;
+    width: 132px;
     margin: 0 auto;
     padding: 0;
+
+    border: none;
   }
 }
 
@@ -55,11 +61,11 @@
   transition: background-color 0.3s ease, opacity 0.3s ease;
 
   @include tablet {
-    left: 21px;
+    left: 0;
   }
 
   @include desktop {
-    left: 0;
+    left: -21px;
   }
 }
 

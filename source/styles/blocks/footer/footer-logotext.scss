@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 280px;
+  width: 280px;
   padding: 0;
 
   cursor: pointer;
@@ -14,14 +14,14 @@
 
   @include max-width-mobile {
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   @include tablet {
     justify-content: flex-start;
 
-    min-width: 128px;
-    min-height: 37px;
+    width: 128px;
+    height: 37px;
     margin: 0;
     margin-right: auto;
     padding: 0;
@@ -36,8 +36,8 @@
     justify-content: center;
     align-items: center;
 
-    min-width: 128px;
-    min-height: 24px;
+    width: 128px;
+    height: 24px;
 
     color: currentColor;
 
@@ -69,7 +69,7 @@
     @include tablet {
       justify-content: flex-start;
 
-      min-width: 128px;
+      width: 128px;
       padding: 0;
     }
   }

@@ -1,11 +1,3 @@
-.logo-htmlacademy {
-  border-top: 1px solid $specify-light-grey;
-
-  @include tablet {
-    border: none;
-  }
-}
-
 .logo-htmlacademy__link {
   @include reset-link;
 
@@ -15,14 +7,14 @@
   justify-content: space-between;
   align-items: center;
 
-  margin: 20px auto 40px;
-  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 40px;
 
   color: $accent-dark-grey;
 
   &::after {
     @include pseudo-element;
-    top: -4px;
     right: 0;
 
     width: 27px;
@@ -53,8 +45,10 @@
   }
 
   @include tablet {
+    width: 168px;
     margin: 0;
     margin-left: auto;
+    padding: 0;
   }
 }
 

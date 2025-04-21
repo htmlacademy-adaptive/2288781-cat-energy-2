@@ -26,6 +26,8 @@
 //Шапка
 @import "./blocks/header/main-header.scss";
 @import "./blocks/header/header-logo.scss";
+@import "./blocks/header/navigation.scss";
+@import "./blocks/header/hero.scss";
 
 //Подвал
 @import "./blocks/footer/main-footer.scss";
@@ -35,7 +37,6 @@
 @import "./blocks/footer/logo-htmlacademy.scss";
 
 //Главная страница
-@import "./blocks/main-index/hero.scss";
 @import "./blocks/main-index/programs.scss";
 @import "./blocks/main-index/reasons.scss";
 @import "./blocks/main-index/stats.scss";

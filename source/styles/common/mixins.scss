@@ -36,22 +36,17 @@
 
 // Контейнер
 @mixin container {
-  width: 100%;
   margin: 0 auto;
 
   @include max-width-mobile {
-    min-width: 320px;
     padding: 0 20px;
   }
 
   @include tablet {
-    min-width: 768px;
     padding: 0 30px;
   }
 
   @include desktop {
-    min-width: 1220px;
-    max-width: 1440px;
     padding: 0 110px;
   }
 }
