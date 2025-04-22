@@ -27,9 +27,12 @@
 
 <body class="page__body">
 
-  <header class="page__main-header main-header main-header--nojs main-header--catalog" data-test="header">
-    <div class="main-header__wrapper">
-      <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
+  <header class="page__main-header main-header main-header--nojs" data-test="header">
+
+    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+    <nav class="main-header__navigation main-header__navigation--index main-header__navigation--closed main-header__navigation--nojs">
+
+      <a class="main-header__header-logo header-logo" href="./index.html" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
           <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
@@ -41,22 +44,27 @@
           <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
       </a>
-      <button class="main-header__toggle main-header__toggle--closed" type="button" aria-label="Открыть/скрыть меню" disabled></button>
-      <!-- Для отображения меню заменить модификатор объекта navigation с closed на opened (js) -->
-      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
-        <ul class="navigation__list navigation__list--accent navigation__list--catalog-index">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./index.html">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item navigation__link--active">
-            <a class="navigation__link navigation__link--current" href="./form.html" aria-current="page">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+      <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+
+      <ul class="main-header__list main-header__list--index">
+
+        <li class="main-header__item">
+          <a class="main-header__link " href="./index.html">Главная</a>
+        </li>
+
+        <li class="main-header__item">
+          <a class="main-header__link " href="./catalog.html">Каталог продукции</a>
+        </li>
+
+        <li class="main-header__item main-header__item--active">
+          <a class="main-header__link main-header__link--current" href="./form.html" aria-current="page">Подбор программы</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
   </header>
 
   <main class="page__main-form main-form">
