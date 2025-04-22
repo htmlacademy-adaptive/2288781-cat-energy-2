@@ -1,9 +1,5 @@
 .logo-htmlacademy {
-  border-top: 1px solid $specify-light-grey;
-
-  @include tablet {
-    border: none;
-  }
+  position: relative;
 }
 
 .logo-htmlacademy__link {

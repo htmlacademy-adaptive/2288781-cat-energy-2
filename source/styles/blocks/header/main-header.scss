@@ -189,6 +189,18 @@
 
       transition: opacity 0.3s ease;
     }
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 24px;
+
+      font-width: 90%;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 100%;
+    }
   }
 }
 
