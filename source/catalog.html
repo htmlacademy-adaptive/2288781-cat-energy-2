@@ -29,7 +29,7 @@
 
   <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Список продукции и акции</h1>
 
-  <header class="page__main-header main-header main-header--index main-header--catalog">
+  <header class="page__main-header main-header main-header--catalog">
 
     <div class="main-header__wrapper">
 
@@ -50,19 +50,19 @@
       </a>
 
       <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
-      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
+      <nav class="main-header__navigation main-header__navigation--index main-header__navigation--catalog main-header__navigation--closed main-header__navigation--nojs">
 
-        <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+        <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
 
-        <ul class="navigation__list navigation__list--catalog navigation__list--catalog-index">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./index.html" aria-current="page">Главная</a>
+        <ul class="main-header__list main-header__list--catalog main-header__list--catalog-index">
+          <li class="main-header__item">
+            <a class="main-header__link" href="./index.html" aria-current="page">Главная</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="./catalog.html">Каталог продукции</a>
+          <li class="main-header__item main-header__item--active">
+            <a class="main-header__link main-header__link--current" href="./catalog.html">Каталог продукции</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./form.html">Подбор программы</a>
+          <li class="main-header__item">
+            <a class="main-header__link" href="./form.html">Подбор программы</a>
           </li>
         </ul>
 

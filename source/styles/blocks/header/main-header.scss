@@ -140,7 +140,7 @@
       align-items: flex-start;
       gap: 33px;
 
-      width: 436px;
+      width: 480px;
       margin: 0;
       padding-top: 14px;
 
@@ -156,7 +156,6 @@
 
       gap: 34px;
 
-      width: 478px;
       margin-top: 18px;
       margin-bottom: 3px;
       padding: 0;
@@ -172,6 +171,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 20px;
 
     color: $black;
 
