@@ -29,7 +29,7 @@
 
   <h1 class="page__headline headline visually-hidden">Онлайн-магазин «Кэт энерджи» | Список продукции и акции</h1>
 
-  <header class="page__main-header main-header" data-test="header">
+  <header class="page__main-header main-header main-header--nojs main-header--catalog" data-test="header">
     <div class="main-header__wrapper">
       <a class="main-header__header-logo header-logo" href="./index.html" aria-current="page" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
         <picture>
@@ -43,22 +43,22 @@
           <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
       </a>
-      <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+      <button class="main-header__toggle main-header__toggle--closed" type="button" aria-label="Открыть/скрыть меню" disabled></button>
+      <!-- Для отображения меню заменить модификатор объекта navigation с closed на opened (js) -->
+      <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
+        <ul class="navigation__list navigation__list--accent navigation__list--catalog-index">
+          <li class="navigation__item">
+            <a class="navigation__link" href="./index.html">Главная</a>
+          </li>
+          <li class="navigation__item navigation__link--active">
+            <a class="navigation__link navigation__link--current" href="./catalog.html" aria-current="page">Каталог продукции</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <!-- Для отображения меню заменить модификатор объекта navigation с closed на opened (js) -->
-    <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
-      <ul class="navigation__list navigation__list--index">
-        <li class="navigation__item ">
-          <a class="navigation__link" href="./index.html">Главная</a>
-        </li>
-        <li class="navigation__item navigation__link--active">
-          <a class="navigation__link navigation__link--current" href="./catalog.html" aria-current="page">Каталог продукции</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="./form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <main class="page__main-inner main-inner" data-test="catalog">

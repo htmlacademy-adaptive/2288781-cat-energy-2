@@ -1,47 +1,89 @@
 .main-footer {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: 0 auto;
 
+  background-color: $accent-light-grey;
+
   transition: all 0.8s ease-out;
+
+  &__map {
+    position: relative;
+
+    display: grid;
+
+    width: 100%;
+    min-width: $breakpoint-mobile-min;
+    margin: 0 auto;
+
+    background-color: $white;
+
+    &--color {
+      background-color: $accent-light-grey;
+    }
+
+    @include tablet {
+      min-width: $breakpoint-tablet-min;
+    }
+
+    @include desktop {
+      min-width: $breakpoint-desktop-min;
+      margin: 0;
+    }
+  }
 
   &__wrapper {
     @include container;
 
+    position: relative;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: wrap column;
+    justify-content: center;
     align-items: center;
 
-    width: 320px;
     padding-top: 40px;
     padding-bottom: 40px;
 
-    background-color: $accent-light-grey;
-
     @include tablet {
-      flex-wrap: nowrap;
+      flex-flow: nowrap row;
+      justify-content: space-between;
 
-      width: 768px;
       padding-top: 55px;
       padding-bottom: 55px;
     }
 
     @include desktop {
-      width: 1440px;
       padding-top: 66px;
       padding-bottom: 66px;
     }
   }
+}
 
-  &__item {
-    flex-basis: 100%;
+.main-footer__item {
+  &:not(:last-child) {
+    border-bottom: 1px solid $specify-light-grey;
 
     @include tablet {
-      padding: 0;
+      border: none;
     }
   }
 
-  &__item--footer-logotext {
+  @include tablet {
+    padding: 0;
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--footer-logotext {
     position: relative;
 
     display: flex;
@@ -52,8 +94,8 @@
     margin: 0;
   }
 
-  &__item--footer-social {
-    width: 132px;
+  &--footer-social {
+    min-width: 132px;
     margin: 0;
     padding: 20px 0;
 
@@ -64,13 +106,13 @@
     }
   }
 
-  &__item--logo-htmlacademy {
+  &--logo-htmlacademy {
     min-width: 280px;
     margin: 0;
 
     @include tablet {
       min-width: 168px;
-      margin-left: auto;
+      margin: 0 0 0 auto;
     }
   }
 }
