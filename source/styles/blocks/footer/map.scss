@@ -116,14 +116,14 @@
 
 .map__wrapper {
   @include container;
+}
 
-  &--color {
-    margin: 0;
-    background-color: $accent-light-grey;
+.map__wrapper--color {
+  margin: 0;
+  background-color: $accent-light-grey;
 
-    @include desktop {
-      background-color: $white;
-    }
+  @include desktop {
+    background-color: $white;
   }
 }
 
