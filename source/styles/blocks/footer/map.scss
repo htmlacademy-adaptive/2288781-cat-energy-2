@@ -3,6 +3,19 @@
 
   transition: all 0.5s ease-out;
 
+  &__wrapper {
+    @include container;
+  }
+
+  &__wrapper--color {
+    margin: 0;
+    background-color: $accent-light-grey;
+
+    @include desktop {
+      background-color: $white;
+    }
+  }
+
   &__content {
     position: relative;
 
@@ -72,12 +85,16 @@
   }
 
   &__location-iframe {
-    display: none;
+    display: block;
 
     height: 362px;
 
     border: none;
     object-fit: cover;
+
+    &--nojs {
+      display: none;
+    }
 
     @include tablet {
       height: 400px;
@@ -111,19 +128,6 @@
       top: 131px;
       left: 908px;
     }
-  }
-}
-
-.map__wrapper {
-  @include container;
-}
-
-.map__wrapper--color {
-  margin: 0;
-  background-color: $accent-light-grey;
-
-  @include desktop {
-    background-color: $white;
   }
 }
 
