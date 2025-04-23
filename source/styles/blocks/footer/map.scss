@@ -5,53 +5,9 @@
 
   &__wrapper {
     @include container;
-
-    position: relative;
-
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: 60px;
-    justify-content: space-between;
-
-    width: 100%;
-
-    @include max-width-mobile {
-      max-width: 280px;
-      min-height: 112px;
-      margin: 0 auto;
-      padding-top: 65px;
-      padding-bottom: 26px;
-    }
-
-    @include tablet {
-      grid-template-columns: repeat(2, 163px);
-      grid-template-rows: 78px;
-      gap: 274px;
-
-      min-height: 200px;
-      margin: 0 auto;
-      padding: 60px 70px;
-    }
-
-    @include desktop {
-      position: absolute;
-      top: 95px;
-      left: 110px;
-      z-index: 10;
-
-      justify-content: start;
-      gap: 87px;
-
-      width: 563px;
-      min-height: 199px;
-      margin: 0;
-      padding: 60px 80px;
-
-      background-color: $white;
-    }
   }
 
-  &__wrapper--color {
+  &__wrappe--color {
     margin: 0;
     background-color: $accent-light-grey;
 
@@ -209,6 +165,52 @@
         url("../../images/maps/location-desktop@1x.jpg") 1x type("image/jpeg")
       );
     background-size: 1440px 400px;
+  }
+}
+
+.map__content {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 60px;
+  justify-content: space-between;
+
+  width: 100%;
+
+  @include max-width-mobile {
+    max-width: 280px;
+    min-height: 112px;
+    margin: 0 auto;
+    padding-top: 65px;
+    padding-bottom: 26px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 163px);
+    grid-template-rows: 78px;
+    gap: 274px;
+
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 60px 70px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 10;
+
+    justify-content: start;
+    gap: 87px;
+
+    width: 563px;
+    min-height: 199px;
+    margin: 0;
+    padding: 60px 80px;
+
+    background-color: $white;
   }
 }
 
