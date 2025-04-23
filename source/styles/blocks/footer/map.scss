@@ -1,22 +1,11 @@
 .map {
-  background-color: $white;
+  position: relative;
 
   transition: all 0.5s ease-out;
 
   &__wrapper {
     @include container;
-  }
 
-  &__wrapper--color {
-    margin: 0;
-    background-color: $accent-light-grey;
-
-    @include desktop {
-      background-color: $white;
-    }
-  }
-
-  &__content {
     position: relative;
 
     display: grid;
@@ -58,6 +47,15 @@
       margin: 0;
       padding: 60px 80px;
 
+      background-color: $white;
+    }
+  }
+
+  &__wrapper--color {
+    margin: 0;
+    background-color: $accent-light-grey;
+
+    @include desktop {
       background-color: $white;
     }
   }

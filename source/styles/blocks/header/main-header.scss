@@ -1,4 +1,8 @@
 .main-header {
+  position: relative;
+
+  margin: 0 auto;
+
   transition: all 0.5s ease;
 
   &__navigation {
@@ -69,7 +73,7 @@
 
   &__toggle {
     position: absolute;
-    top: 20;
+    top: 20px;
     right: 0;
     z-index: 2;
 
@@ -81,6 +85,10 @@
     background-color: #ffffff;
     cursor: pointer;
     border: none;
+
+    &--catalog {
+      top: -20px;
+    }
 
     &:hover {
       opacity: 0.6;
@@ -193,8 +201,6 @@
     @include tablet {
       font-size: 18px;
       line-height: 24px;
-
-      font-width: 90%;
     }
 
     @include desktop {
@@ -275,13 +281,14 @@
     text-align: center;
   }
 
-  .main-header__navigation__list .main-header__header-logo {
+  .main-header__list .main-header__header-logo {
     width: 320px;
 
     border-top: solid 1px $extra-light-grey;
   }
 
-  .main-header__navigation__list .main-header__item {
+  .main-header__list .main-header__item {
+    width: 100%;
     padding-top: 22px;
     padding-bottom: 24px;
 
