@@ -30,7 +30,7 @@
 
       min-height: 200px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 60px 70px;
     }
 
     @include desktop {
@@ -184,7 +184,6 @@
       url("../../images/maps/location-mobile@1x.webp") 1x type("image/webp"),
       url("../../images/maps/location-mobile@1x.jpg") 1x type("image/jpeg")
     );
-  background-size: 320px 362px;
   background-position: center;
   background-repeat: no-repeat;
 
