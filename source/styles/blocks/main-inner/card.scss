@@ -17,7 +17,7 @@
     @include tablet {
       grid-template-columns: 250px;
       grid-template-rows: 399px 40px;
-      row-gap: 32px;
+      row-gap: 22px;
 
       min-height: 511px;
       padding: 10px 37px 40px;
@@ -72,6 +72,7 @@
   &__image {
     position: relative;
     top: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,6 +122,10 @@
 
   &__link-info {
     @include reset-link;
+
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 
   &__denomination {
@@ -134,7 +139,7 @@
 
     @include tablet {
       max-width: 135px;
-      margin: -7px auto;
+      margin: 2px auto;
 
       text-align: center;
     }
@@ -159,6 +164,7 @@
   &__list {
     @include reset-list;
     justify-items: center;
+
     padding-top: 14px;
 
     @include tablet {
@@ -188,8 +194,9 @@
       flex-wrap: nowrap;
 
       min-width: 250px;
-      min-height: 25px;
-      margin-bottom: 10px;
+      min-height: 21px;
+      margin-bottom: 13px;
+
 
       font-size: 16px;
       line-height: 20px;
@@ -212,6 +219,7 @@
 
   &__button {
     @include primary-button;
+
     min-width: 280px;
     min-height: fit-content;
     padding: 10px 0;
@@ -219,6 +227,9 @@
     @include tablet {
       min-width: 250px;
       padding: 10px 0;
+
+      font-size: 16px;
+      line-height: 20px;
     }
 
     @include desktop {

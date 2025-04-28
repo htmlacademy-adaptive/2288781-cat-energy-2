@@ -81,7 +81,7 @@
   @include info;
 
   width: 280px;
-  margin: 75px auto 12px;
+  margin: 75px auto 10px;
 
   text-transform: uppercase;
   color: $extra-dark-grey;
@@ -89,7 +89,7 @@
 
   @include tablet {
     width: 170px;
-    margin: 80px auto 23px;
+    margin: 77px auto 24px;
   }
 
   @include desktop {
@@ -133,6 +133,9 @@
     width: 250px;
     height: fit-content;
     padding: 10px 0;
+
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @include desktop {

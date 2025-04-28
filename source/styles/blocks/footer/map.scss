@@ -1,251 +1,190 @@
 .map {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
   background-color: $white;
 
-  transition: all 0.5s ease-out;
-
-  &__content {
+  @include desktop {
     position: relative;
 
-    display: grid;
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: 60px;
-    justify-content: space-between;
+    padding-top: 95px;
+    padding-bottom: 106px;
+  }
 
-    width: 100%;
+  &--color {
+    background-color: $accent-light-grey;
 
-    @include max-width-mobile {
-      max-width: 280px;
-      min-height: 112px;
-      margin: 0 auto;
-      padding-top: 65px;
-      padding-bottom: 26px;
+    @include desktop {
+      background-color: unset;
     }
+  }
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 280px;
+    min-height: 112px;
+    margin: 0 auto;
+    padding: 26px 0;
 
     @include tablet {
-      grid-template-columns: repeat(2, 163px);
-      grid-template-rows: 78px;
-      gap: 274px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
 
+      width: 708px;
       min-height: 200px;
-      margin: 0 auto;
       padding: 60px 40px;
     }
 
     @include desktop {
-      position: absolute;
-      top: 95px;
-      left: calc(110px + (100vw - 1440px) / 2);
-      z-index: 10;
+      position: sticky;
+      z-index: 3;
 
+      display: flex;
+      flex-wrap: wrap;
       justify-content: start;
       gap: 87px;
 
-      width: 555px;
-      min-height: 199px;
+      width: 565px;
+      height: 199px;
       margin: 0;
-      padding: 60px 45px;
+      padding: 60px 78px 60px 80px;
 
       background-color: $white;
     }
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
     margin: 0;
 
     font-family: $main-font;
     font-size: 16px;
     line-height: 20px;
-    padding: 1px 0;
 
+    text-transform: uppercase;
     color: $extra-dark-grey;
     text-align: left;
-    text-transform: uppercase;
 
     @include tablet {
+      width: 163px;
+
       font-size: 20px;
       line-height: 26px;
     }
   }
 
-  &__location {
-    width: 100%;
-    height: 362px;
-
-    background-color: $dark-grey;
-    // background-image:
-    //   image-set(url("../../images/maps/location-mobile@1x.jpg" 1x,
-    //             "../../images/maps/location-mobile@2x.jpg" 2x,
-    //             "../../images/maps/location-mobile@1x.webp" 1x,
-    //             "../../images/maps/location-mobile@2x.webp" 2x)
-    //   );
-    // background-size: 320px 362px;
-    // background-position: center;
-    // background-repeat: no-repeat;
-
-    @include tablet {
-      height: 400px;
-    }
-  }
-
-  &__location-iframe {
-    display: block;
-
-    width: 100%;
-    height: 362px;
-    margin: 0 auto;
-
-    border: none;
-    object-fit: cover;
-
-    @include tablet {
-      height: 400px;
-    }
-
-    @include desktop {
-      height: 100%;
-    }
-  }
-
-  &__pin {
-    position: absolute;
-    top: 139px;
-    left: 134px;
-    z-index: 10;
-
-    display: none;
-
-    width: 57px;
-    height: 53px;
-
-    @include tablet {
-      top: 146px;
-      left: 333px;
-
-      width: 113px;
-      height: 106px;
-    }
-
-    @include desktop {
-      top: 131px;
-      left: 908px;
-    }
-  }
-}
-
-.map__wrapper {
-  @include container;
-
-  &--color {
+  &__direction {
     margin: 0;
-    background-color: $accent-light-grey;
+
+    line-height: 20px;
+
+    text-align: left;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 157px;
+
+      font-size: 16px;
+
+      text-align: right;
+    }
 
     @include desktop {
-      background-color: $white;
+      text-align: left;
     }
   }
-}
-
-.map__direction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  width: 140px;
-  margin: 0;
-  margin-right: auto;
-
-  font-family: $base-font;
-  line-height: 20px;
-
-  color: $accent-dark-grey;
 
   &__address {
+    width: 140px;
     margin-top: 0;
     margin-bottom: 0;
 
+    font-style: normal;
+
     @include tablet {
+      width: 157px;
+      margin-bottom: 20px;
+    }
+
+    @include desktop {
       margin-bottom: 19px;
     }
   }
 
   &__city {
-    margin-top: 0;
-    margin-bottom: 0;
+    font-style: normal;
   }
 
-  @include tablet {
-    justify-content: space-between;
+  &__location {
+    position: relative;
+    z-index: 1;
 
-    width: 163px;
+    display: flex;
+    flex-direction: column;
 
-    font-size: 16px;
+    height: 362px;
 
-    text-align: right;
-  }
+    background-image:
+      image-set(
+        url("../../images/maps/map-mobile@1x.png") 1x type("image/png"),
+        url("../../images/maps/map-mobile@2x.png") 2x type("image/png"),
+        url("../../images/maps/map-mobile@1x.webp") 1x type("image/webp"),
+        url("../../images/maps/map-mobile@2x.webp") 2x type("image/webp")
+      );
+    background-repeat: no-repeat;
+    background-size: 320px 362px;
+    background-position: center;
 
-  @include desktop {
-    text-align: left;
-  }
-}
+    @include tablet {
+      height: 400px;
 
-.map__location-wrapper {
-  width: 100%;
-  height: 362px;
+      background-image:
+        image-set(
+          url("../../images/maps/map-tablet@1x.png") 1x type("image/png"),
+          url("../../images/maps/map-tablet@2x.png") 2x type("image/png"),
+          url("../../images/maps/map-tablet@1x.webp") 1x type("image/webp"),
+          url("../../images/maps/map-tablet@2x.webp") 2x type("image/webp")
+        );
+      background-size: 768px 400px;
+    }
 
-  background: $accent-light-grey url("../../images/maps/location-mobile@1x.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+    @include desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../images/maps/location-mobile@2x.jpg");
-  }
-}
+      width: 100%;
+      height: unset;
 
-@include tablet {
-  .map__location-wrapper {
-    height: 400px;
-    background: $accent-light-grey url("../../images/maps/location-tablet@1x.jpg") no-repeat;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/maps/location-tablet@2x.jpg");
-      height: 100%;
+      background-image:
+        image-set(
+          url("../../images/maps/map-desktop@1x.png") 1x type("image/png"),
+          url("../../images/maps/map-desktop@2x.png") 2x type("image/png"),
+          url("../../images/maps/map-desktop@1x.webp") 1x type("image/webp"),
+          url("../../images/maps/map-desktop@2x.webp") 2x type("image/webp")
+        );
+      background-size: 1440px 400px;
     }
   }
-}
 
-@include desktop {
-  .map__location-wrapper {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
+  &__location-iframe {
+    position: relative;
+    left: 0;
 
-    width: 100%;
-    height: 100%;
+    display: block;
+    flex-grow: 1;
 
-    min-height: unset;
-    background-image: url("../../images/maps/location-desktop@1x.jpg");
+    width: 100vw;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/maps/location-desktop@2x.jpg");
-    }
-  }
-}
-
-.map__content--catalog {
-  @include max-width-mobile {
-    padding-top: 26px;
-  }
-
-  @include tablet {
-    padding: 106px 37px 62px 43px;
+    border: 0;
+    overflow: hidden;
   }
 }
