@@ -122,6 +122,10 @@
 
   &__link-info {
     @include reset-link;
+
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 
   &__denomination {
