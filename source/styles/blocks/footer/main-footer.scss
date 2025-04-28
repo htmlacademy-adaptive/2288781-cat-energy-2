@@ -3,7 +3,8 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  width: 100%;
 
   margin: 0 auto;
 
@@ -11,41 +12,17 @@
 
   transition: all 0.8s ease-out;
 
-  &__map {
-    position: relative;
-
-    display: grid;
-
-    width: 100%;
-    min-width: $breakpoint-mobile-min;
-    margin: 0 auto;
-
-    background-color: $white;
-
-    &--color {
-      background-color: $accent-light-grey;
-    }
-
-    @include tablet {
-      min-width: $breakpoint-tablet-min;
-    }
-
-    @include desktop {
-      min-width: $breakpoint-desktop-min;
-      margin: 0;
-    }
-  }
-
   &__wrapper {
     @include container;
 
     position: relative;
 
     display: flex;
-    flex-flow: wrap column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    max-width: 320px;
     padding-top: 40px;
     padding-bottom: 40px;
 
@@ -53,11 +30,13 @@
       flex-flow: nowrap row;
       justify-content: space-between;
 
+      max-height: 768px;
       padding-top: 55px;
       padding-bottom: 55px;
     }
 
     @include desktop {
+      max-width: 1440px;
       padding-top: 66px;
       padding-bottom: 66px;
     }

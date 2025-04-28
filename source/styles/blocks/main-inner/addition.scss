@@ -7,25 +7,33 @@
     overflow: hidden;
 
     @include subtitle;
+
     position: relative;
-    margin: 25px auto 32px;
+
+    margin: 20px auto 35px;
+
     line-height: 24px;
+
     white-space: nowrap;
     text-align: center;
     background-image: linear-gradient(to bottom, transparent 0, transparent 12px, $primary 12px, $primary 14px, transparent 14px, transparent 100%);
 
     @include tablet {
-      margin: 74px auto 80px;
+      margin: 73px auto 78px;
       padding: 0 calc((100vw - 768px) / 2);
+
       font-size: 32px;
       line-height: 32px;
+
       text-align: left;
       background-image: linear-gradient(to bottom, transparent 0, transparent 16px, $primary 16px, $primary 18px, transparent 18px, transparent 100%);
     }
 
     @include desktop {
       margin-top: 71px;
+      margin-bottom: 69px;
       padding: 0 calc((100vw - 1220px) / 2);
+
       font-size: 40px;
       line-height: 40px;
     }
@@ -33,16 +41,19 @@
 
   &__text-subtitle {
     display: inline-block;
-    margin-left: -40px;
+
+    margin-left: -50px;
     padding: 0 40px;
-    background-color: #ffffff;
+
+    vertical-align: middle;
+    background-color: $white;
 
     @include tablet {
-      margin-left: 24px;
+      margin-left: 20px;
     }
 
     @include desktop {
-      margin-left: -50px;
+      margin-left: -49px;
     }
   }
 
@@ -93,7 +104,7 @@
     @include tablet {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 25px;
+      gap: 24px;
 
       max-width: 708px;
       padding: 26px 38px 28px;
@@ -190,7 +201,7 @@
     }
 
     @include desktop {
-      margin-right: 20px;
+      margin-right: -37px;
     }
   }
 
@@ -198,11 +209,16 @@
     flex-shrink: 0;
 
     min-width: 126px;
+
     text-align: left;
+    vertical-align: middle;
 
     @include tablet {
       min-width: 132px;
       margin-right: auto;
+
+      font-size: 16px;
+      line-height: 20px;
 
       text-align: right;
     }
@@ -219,15 +235,21 @@
     min-width: 37px;
 
     text-align: right;
+    vertical-align: middle;
 
     @include tablet {
-      min-width: 93px;
+      min-width: 95px;
 
       margin-right: auto;
+
+      font-size: 16px;
+      line-height: 20px;
     }
 
     @include desktop {
-      text-align: left;
+      min-width: 150px;
+
+      text-align: right;
     }
   }
 
@@ -244,6 +266,7 @@
       margin: 0;
       padding: 10px 0;
 
+      font-size: 16px;
       line-height: 20px;
     }
 
@@ -383,7 +406,7 @@
     justify-content: center;
 
     margin-left: 0;
-    margin-bottom: 49px;
+    margin-bottom: 47px;
 
     text-align: center;
   }

@@ -2,10 +2,13 @@
   position: relative;
 
   margin: 0 auto;
+  padding-bottom: 40px;
 
   transition: all 0.8s ease-out;
 
   @include tablet {
+    padding-bottom: 0;
+
     --bg-top-shift: calc(100% - 461px);
     border-top: 1px solid $extra-light-grey;
   }

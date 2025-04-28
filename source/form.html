@@ -26,47 +26,35 @@
 </head>
 
 <body class="page__body">
-  <header class="page__main-header main-header main-header--index">
 
-    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened -->
-    <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
-
+  <header class="page__main-header main-header" data-test="header">
+    <!-- Для отображения меню заменить модификатор объекта main-header__navigation с closed на opened (js) -->
+    <nav class="main-header__navigation main-header__navigation--index main-header__navigation--closed main-header__navigation--nojs">
       <a class="main-header__header-logo header-logo" href="./index.html" aria-label="Изображение логотипа онлайн-магазина «Кэт энерджи» | Переход на главную страницу">
-
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo/header-logo/logotype-desktop.svg">
           <source media="(min-width: 780px)" type="image/svg+xml" width="60" height="50" srcset="images/logo/header-logo/logotype-tablet.svg">
           <img class="header-logo__logo-image" width="33" height="38" src="images/logo/header-logo/logotype-mobile.svg" alt="Товарный знак логотипа магазина «Кэт энерджи».">
         </picture>
-
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="118" height="21" srcset="images/logo/header-logo/logotext-desktop.svg">
           <source media="(min-width: 780px)" type="image/svg+xml" width="101" height="18" srcset="images/logo/header-logo/logotext-tablet.svg">
           <img class="header-logo__logo-text" width="101" height="18" src="images/logo/header-logo/logotext-mobile.svg" alt="Товарный знак текстового логотипа магазина «Кэт энерджи».">
         </picture>
-
       </a>
-
-      <button class="navigation__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
-
-      <ul class="navigation__list navigation__list--form">
-
-        <li class="navigation__item">
-          <a class="navigation__link" href="./index.html">Главная</a>
+      <button class="main-header__toggle" type="button" aria-label="Открыть/скрыть меню"></button>
+      <ul class="main-header__list main-header__list--index main-header__list--form">
+        <li class="main-header__item">
+          <a class="main-header__link" href="./index.html">Главная</a>
         </li>
-
-        <li class="navigation__item">
-          <a class="navigation__link" href="./catalog.html">Каталог продукции</a>
+        <li class="main-header__item">
+          <a class="main-header__link" href="./catalog.html">Каталог продукции</a>
         </li>
-
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="./form.html">Подбор программы</a>
+        <li class="main-header__item  main-header__item--active">
+          <a class="main-header__link main-header__link--current main-header__link--form-current" href="./form.html"  aria-current="page">Подбор программы</a>
         </li>
-
       </ul>
-
     </nav>
-
   </header>
 
   <main class="page__main-form main-form">
@@ -114,25 +102,35 @@
   </main>
 
   <footer class="page__main-footer main-footer">
-    <section class="main-footer__map map" data-test="contacts">
-      <h2 class="map__title title visually-hidden">Контакты и местонахождение офиса онлайн-магазина «Кэт Энерджи» с кастомным курсором на карте</h2>
+    <section class="map map--color" data-test="contacts">
+
+      <h2 class="visually-hidden">Контакты и местонахождение офиса онлайн-магазина «Кэт Энерджи» с кастомным курсором на карте</h2>
+
       <div class="map__wrapper">
+
         <div class="map__content">
+
           <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+
           <p class="map__direction">
-            <span class="map__address">ул.&nbsp;Большая Конюшенная, д.&nbsp;19&#47;8</span>
+            <span class="map__address">ул. Большая Конюшенная, д.&nbsp;19/8</span>
             <span class="map__city">Санкт-Петербург</span>
           </p>
+
         </div>
+
       </div>
-      <div class="map__location map__location--nojs">
-        <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19&#47;8</span>
-        <div class="map__location-wrapper">
-          <iframe class="map__location-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;source=constructor" width="1440" height="362" title="Офис онлайн-магазина «Кэт Энерджи» по адресу ул. Большая Конюшенная д.19&#47;8, Санкт-Петербург">
-          </iframe>
-        </div>
-        <span class="map__pin visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19&#47;8</span>
+
+      <div class="map__location">
+
+        <span class="visually-hidden">Фрагмент карты Санкт-Петербург, в центре которого находится онлайн-магазин «Кэт Энерджи», размещенный на улице Большая Конюшенная, д. 19 &#47;8</span>
+        <span class="visually-hidden">Кастомный курсор логотипа онлайн-магазина «Кэт Энерджи», размещенная на улице Большая Конюшенная, д. 19&#47;8</span>
+
+        <iframe class="map__location-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8507ba28dac774ecf3ba2ff4b114d8f6176f3dd3dc8e08892f0c643ca06518a6&amp;source=constructor" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис онлайн-магазина «Кэт Энерджи» по адресу ул. Большая Конюшенная д.19&#47;8, Санкт-Петербург">
+        </iframe>
+
       </div>
+
     </section>
     <div class="main-footer__wrapper">
 

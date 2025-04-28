@@ -37,7 +37,8 @@
 // Контейнер
 @mixin container {
   width: 100%;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 
   @include max-width-mobile {
     min-width: 320px;

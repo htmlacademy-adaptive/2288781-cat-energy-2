@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navNojs = document.querySelector('.main-header__navigation');
   const navMain = document.querySelector('.main-header__navigation');
   const navToggle = document.querySelector('.main-header__toggle');
-  const mapNojs = document.querySelector('.map__location-iframe');
+  const mapNojs = document.querySelector('.map__location');
 
   if (navNojs) {
     navNojs.classList.remove('main-header__navigation--nojs');
   }
 
   if (mapNojs) {
-    navNojs.classList.remove('map__location-iframe--nojs');
+    navNojs.classList.remove('map__location--nojs');
   }
 
   navToggle.addEventListener('click', () => {
